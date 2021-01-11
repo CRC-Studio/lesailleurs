@@ -1,0 +1,35 @@
+// main: ../../../style.sass
+
+$header_barre-height: $modulor*2
+
+.l-header
+  height: $header_barre-height
+
+.nav__main
+  float: left
+
+  li
+    display: inline-block
+    margin-right: 24px
+
+    a:link, a:visited
+      line-height: $header_barre-height
+
+
+  li.current-menu-item
+    a:link, a:visited
+      color: $color-accent
+
+.btn__menu-more-vert
+  float: right
+  padding-top: 2px
+
+  svg
+    fill: #4e4e4e
+
+.l-header .menu
+  position: absolute
+  right: 25px
+  top: 60px
+
+.l-header__logo

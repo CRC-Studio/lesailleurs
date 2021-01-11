@@ -1,0 +1,56 @@
+// main: ../../../style.sass
+
+  Exemple de HTML :
+
+	<a href="" class="tooltip--hover">Mon lien
+		<div class="tooltip tooltip_top-left">
+      <div class="tooltip__content">Fullscreen</div>
+    </div>
+	</a>
+
+
+
+
+.tooltip--hover
+  position: relative
+
+.tooltip--hover:hover .tooltip
+  visibility: initial
+  top: 40px
+  opacity: 1
+  transition: all 0.5s
+
+.tooltip
+  visibility: hidden
+  position: absolute
+  padding: $modulor
+  color: $color-back
+  padding: 12px
+  border-radius: 1px
+  opacity: 0
+  background: $color-principale
+  transition: all 0.5s
+  z-index: 500
+
+.tooltip__content
+  white-space: nowrap
+
+.tooltip:before
+  content: ""
+  display: block
+  position: absolute
+  width: 8px
+  height: 16px
+  background-image: url(./assets/img/tooltip_arrow.png)
+
+.tooltip_left:before
+  left: -8px
+
+.tooltip_top-left
+  right: -10px
+  top: 60px
+
+.tooltip_top-left:before
+  right: 15px
+  top: -12px
+  transform: rotate(90deg)

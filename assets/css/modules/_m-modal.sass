@@ -1,0 +1,26 @@
+// main: ../../../style.sass
+
+
+.modal__overlay
+  position: fixed
+  z-index: 5000
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  background: rgba($color-text, 0.66)
+
+
+.modal
+  position: fixed
+  top: 50%
+  left: 50%
+  width: 50%
+  height: auto
+  padding: $modulor*2
+  text-align: center
+  background: $color-back
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+  border-radius: 3px
+  transform: translate(-50%, -50%)
+  z-index: 5000

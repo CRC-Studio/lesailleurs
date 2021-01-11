@@ -1,0 +1,47 @@
+// main: ../../../style.sass
+
+
+.cover
+  position: relative
+  height: 66vh
+  padding: 120px 60px 60px 60px !important
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  background: $color-principale
+
+  .cover__img
+    background-color: $color-principale
+
+    img
+      opacity: 0.7
+
+.cover__image
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
+  opacity: 0.7
+
+.btn__scroll-cover
+  position: absolute
+  width: 50px
+  height: 50px
+  bottom: 60px
+  cursor: pointer
+
+.cover__overlay
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 50%
+  z-index: -1
+
+@media (max-height: 800px)
+  .cover
+    height: auto

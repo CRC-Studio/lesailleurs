@@ -1,0 +1,92 @@
+// main: ../../../style.sass
+
+
+$line-height: $modulor*1.33
+
+
+*
+  font-weight: 400
+  color: $color-principale
+
+h1, h2, h3, h4, h5, h6
+  font-size: $modulor*2
+  line-height: $modulor*3
+  letter-spacing: 0.5px
+
+p
+  font-size: $modulor
+  line-height: $modulor*1.5
+  padding: 10px 0
+
+  a:link, a:visited
+    color: lighten( $color-principale, 20% )
+
+strong
+  font-weight: 800
+
+em
+  font-style: italic
+
+a
+  &:link, &:visited
+    color: inherit
+    box-shadow: 0 1px 0 0 $color-principale
+    transition: all 0.5s
+  &:hover
+    padding-bottom: 5px
+    text-decoration: none
+    box-shadow: 0 1px 0 0 $color-principale
+    transition: all 0.5s
+
+.display4, .display4 p, .display4 a
+  font-size: 112px
+  line-height: 40px
+
+.display3, .display3 p, .display3 a
+  font-size: 56px
+  line-height: 40px
+
+.display2, .display2 p, .display2 a
+  font-size: 45px
+  line-height: 48px
+
+.display1, .display1 p, .display1 a
+  font-size: 34px
+  line-height: 40px
+
+.headline, .headline p, .headline a
+  font-size: 24px
+  line-height: 32px
+
+.title, .title p, .title a
+  font-size: 20px
+  line-height: 40px
+
+.subheading, .subheading p, .subheading a
+  font-size: 16px
+  line-height: 28px
+
+.body, .body p, .body a
+  font-size: 11px
+  line-height: 24px
+
+.caption, .caption p, .caption a
+  font-size: 12px
+  line-height: 40px
+
+.button, .button p, .button a
+  font-size: 14px
+  line-height: 40px
+
+.material-icons
+  font-family: 'Material Icons'
+  font-weight: normal
+  font-style: normal
+  font-size: $modulor*2
+  display: inline-block
+  line-height: 1
+  text-transform: none
+  letter-spacing: normal
+  word-wrap: normal
+  white-space: nowrap
+  direction: ltr

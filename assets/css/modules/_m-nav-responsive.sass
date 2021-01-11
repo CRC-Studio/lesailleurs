@@ -1,0 +1,69 @@
+// main: ../../../style.sass
+
+@media (max-width: 992px)
+  .nav__button
+    display: block
+    position: fixed
+    z-index: 1000
+    display: block
+    width: $header_barre-height
+    height: $header_barre-height
+    top: 0px
+    left: 0px
+    padding: $header_barre-height /4
+    cursor: pointer
+
+    span
+      height: 4px
+      width: 100%
+      background: $color-principale
+      float: left
+      margin-bottom: 6px
+      transition: all 0.5s
+
+    span#mobile_control_1.is--active
+      transform: translateY(12px) rotate(135deg)
+
+    span#mobile_control_2.is--active
+      transform: translateY(8px) rotate(-30deg)
+      opacity: 0
+
+    span#mobile_control_3.is--active
+      transform: translateY(-7px) rotate(-135deg)
+
+  .nav__button:hover
+    #mobile_control_1
+      transform: translateY(4px)
+
+    #mobile_control_2
+      transform: translateY(-4px)
+      opacity: 0
+
+    #mobile_control_3
+      transform: translateY(-4px)
+
+  .nav__main
+    display: block
+
+  .l-header__nav
+    display: none
+    position: fixed
+    z-index: 10
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    background: $color-back
+    padding: $modulor*2 $modulor
+
+  .l-header__nav.is--active
+    display: block
+
+  .l-header__nav li
+    width: 100%
+    margin: 10px 0
+    text-align: left
+
+    a:link
+      font-weight: 300
+      font-size: 50px

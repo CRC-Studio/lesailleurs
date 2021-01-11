@@ -1,0 +1,17 @@
+<?php
+/**
+ * Parts : RGPD
+ *
+ */
+?>
+
+<div id="message_rgpd" class="rgpd is--open">
+  <div class="rgpd__message">
+    <p class="body">En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies ou autres traceurs pour réaliser des statistiques de visites et obtenir des informations sur votre parcours de navigation afin d’améliorer nos contenus et votre expérience utilisateur. Plus d’informations en <a href="<?php echo home_url(); ?>/informations-legales">cliquant ici</a>.</p>
+  </div>
+  <div class="rgpd__btn">
+    <span class="btn btn--plain rgpd__oui">OK</span>
+    <a href="<?php echo home_url(); ?>/informations-legales" class="btn btn--outline">En savoir plus</a>
+    <a href="<?php echo home_url(); ?>" class="btn btn--outline">Décliner</a>
+  </div>
+</div>

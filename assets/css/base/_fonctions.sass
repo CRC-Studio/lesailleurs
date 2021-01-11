@@ -1,0 +1,37 @@
+// main: ../../../style.sass
+
+
+@function rgba-to-rgb($rgba, $background: #fff)
+  @return mix(rgb(red($rgba), green($rgba), blue($rgba)), $background, alpha($rgba) * 100%)
+
+// div
+ background: rgba-to-rgb(transparentize($vert-menthe, 0.8), $color-back)
+
+
+@mixin transition($args...)
+  -webkit-transition: $args
+  -moz-transition: $args
+  -ms-transition: $args
+  -o-transition: $args
+  transition: $args
+
+// div
+//   color: gray
+//   @include transition(color .3s ease)
+
+
+@mixin box-shadow ($level)
+  @if $level == 1
+    box-shadow: 0 0.125em 0.313em rgba(50,50,93,.09),0 0.063em 0.125em rgba(0,0,0,.07)
+  @else if $level == 2
+    box-shadow: 0 0.250em 0.375em rgba(50,50,93,.09),0 0.063em 0.188em rgba(0,0,0,.08)
+  @else if $level == 3
+    box-shadow: 0 0.063em 0.313em 0 rgba(0,0,0,.07),0 0.438em 1.063em 0 rgba(0,0,0,.1)
+  @else if $level == 4
+    box-shadow: 0 0.938em 2.188em rgba(50,50,93,.1),0 0.313em 0.938em rgba(0,0,0,.07)
+  @else if $level == 5
+    box-shadow: 0 0.938em 2.188em rgba(50,50,93,.15),0 0.313em 0.938em rgba(0,0,0,.1)
+
+
+// div
+    @include box-shadow(4)
