@@ -8,7 +8,12 @@ require_once( __DIR__ . '/functions/include.php');
 
 /*        ADD Custom Type        */
 
-// require_once( __DIR__ . '/functions/add-custom-post-type.php');
+require_once( __DIR__ . '/functions/custom-post-type__artiste.php');
+require_once( __DIR__ . '/functions/custom-post-type__oeuvre.php');
+require_once( __DIR__ . '/functions/custom-post-type__selection.php');
+require_once( __DIR__ . '/functions/custom-post-type__partenaire.php');
+require_once( __DIR__ . '/functions/custom-post-type__edition.php');
+require_once( __DIR__ . '/functions/custom-post-type__evenement.php');
 
 
 /*        ADD Custom Block        */
@@ -25,6 +30,7 @@ require_once( __DIR__ . '/functions/include.php');
 
 /*     Custom HTML wp_nav_menu()      */
 
+require_once( __DIR__ . '/functions/custom_menu.php');
 // require_once( __DIR__ . '/functions/custom_html_wp_nav_menu.php');
 
 
