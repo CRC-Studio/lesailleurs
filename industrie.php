@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:  Artiste
+Template Name:  Industrie
 */
 
 get_header(); ?>

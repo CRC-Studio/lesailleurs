@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:  Artiste
+Template Name:  Résidence d'écriture
 */
 
 get_header(); ?>

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:  Artiste
+Template Name:  Appel à Projet
 */
 
 get_header(); ?>

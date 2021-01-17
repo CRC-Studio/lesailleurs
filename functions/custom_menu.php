@@ -18,7 +18,8 @@ function register_my_menus() {
         array(
             'primary-menu' => __( 'Menu principal' ),
             'footer-links' => __( 'Liens Footer' ),
-            'footer-secondary-links' => __( 'Liens secondaires Footer' ),
+            'secondary-links' => __( 'Liens secondaires' ),
+            'secondary-menu' => __( 'Menu secondaire' ),
         )
     );
 }

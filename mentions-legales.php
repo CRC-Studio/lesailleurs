@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:  Artiste
+Template Name:  Méntions légales
 */
 
 get_header(); ?>
