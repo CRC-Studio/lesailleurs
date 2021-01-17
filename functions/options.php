@@ -64,7 +64,7 @@ function disable_emojis_tinymce( $plugins ) {
 
 add_action( 'after_setup_theme', 'multilangue_support' );
 function multilangue_support(){
-  load_theme_textdomain( 'oripeau', get_template_directory() . '/languages' );
+  load_theme_textdomain( 'lesailleurs', get_template_directory() . '/languages' );
 }
 
 // Desactivé bar admin
