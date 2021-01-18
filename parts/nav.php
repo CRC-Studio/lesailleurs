@@ -14,7 +14,12 @@ Version:        1.0
 
 <header class="l-header row">
 	<div class="col l4">
-		<a href="<?php echo home_url(); ?>" class="headline"><?php bloginfo( 'name' ); ?></a>
+		<a href="<?php echo home_url(); ?>" class="headline">
+			<?php bloginfo( 'name' ); ?>
+			<div class="tooltip tooltip_top-left">
+				<div class="tooltip__content">A tooltip</div>
+			</div>
+		</a>
 
 
 		<!-- <div class="l-header__logo">
