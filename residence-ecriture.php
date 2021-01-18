@@ -5,7 +5,7 @@ Template Name:  Résidence d'écriture
 
 get_header(); ?>
 
-<section class="row">
+<section class="l-residence-ecriture row">
   <div class="col l12">
     <h1><?php the_title(); ?></h1>
   </div>

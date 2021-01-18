@@ -5,7 +5,7 @@ Template Name:  À propos
 
 get_header(); ?>
 
-<section class="row">
+<section class="l-a-propos row">
   <div class="col l12">
     <h1><?php the_title(); ?></h1>
   </div>

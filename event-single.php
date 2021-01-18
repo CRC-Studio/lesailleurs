@@ -5,7 +5,7 @@ Template Name:  Event
 
 get_header(); ?>
 
-<section class="row">
+<section class="l-event-single row">
   <div class="col l12">
     <h1><?php the_title(); ?></h1>
   </div>
