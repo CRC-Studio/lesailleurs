@@ -17,25 +17,17 @@
   display: block
 
 .rgpd__message
-  width: calc( 100% - #{$modulor*13} )
   float: left
 
 .rgpd__btn
-  width: $modulor*13
   padding: $modulor/2 0
   float: right
 
-  .btn
+  .btn, a:link.btn, a:visited.btn
     float: right
-    margin-top: 0 !important
     margin: $modulor/4
+    margin-top: 0 !important
 
-@media (max-width: 992px)
-  .rgpd__message
-    width: calc( 100% - #{$modulor*7} )
-
-  .rgpd__btn
-    width: $modulor*7
 
 @media (max-width: 768px)
   .rgpd__message,
