@@ -28,9 +28,6 @@
 		<meta name="msapplication-TileColor" content="#00233f">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#00233f">
-		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-		<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans|IBM+Plex+Serif:200" rel="stylesheet">
-		<link href='<?php echo get_stylesheet_directory_uri(); ?>/style.min.css' media='all' rel='stylesheet' type='text/css'>
 		<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/js.cookie.js"></script>
 		<?php wp_head(); ?>
 	</head>
