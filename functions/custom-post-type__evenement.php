@@ -28,7 +28,7 @@ function custom_post_evenement() {
     $args_evenement = array(
         'labels'              => $taxo_evenement,
         'supports'            => array('title'),
-        'taxonomies'          => array( 'category' ),
+        'taxonomies'          => array( '' ),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,

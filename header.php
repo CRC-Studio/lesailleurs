@@ -35,11 +35,5 @@
 
 <body id="<?php if ( is_front_page() ) { echo "front_page";  } else{ print strtolower(get_the_title()); }; ?>" <?php body_class(); ?>>
 
-
-<?php if( get_field('active--dev_mode', 'option') == 'active' ): ?>
-	<?php get_template_part('template/dev_mode') ?>
-
-<?php else:  ?>
 	<main class="main">
 		<?php get_template_part('parts/nav') ?>
-<?php endif; ?>

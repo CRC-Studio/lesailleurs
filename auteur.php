@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:  Artiste
+Template Name:  Auteurs
 */
 
 get_header(); ?>

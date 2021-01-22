@@ -1,10 +1,4 @@
-<?php
-/*
-Theme Name: Petrossian
 
-*/
-
-?>
 <div class="msg__smartphone is--open">
 	<div class="msg__smartphone-top">
 		<p class="display1">A tip for you: explore this site on your desktop.</p>

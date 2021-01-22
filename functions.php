@@ -5,15 +5,28 @@
 
 require_once( __DIR__ . '/functions/options.php');
 require_once( __DIR__ . '/functions/include.php');
+require_once( __DIR__ . '/functions/acf-fields.php');
 
 /*        ADD Custom Type        */
 
-require_once( __DIR__ . '/functions/custom-post-type__artiste.php');
+require_once( __DIR__ . '/functions/custom-post-type__auteurs.php');
 require_once( __DIR__ . '/functions/custom-post-type__oeuvre.php');
 require_once( __DIR__ . '/functions/custom-post-type__selection.php');
 require_once( __DIR__ . '/functions/custom-post-type__partenaire.php');
 require_once( __DIR__ . '/functions/custom-post-type__edition.php');
 require_once( __DIR__ . '/functions/custom-post-type__evenement.php');
+
+/*        ADD Custom Taxonomy       */
+
+require_once( __DIR__ . '/functions/custom-taxo__type-evenement.php');
+require_once( __DIR__ . '/functions/custom-taxo__profession.php');
+require_once( __DIR__ . '/functions/custom-taxo__nationalite.php');
+require_once( __DIR__ . '/functions/custom-taxo__thematique.php');
+require_once( __DIR__ . '/functions/custom-taxo__premiere.php');
+require_once( __DIR__ . '/functions/custom-taxo__mention.php');
+require_once( __DIR__ . '/functions/custom-taxo__langue.php');
+require_once( __DIR__ . '/functions/custom-taxo__genre.php');
+require_once( __DIR__ . '/functions/custom-taxo__pays.php');
 
 
 /*        ADD Custom Block        */

@@ -28,7 +28,7 @@ function custom_post_selection() {
     $args_selection = array(
         'labels'              => $taxo_selection,
         'supports'            => array('title'),
-        'taxonomies'          => array( 'category' ),
+        'taxonomies'          => array( '' ),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,

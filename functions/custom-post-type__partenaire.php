@@ -28,7 +28,7 @@ function custom_post_partenaire() {
     $args_partenaire = array(
         'labels'              => $taxo_partenaire,
         'supports'            => array('title'),
-        'taxonomies'          => array( 'category' ),
+        'taxonomies'          => array( '' ),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,

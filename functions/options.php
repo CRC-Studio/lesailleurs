@@ -67,6 +67,10 @@ function multilangue_support(){
   load_theme_textdomain( 'lesailleurs', get_template_directory() . '/languages' );
 }
 
+// Support des images de couvertures
+
+add_theme_support( 'post-thumbnails' );
+
 // Desactivé bar admin
 
 show_admin_bar(false);

@@ -1,10 +1,4 @@
-<?php
-/*
-Theme Name: MonoBloc
 
-*/
-
-?>
 
 <?php if( have_rows('bloc') ): ?>
 

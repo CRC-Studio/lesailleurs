@@ -1,22 +1,10 @@
-<?php
-/*
-Theme Name:     methodic.design
-Description:    methodic.design
-Author:         methodic.design
-Author URI:     methodic.design
-Template:       twentyseventeen
-Tags:           responsive-layout
-Version:        1.0
 
-*/
-
-?>
 
 <header class="l-header row">
 	<div class="col l4">
-		<a href="<?php echo home_url(); ?>" class="headline">
+		<a href="<?php echo home_url(); ?>" class="headline tooltip--hover">
 			<?php bloginfo( 'name' ); ?>
-			<div class="tooltip tooltip_top-left">
+			<div class="tooltip tooltip_top">
 				<div class="tooltip__content">A tooltip</div>
 			</div>
 		</a>

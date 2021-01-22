@@ -28,7 +28,7 @@ function custom_post_edition() {
     $args_edition = array(
         'labels'              => $taxo_edition,
         'supports'            => array('title'),
-        'taxonomies'          => array( 'category' ),
+        'taxonomies'          => array( '' ),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,

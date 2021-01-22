@@ -1,10 +1,4 @@
-<?php
-/*
-Theme Name: MonoBloc
 
-*/
-
-?>
 
 <?php if( get_row_layout() == 'slideshow' ):  ?>
 

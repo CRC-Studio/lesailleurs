@@ -8,27 +8,27 @@
 /***************************************/
 
 
-/*        Artistes        */
+/*        auteurs        */
 
-function custom_post_artiste() {
+function custom_post_auteur() {
 
-    $taxo_artiste = array(
-        'name'                => ( 'Artistes' ),
-        'singular_name'       => ( 'Artiste' ),
-        'all_items'           => ( 'Tous les artistes' ),
-        'view_item'           => ( "Voir l'artiste" ),
-        'add_new_item'        => ( 'Ajouter un artiste' ),
+    $taxo_auteur = array(
+        'name'                => ( 'Auteurs' ),
+        'singular_name'       => ( 'Auteur' ),
+        'all_items'           => ( 'Tous les auteurs' ),
+        'view_item'           => ( "Voir l'auteur" ),
+        'add_new_item'        => ( 'Ajouter un auteur' ),
         'add_new'             => ( 'Ajouter' ),
         'edit_item'           => ( "Modifier"  ),
         'update_item'         => ( 'Mettre à jour' ),
-        'search_items'        => ( 'Chercher un artiste' ),
-        'not_found'           => ( 'Aucun artiste trouvé.' ),
-        'not_found_in_trash'  => ( 'Aucun artiste trouvé dans la corbeille.' )
+        'search_items'        => ( 'Chercher un auteur' ),
+        'not_found'           => ( 'Aucun auteur trouvé.' ),
+        'not_found_in_trash'  => ( 'Aucun auteur trouvé dans la corbeille.' )
     );
-    $args_artiste = array(
-        'labels'              => $taxo_artiste,
+    $args_auteur = array(
+        'labels'              => $taxo_auteur,
         'supports'            => array('title'),
-        'taxonomies'          => array( 'category' ),
+        'taxonomies'          => array( '' ),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,
@@ -42,6 +42,6 @@ function custom_post_artiste() {
         'hierarchical'        => true,
         'capability_type'     => 'post',
     );
-    register_post_type( 'artiste', $args_artiste );
+    register_post_type( 'auteur', $args_auteur );
 }
-add_action( 'init', 'custom_post_artiste', 0 );
+add_action( 'init', 'custom_post_auteur', 0 );

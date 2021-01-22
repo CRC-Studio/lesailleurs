@@ -1,9 +1,3 @@
-<?php
-/*
-Theme Name: MonoBloc
-*/
-
-?>
 
 
 

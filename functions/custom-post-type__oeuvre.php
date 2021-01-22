@@ -27,8 +27,8 @@ function custom_post_oeuvre() {
     );
     $args_oeuvre = array(
         'labels'              => $taxo_oeuvre,
-        'supports'            => array('title'),
-        'taxonomies'          => array( 'category' ),
+        'supports'            => array('title','thumbnail'),
+        'taxonomies'          => array( '' ),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,

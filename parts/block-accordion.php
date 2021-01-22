@@ -1,9 +1,4 @@
-<?php
-/**
- * Block Name: Accordion
- *
- */
-?>
+
 
 <div class="accordion">
   <div class="accordion__titre">
