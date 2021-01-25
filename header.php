@@ -34,6 +34,3 @@
 
 
 <body id="<?php if ( is_front_page() ) { echo "front_page";  } else{ print strtolower(get_the_title()); }; ?>" <?php body_class(); ?>>
-
-	<main class="main">
-		<?php get_template_part('parts/nav') ?>

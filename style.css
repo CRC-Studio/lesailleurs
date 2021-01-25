@@ -236,7 +236,7 @@ body {
   background: white;
 }
 
-main {
+section {
   width: 100%;
   float: left;
   padding: 14px;
@@ -416,7 +416,9 @@ em {
 }
 
 .subheading {
-  font-size: 35px;
+  font-family: "roobert", Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 21px;
   line-height: 21px;
 }
 
@@ -428,6 +430,13 @@ em {
 .body {
   font-size: 14px;
   line-height: 21px;
+}
+
+.divider {
+  width: 1px;
+  height: 56px;
+  margin: 14px;
+  background: black;
 }
 
 .btn, a:link.btn, a:visited.btn {
@@ -465,10 +474,7 @@ em {
 .image-full {
   position: relative;
   width: 100%;
-}
-
-.image-full .image-full__content {
-  position: relative;
+  height: 100%;
 }
 
 .image-full__ratio-1-1 {
@@ -514,7 +520,6 @@ em {
   left: 0;
   right: 0;
   overflow: hidden;
-  border-radius: 3px;
 }
 
 .image-full__content img {
@@ -550,33 +555,28 @@ em {
 }
 
 .cover {
+  padding: 0;
   position: relative;
-  height: 66vh;
-  padding: 120px 60px 60px 60px !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background: black;
 }
 
-.cover .cover__img {
-  background-color: black;
+.cover__small > div {
+  height: 33vh;
 }
 
-.cover .cover__img img {
-  opacity: 0.7;
+.cover__big > div {
+  height: 100vh;
 }
 
-.cover__image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  opacity: 0.7;
+.cover > div {
+  float: left;
+  width: 50%;
+}
+
+.cover__content {
+  padding: 14px;
 }
 
 .btn__scroll-cover {
@@ -585,21 +585,6 @@ em {
   height: 50px;
   bottom: 60px;
   cursor: pointer;
-}
-
-.cover__overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 50%;
-  z-index: -1;
-}
-
-@media (max-height: 800px) {
-  .cover {
-    height: auto;
-  }
 }
 
 .rgpd {
@@ -793,6 +778,11 @@ em {
     font-weight: 300;
     font-size: 50px;
   }
+}
+
+.isv--parent {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 1200px) {
