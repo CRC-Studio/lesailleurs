@@ -4,13 +4,13 @@ Template Name:  Partenaire-Single
 */
 
 get_header(); ?>
+<main class="main l-partenaire">
+  <?php get_template_part('parts/nav') ?>
 
-<section class="l-partenaire row">
-  <div class="col l12">
-    <h1><?php the_title(); ?></h1>
-  </div>
-  <?php get_template_part( 'parts/elements' ); ?>
-</section>
+  <?php get_template_part('blocks/block__cover') ?>
+  <?php get_template_part('blocks/block__editorblocksystem') ?>
+  <?php get_template_part('blocks/block__biglinks') ?>
 
+</main>
 
 <?php get_footer(); ?>

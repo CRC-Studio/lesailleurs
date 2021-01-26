@@ -5,12 +5,12 @@ Template Name:  Sélection Single
 
 get_header(); ?>
 
-<section class="l-selection row">
-  <div class="col l12">
-    <h1><?php the_title(); ?></h1>
-  </div>
-  <?php get_template_part( 'parts/elements' ); ?>
-</section>
+<main class="main l-selection">
+  <?php get_template_part('parts/nav') ?>
 
+  <?php get_template_part('blocks/block__cover') ?>
+  <?php get_template_part('blocks/block__editorblocksystem') ?>
+
+</main>
 
 <?php get_footer(); ?>
