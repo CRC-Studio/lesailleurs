@@ -8,15 +8,23 @@
   background-size: cover
   background-position: center center
 
-.cover__small > div
-  height: 33vh
+.cover > div
+  float: left
+  width: 50%
 
 .cover__big > div
   height: 100vh
 
-.cover > div
-  float: left
-  width: 50%
+.cover__small > div
+  height: 33vh
+
+.cover__small
+  .cover__img-overlay
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
 
 .cover__content
   padding: $modulor
@@ -27,3 +35,161 @@
   height: 50px
   bottom: 60px
   cursor: pointer
+
+
+
+// Theme coloré 001
+
+.cover__color01
+  background: $color__01
+  .cover__title
+    color: $color__04
+  .cover__subheading
+    color: $color__03
+  .cover__divider
+    background: $color__02
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__01, 1) 20%, rgba($color__01, 0) 80%)
+
+// Theme coloré 002
+
+.cover__color02
+  background: $color__02
+  .cover__title
+    color: $color__05
+  .cover__subheading
+    color: $color__04
+  .cover__divider
+    background: $color__01
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__02, 1) 20%, rgba($color__02, 0) 80%)
+
+// Theme coloré 003
+
+.cover__color03
+  background: $color__03
+  .cover__title
+    color: $color__01
+  .cover__subheading
+    color: $color__05
+  .cover__divider
+    background: $color__04
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__03, 1) 20%, rgba($color__03, 0) 80%)
+
+// Theme coloré 004
+
+.cover__color04
+  background: $color__04
+  .cover__title
+    color: $color__01
+  .cover__subheading
+    color: $color__06
+  .cover__divider
+    background: $color__05
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__04, 1) 20%, rgba($color__04, 0) 80%)
+
+// Theme coloré 005
+
+.cover__color05
+  background: $color__05
+  .cover__title
+    color: $color__02
+  .cover__subheading
+    color: $color__03
+  .cover__divider
+    background: $color__04
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__05, 1) 20%, rgba($color__05, 0) 80%)
+
+// Theme coloré 006
+
+.cover__color06
+  background: $color__06
+  .cover__title
+    color: $color__08
+  .cover__subheading
+    color: $color__04
+  .cover__divider
+    background: $color__05
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__06, 1) 20%, rgba($color__06, 0) 80%)
+
+// Theme coloré 007
+
+.cover__color07
+  background: $color__07
+  .cover__title
+    color: $color__06
+  .cover__subheading
+    color: $color__09
+  .cover__divider
+    background: $color__09
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__07, 1) 20%, rgba($color__07, 0) 80%)
+
+// Theme coloré 008
+
+.cover__color08
+  background: $color__08
+  .cover__title
+    color: $color__10
+  .cover__subheading
+    color: $color__06
+  .cover__divider
+    background: $color__07
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__08, 1) 20%, rgba($color__08, 0) 80%)
+
+// Theme coloré 009
+
+.cover__color09
+  background: $color__09
+  .cover__title
+    color: $color__06
+  .cover__subheading
+    color: $color__07
+  .cover__divider
+    background: $color__07
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__09, 1) 20%, rgba($color__09, 0) 80%)
+
+// Theme coloré 010
+
+.cover__color10
+  background: $color__10
+  .cover__title
+    color: $color__08
+  .cover__subheading
+    color: $color__12
+  .cover__divider
+    background: $color__11
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__10, 1) 20%, rgba($color__10, 0) 80%)
+
+// Theme coloré 011
+
+.cover__color11
+  background: $color__11
+  .cover__title
+    color: $color__08
+  .cover__subheading
+    color: $color__09
+  .cover__divider
+    background: $color__10
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__11, 1) 20%, rgba($color__11, 0) 80%)
+
+// Theme coloré 012
+
+.cover__color12
+  background: $color__12
+  .cover__title
+    color: $color__09
+  .cover__subheading
+    color: $color__10
+  .cover__divider
+    background: $color__11
+  .cover__img-overlay
+    background: linear-gradient(100deg, rgba($color__12, 1) 20%, rgba($color__12, 0) 80%)

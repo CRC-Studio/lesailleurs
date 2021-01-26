@@ -21,10 +21,10 @@
     <section class="cover <?php echo $cover__size." ".$cover__color ?>">
       <div class="cover__container isv--parent">
         <div class="cover__content">
-          <h1 class="display3"><?php the_title(); ?></h1>
+          <h1 class="cover__title display3"><?php the_title(); ?></h1>
           <?php if( $soustitre ): ?>
-            <div class="divider"></div>
-            <span class="subheading"><?php echo $soustitre ?></span>
+            <div class="cover__divider divider"></div>
+            <span class="cover__subheading subheading"><?php echo $soustitre ?></span>
           <?php endif; ?>
         </div>
       </div>
@@ -35,6 +35,7 @@
             <div class="image-full__content">
               <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
             </div>
+            <div class="cover__img-overlay"></div>
           </div>
         <?php endif; ?>
       </div>

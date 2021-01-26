@@ -1,5 +1,5 @@
 
-	<footer class="l-footer"></footer>
+	<footer class="l-footer row"></footer>
 
 <?php get_template_part('parts/rgpd') ?>
 

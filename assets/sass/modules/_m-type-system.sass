@@ -44,26 +44,33 @@ em
   font-size: $modulor*4
   line-height: $modulor*4
 
-.display1
+.display1, .display1 *
   font-size: $modulor*3
   line-height: $modulor*4
 
-.subheading
+.subheading, .subheading *
   font-family: "roobert", Helvetica, sans-serif
   font-weight: 500
   font-size: $modulor*1.5
   line-height: $modulor*1.5
 
-.lead_paragraph
+.lead_paragraph, .lead_paragraph *
   font-size: $modulor*2
   line-height: $modulor*2.5
 
-.body
+.body, .body *
   font-size: $modulor
+  letter-spacing: 1px
   line-height: $modulor*1.5
 
 .divider
-  width: 1px
+  width: 2px
   height: $modulor*4
   margin: $modulor
+  background: $color-principale
+
+.divider-h
+  width: $modulor*4
+  height: 2px
+  margin: $modulor 0
   background: $color-principale

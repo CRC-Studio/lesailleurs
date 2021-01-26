@@ -1,43 +1,87 @@
 // main: ../../../style.sass
 
-.accordion__titre
+.ebs
   position: relative
-  float: left
-  width: 100%
-  cursor: pointer
-  margin: 5px 0
-  padding: 10px 0
-  border-bottom: 1px solid $color-principale
-
-.accordion__icon
-  position: absolute
-  transform: rotate(-90deg)
-  right: 0
-  top: -10px
-  width: 20px
-  transition: transform 0.5s
-
-
-.accordion__container
-  float: left
-  width: 100%
-  max-height: 0
-  margin: 0
-  opacity: 0
+  margin-bottom: $modulor*10
   overflow: hidden
-  transition: all 1s
+  max-height: 1000vh
+  transition: all 3s cubic-bezier(1, 0.03, 1, 1)
 
-  p
-    font-size: 24px
-    line-height: 32px
+  .divider-h
+    background: $color__08
 
-.accordion.is--active
-  .accordion__icon
-    transform: rotate(0deg)
-    transition: transform 0.5s
+.ebs__container
+  display: flex
+  justify-content: start
 
-  .accordion__container
-    opacity: 1
-    max-height: 1000px
-    margin: 5px 0 30px 0
-    transition: all 1s
+.ebs__content
+  flex: 1 1 auto
+  width: 100%
+
+.ebs__links
+  width: 33.33%
+  padding-top: $modulor*10
+
+  li
+    color: $color-secondaire
+    padding-bottom: $modulor/2
+
+.ebs__block-citation,
+.ebs__block-text,
+.ebs__block-gd-text
+  margin-bottom: $modulor
+
+.ebs__block-citation
+  padding-left: 8.33%
+  text-align: right
+  margin: $modulor*5 0
+
+.ebs__block-citation > *
+  float: right
+  width: 100%
+
+.ebs__citation *
+  color: $color-citation
+
+.ebs__legende *
+  color: $color__08
+
+.ebs__block-image
+  text-align: center
+
+.ebs__images
+    display: flex
+
+.ebs__image
+  float: left
+  width: 50%
+  padding: 1px
+
+// ReadMore System
+
+.ebs__readmore
+  max-height: 66vh
+  transition: all 3s
+
+.ebs__overlay
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: linear-gradient(0deg, rgba($color-back, 1) 20%, rgba($color-back, 0) 66%)
+  pointer-events: none
+  opacity: 1
+  transition: opacity 3s
+
+#ebs__readmore-btn
+  position: absolute
+  bottom: 0
+  z-index: 1
+
+.ebs__full
+  .ebs__overlay,
+  #ebs__readmore-btn
+    pointer-events: none
+    opacity: 0
+    transition: opacity 3s

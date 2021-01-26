@@ -1,5 +1,10 @@
 // main: ../../../style.sass
 
+  Exemple de HTML :
+
+    <button class="btn btn--outline">Mon Button</button>
+
+
 
 .btn, a:link.btn, a:visited.btn
   display: inline-block
@@ -16,15 +21,15 @@
 
 .btn:hover, a.btn:hover
   border-radius: $modulor/2
-  box-shadow: 0 10px 20px rgba($boreal_6, 0.19), 0 6px 6px rgba($boreal_6, 0.23)
+  box-shadow: 0 10px 20px rgba($color-btn-tooltips, 0.19), 0 6px 6px rgba($color-btn-tooltips, 0.23)
   transition: all 0.2s
 
 .btn--plain
-  background: $boreal_8
+  background: $color-secondaire
   color: $color-back
-  border: 2px solid $boreal_8
+  border: 2px solid $color-secondaire
 
 .btn--outline
   background: none
   color: $color-principale
-  border: 2px solid $boreal_8
+  border: 2px solid $color-secondaire
