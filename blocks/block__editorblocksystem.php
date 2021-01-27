@@ -82,7 +82,7 @@
                       </div>
                       <?php if( get_sub_field('bloc_citation_legende') ): ?>
                         <div class="divider-h"></div>
-                        <span class="ebs__legende body"><?php the_sub_field('bloc_citation_legende') ?></span>
+                        <span class="color__legende body"><?php the_sub_field('bloc_citation_legende') ?></span>
                       <?php endif; ?>
                     </div>
 
@@ -93,29 +93,7 @@
 
                   </div>
                 </div>
-              <div class="row ebs__block-image">
-                <div class="ebs__gallery">
-                  <?php
-                  $images = get_sub_field('bloc_image');
-                  $size = 'full'; // (thumbnail, medium, large, full or custom size)
-                  if( $images ): ?>
-                  <ul class="ebs__images">
-                    <?php foreach( $images as $image_id ): ?>
-                      <li class="ebs__image">
-                        <div class="image-full__ratio-1-1">
-                          <div class="image-full__content">
-                            <?php echo wp_get_attachment_image( $image_id, $size ); ?>
-                          </div>
-                        </div>
-                      </li>
-                    <?php endforeach; ?>
-                  </ul>
-                <?php endif; ?>
-              </div>
-              <?php if( get_sub_field('bloc_image_legende') ): ?>
-                <span class="ebs__legende body"><?php the_sub_field('bloc_image_legende') ?></span>
-              <?php endif; ?>
-            </div>
+                <?php get_template_part('blocks/block__galerie-img') ?>
                 <?php if( $link ): ?>
                 <div class="ebs__container col l6 m3">
               <?php else: ?>

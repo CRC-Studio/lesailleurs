@@ -6,10 +6,10 @@
 /*                                     */
 /***************************************/
 
-function atg_menu_classes($classes, $item, $args) {
-  if($args->menu == 'Menu principal') {
-    $classes[] = 'subheading';
+
+// Supprimer les classes des <li> menus
+
+function nav_class_filter( $var ) {
+  return is_array($var) ? array_intersect($var, array('current-menu-item')) : '';
   }
-  return $classes;
-}
-add_filter('nav_menu_css_class', 'atg_menu_classes', 1, 3);
+add_filter('nav_menu_css_class', 'nav_class_filter', 100, 1);

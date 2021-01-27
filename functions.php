@@ -25,7 +25,7 @@ require_once( __DIR__ . '/functions/custom-taxo__thematique.php');
 require_once( __DIR__ . '/functions/custom-taxo__premiere.php');
 require_once( __DIR__ . '/functions/custom-taxo__mention.php');
 require_once( __DIR__ . '/functions/custom-taxo__langue.php');
-require_once( __DIR__ . '/functions/custom-taxo__genre.php');
+require_once( __DIR__ . '/functions/custom-taxo__format.php');
 require_once( __DIR__ . '/functions/custom-taxo__pays.php');
 
 
@@ -40,11 +40,10 @@ require_once( __DIR__ . '/functions/custom-taxo__pays.php');
 // require_once( __DIR__ . '/functions/add-custom-option-page.php');
 
 
-
 /*     Custom HTML wp_nav_menu()      */
 
 require_once( __DIR__ . '/functions/custom_menu.php');
-// require_once( __DIR__ . '/functions/custom_html_wp_nav_menu.php');
+require_once( __DIR__ . '/functions/custom_html_wp_nav_menu.php');
 
 
 /*        ADD Custom Script        */

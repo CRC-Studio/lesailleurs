@@ -3,4 +3,41 @@
 
 .l-footer
   background: linear-gradient(45deg, $color__12 0%, $color__01 100%)
-  height: 100vh
+
+.l-footer__nav ul,
+.l-footer__nav li
+  border-bottom: 1px solid $color__11
+
+.l-footer__nav
+  li
+    float: left
+    width: 50%
+    padding: $modulor 0
+
+  li:last-child,
+  li:nth-last-of-type(-n+2):not(:nth-child(even))
+    border-bottom: 0
+
+  li:nth-child(even)
+    text-align: right
+
+  a:link, a:visited
+    font-family: "apoc", Helvetica, sans-serif
+    color: $color__09
+
+.l-footer__rs
+  text-align: center
+
+  ul
+    display: flex
+    width: 33.33%
+    margin-left: 33.33%
+    justify-content: center
+    flex-wrap: wrap
+
+  li
+    padding: $modulor
+
+  a:link, a:visited
+    text-transform: capitalize
+    color: $color__09

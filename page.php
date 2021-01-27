@@ -2,17 +2,12 @@
 
 get_header(); ?>
 
+<main class="main l-page">
+  <?php get_template_part('parts/nav') ?>
+
+  <?php get_template_part('blocks/block__cover') ?>
 
 
-<section class="l-page row">
-  <div class="wrapper-center">
-    <div class="col l12">
-      <h1 class="title"><?php the_title(); ?></h1>
-      <?php the_content(); ?>
-    </div>
-  </div>
-</section>
-
-
+</main>
 
 <?php get_footer(); ?>

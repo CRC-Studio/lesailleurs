@@ -36,6 +36,33 @@
   bottom: 60px
   cursor: pointer
 
+// Les classes .cover__info et .cover__nocolor sont utilisées sur les page Single-oeuvre.php et Single-aritiste.php. See you broth'
+
+.cover__nocolor
+  background: $color__08
+  .cover__title
+    color: $color-principale
+
+.cover__info
+  margin-top: $modulor
+  text-align: right
+
+  span
+    float: right
+    padding: 0 $modulor/3
+
+  a:link, a:visited
+    color: $color-back
+
+  a:nth-last-of-type(n+3)::after
+    content: ', '
+
+  a:last-of-type::before
+    content: ' & '
+
+  a:first-of-type::before
+    content: ''
+
 
 
 // Theme coloré 001

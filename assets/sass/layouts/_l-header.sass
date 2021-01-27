@@ -2,7 +2,18 @@
 
 
 .l-header
-  height: $header_barre-height
+  display: flex
+  padding: $modulor
+
+.l-header__baseline
+  span
+    width: 100%
+    float: left
+    font-size: 18px
+    letter-spacing: 1px
+
+  span:last-child
+    padding-left: $modulor*3
 
 .nav__main
   float: left
@@ -11,24 +22,6 @@
     display: inline-block
     margin-right: 24px
 
-    a:link, a:visited
-      line-height: $header_barre-height
-
-
   li.current-menu-item
     a:link, a:visited
       color: $color-accent
-
-.btn__menu-more-vert
-  float: right
-  padding-top: 2px
-
-  svg
-    fill: #4e4e4e
-
-.l-header .menu
-  position: absolute
-  right: 25px
-  top: 60px
-
-.l-header__logo
