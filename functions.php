@@ -5,7 +5,7 @@
 
 require_once( __DIR__ . '/functions/options.php');
 require_once( __DIR__ . '/functions/include.php');
-// require_once( __DIR__ . '/functions/acf-fields.php');
+require_once( __DIR__ . '/functions/acf-fields.php');
 
 /*        ADD Custom Type        */
 
