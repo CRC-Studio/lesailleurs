@@ -14,7 +14,9 @@
 		<span>QUI EXPLORE L'IMMERSION</span>
 	</div>
 
-	<nav class="l-header__nav l6">
+	<div class="l-header__nav">
+		<div class="l6 l-header__scene"></div>
+		<nav class="l6">
 		<?php wp_nav_menu( array(
 		    'menu'						=> 'Menu principal',
 				'theme_location'  => 'primary-menu',
@@ -23,6 +25,7 @@
 			) );
 		?>
 	</nav>
+	</div>
 	<div class="nav__button">
 		<span id="mobile_control_1" class="">&nbsp;</span>
 		<span id="mobile_control_2" class="">&nbsp;</span>

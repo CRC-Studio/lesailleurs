@@ -3,7 +3,8 @@
 
 .l-header
   display: flex
-  padding: $modulor
+  height: $header_barre-height
+  align-items: center
 
 .l-header__baseline
   span
@@ -25,3 +26,81 @@
   li.current-menu-item
     a:link, a:visited
       color: $color-accent
+
+
+.nav__button
+  display: block
+  position: fixed
+  z-index: 1000
+  display: block
+  width: $header_barre-height
+  height: $header_barre-height
+  top: 0
+  right: 0
+  padding: $header_barre-height /3 $header_barre-height /4
+  border-left: 1px solid $color-principale
+  cursor: pointer
+
+  span
+    height: 1px
+    width: 100%
+    background: $color-principale
+    float: left
+    margin-bottom: $modulor/2
+    transition: all 0.5s
+
+  span#mobile_control_1.is--active
+    transform: translateY(12px) rotate(135deg)
+
+  span#mobile_control_2.is--active
+    transform: translateY(8px) rotate(-30deg)
+    opacity: 0
+
+  span#mobile_control_3.is--active
+    transform: translateY(-7px) rotate(-135deg)
+
+.nav__button:hover
+  #mobile_control_1
+    transform: translateY(4px)
+
+  #mobile_control_2
+    transform: translateY(-4px)
+    opacity: 0
+
+  #mobile_control_3
+    transform: translateY(-4px)
+
+.nav__main
+  display: block
+
+.l-header__nav
+  display: none
+  position: fixed
+  z-index: 10
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  background: $color-back
+
+  nav
+    padding: $modulor*2 $modulor
+
+.l-header__nav > *
+  float: left
+  height: 100vw
+
+.l-header__scene
+  background: $color__08
+
+.l-header__nav.is--active
+  display: block
+
+.l-header__nav li
+  width: 100%
+  margin: 10px 0
+  text-align: left
+
+  a:link
+    font-weight: 300
+    font-size: 50px
