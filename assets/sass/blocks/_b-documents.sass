@@ -1,0 +1,71 @@
+// main: ../../../style.sass
+
+
+.doc__docs
+  margin-top: $modulor*4
+
+.doc__doc
+  float: left
+  padding: $modulor/2
+
+  &:hover
+    .doc__wrapper, .doc__overlay
+      border-radius: 25%
+      transition: all 0.5s
+
+    .doc__overlay
+      padding: 12%
+      opacity: 0.97
+
+.doc__small
+  width: 25%
+
+.doc__big
+  width: 50%
+
+.doc__wrapper
+  width: 100%
+  position: relative
+  padding-top: 100%
+  background: linear-gradient(90deg, $color__08 0%, $color__07 100%)
+  transition: all 5s
+
+.doc__container
+  position: absolute
+  margin: auto
+  top: $modulor*4
+  bottom: $modulor*4
+  left: $modulor*4
+  right: $modulor*4
+
+  img
+    display: block
+    position: absolute
+    margin: auto
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    max-width: 100%
+    max-height: 100%
+    border-radius: $modulor/2
+    box-shadow: 0 5px 10px rgba($color__10, 0.5), 0 15px 60px rgba($color__10, 0.4)
+
+.doc__overlay
+  opacity: 0
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  padding: $modulor*2
+  opacity: 0
+  background: linear-gradient(90deg, $color__01 0%, $color__12 100%)
+  transition: all 5s
+
+  p, span
+    color: $color-back
+
+  .doc__read-more
+    position: absolute
+    bottom: $modulor*4

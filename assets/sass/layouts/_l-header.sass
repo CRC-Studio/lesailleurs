@@ -3,8 +3,14 @@
 
 .l-header
   display: flex
+  position: fixed
   height: $header_barre-height
+  padding: 0 $modulor*5 0 $modulor
   align-items: center
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1
 
 .l-header__baseline
   span
@@ -15,18 +21,6 @@
 
   span:last-child
     padding-left: $modulor*3
-
-.nav__main
-  float: left
-
-  li
-    display: inline-block
-    margin-right: 24px
-
-  li.current-menu-item
-    a:link, a:visited
-      color: $color-accent
-
 
 .nav__button
   display: block
@@ -70,25 +64,19 @@
   #mobile_control_3
     transform: translateY(-4px)
 
-.nav__main
-  display: block
-
 .l-header__nav
   display: none
   position: fixed
   z-index: 10
+  width: 100%
   top: 0
-  bottom: 0
   right: 0
-  left: 0
   background: $color-back
 
-  nav
-    padding: $modulor*2 $modulor
-
 .l-header__nav > *
+  position: relative
   float: left
-  height: 100vw
+  height: 100vh
 
 .l-header__scene
   background: $color__08
@@ -96,11 +84,53 @@
 .l-header__nav.is--active
   display: block
 
-.l-header__nav li
+.nav__main
+  float: left
   width: 100%
-  margin: 10px 0
-  text-align: left
+  margin-bottom: $modulor
 
-  a:link
-    font-weight: 300
-    font-size: 50px
+  li
+    width: 100%
+    padding: $modulor 0
+    text-align: left
+    border-bottom: 1px solid $color__08
+
+  li:last-child
+    border-bottom: none
+
+  a:link, a:visited
+    font-family: "apoc", Helvetica, sans-serif
+
+  li.current-menu-item
+    a:link, a:visited
+      color: $color-accent
+
+.l-header__content
+  float: left
+  padding: $modulor*2
+
+  .divider
+    width: 1px
+    height: $modulor*6
+    float: left
+
+.l-header__links
+  position: absolute
+  bottom: $modulor*2
+
+  li
+    display: inline-block
+    padding: $modulor
+
+  li:first-of-type
+    padding: $modulor $modulor $modulor 0
+
+  a:link, a:visited
+    text-transform: capitalize
+    color: $color__09
+
+.l-header__nav-language
+  li
+    display: inline-block
+    float: right
+    padding: $modulor/2

@@ -20,6 +20,7 @@ function register_my_menus() {
             'footer-links' => __( 'Liens Footer' ),
             'secondary-links' => __( 'Liens secondaires' ),
             'secondary-menu' => __( 'Menu secondaire' ),
+            'language-menu' => __( 'Language Menu' )
         )
     );
 }

@@ -1,5 +1,12 @@
 // main: ../../../style.sass
 
+.acn
+  position: relative
+  background: linear-gradient(-45deg, $color__05 0%, $color__06 100%)
+
+  h2, h3
+    color: $color__10
+
 .accordion__titre
   position: relative
   float: left
@@ -7,16 +14,20 @@
   cursor: pointer
   margin: 5px 0
   padding: 10px 0
-  border-bottom: 1px solid $color-principale
+  border-bottom: 1px solid $color__05
 
 .accordion__icon
   position: absolute
   transform: rotate(-90deg)
   right: 0
-  top: -10px
-  width: 20px
+  top: 0
+  width: $modulor*4
   transition: transform 0.5s
 
+  svg
+    fill: none
+    stroke: $color__04
+    stroke-miterlimit: 10
 
 .accordion__container
   float: left
@@ -26,10 +37,6 @@
   opacity: 0
   overflow: hidden
   transition: all 1s
-
-  p
-    font-size: 24px
-    line-height: 32px
 
 .accordion.is--active
   .accordion__icon
@@ -41,3 +48,17 @@
     max-height: 1000px
     margin: 5px 0 30px 0
     transition: all 1s
+
+.acn__links
+  position: absolute
+  bottom: $modulor*3
+
+  .divider
+    background: $color__05
+
+  span
+    color: $color__11
+
+.acn__link
+  margin-bottom: $modulor/2
+  color: $color__09
