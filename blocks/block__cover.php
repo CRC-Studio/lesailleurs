@@ -1,5 +1,4 @@
 
-
 <?php if( have_rows('couverture') ): ?>
   <?php while( have_rows('couverture') ): the_row(); ?>
 

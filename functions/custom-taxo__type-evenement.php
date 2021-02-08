@@ -21,7 +21,7 @@ function custom_taxo_type_evenement() {
         'update_item'       => __( "Mettre à jour", 'lesailleurs' ),
         'add_new_item'      => __( "Ajouter un nouveau type d'évenement", 'lesailleurs' ),
         'new_item_name'     => __( "Nom du nouveau type d'évenement", 'lesailleurs' ),
-        'menu_name'         => __( "type d'évenement", 'lesailleurs' ),
+        'menu_name'         => __( "Type d'évenement", 'lesailleurs' ),
     );
 
     $args = array(

@@ -1,0 +1,131 @@
+// main: ../../../style.sass
+
+.slc__slc
+  display: flex
+  height: 25vw
+  position: relative
+  float: left
+  padding: $modulor
+  margin: $modulor/2
+  cursor: pointer
+  transition: all 2s
+
+  &:hover
+    border-radius: $modulor
+    background-color: $color-secondaire
+    transition: all 0.5s
+
+    .slc__overlay
+      opacity: 0
+      transition: all 0.5s
+
+    .slc__img
+      border: 2px solid $color-principale
+      transition: all 0.5s
+
+    .slc__img, img
+      border-radius: $modulor
+      transition: all 0.5s
+
+.slc__infos
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 25vw
+  padding-right: $modulor
+
+  span
+    display: block
+    width: 100%
+
+.slc__img
+  flex-grow: 1
+  position: relative
+  background-color: $color__08
+  border: 2px solid $color-back
+  z-index: 1
+  transition: all 4s
+
+  img
+    transition: all 4s
+
+.slc__hashtag
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  padding-bottom: $modulor/2
+  background-image: url('./assets/img/background__hashtag.svg')
+  background-size: 1px 32px
+  background-position: 0 7px
+  border-top: 2px solid $color-principale
+
+  li
+    display: inline-block
+    margin: $modulor/2 $modulor/4
+    text-transform: capitalize
+
+.slc__overlay
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 1) 20%)
+  opacity: 1
+  transition: all 4s
+
+
+.slc__lar1, .slc__lar2
+  width: 25%
+  height: auto
+  flex-direction: column-reverse
+
+  .slc__infos
+    width: 100%
+    padding-right: 0
+
+  .slc__infos-top
+    margin: $modulor 0 $modulor*2
+
+  .divider-h
+    display: none
+
+  .slc__img
+    flex-grow: 0
+    height: 25vw
+
+  .slc__overlay
+    background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 1) 50%)
+
+.slc__lar3, .slc__lar4
+  width: 50%
+
+  .slc__overlay
+    background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 1) 33%)
+
+.slc__lar5, .slc__lar6
+  width: 75%
+
+.slc__lar7
+  width: 100%
+  margin: $modulor/2 !important
+
+.slc__marh1, .slc__marh2
+.slc__marh3
+  margin-right: 8.33%
+.slc__marh4
+  margin-right: 16.66%
+.slc__marh5
+  margin-left: 8.33%
+.slc__marh6
+  margin-left: 16.66%
+
+.slc__marv1, .slc__marv2
+.slc__marv3
+  margin-top: $modulor*6
+.slc__marv4
+  margin-top: $modulor*12
+.slc__marv5
+  margin-bottom: $modulor*6
+.slc__marv6
+  margin-bottom: $modulor*12

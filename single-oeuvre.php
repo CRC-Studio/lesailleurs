@@ -4,9 +4,9 @@ Template Name:  Œuvre Single
 */
 
 get_header(); ?>
-<main class="main l-oeuvre">
-  <?php get_template_part('parts/nav') ?>
+<?php get_template_part('parts/nav') ?>
 
+<main class="main l-oeuvre">
   <?php // Gestion de la cover ?>
 
   <section class="cover cover__small cover__nocolor">
@@ -25,7 +25,7 @@ get_header(); ?>
 
           <?php $terms = get_field('oeu__pays');
           if( $terms ): ?>
-          <span>
+          <span class="liste__de__lien">
             <?php _e("Pays : ","lesailleurs") ?>
             <?php foreach( $terms as $term ): ?>
               <a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
@@ -33,17 +33,18 @@ get_header(); ?>
           </span>
         <?php endif; ?>
 
-        <?php // Info sur la couverture : Duré ?>
+        <?php // Info sur la couverture : Durée ?>
 
         <?php if( get_field('oeu__duree') ): ?>
           <span><?php _e("Durée : ","lesailleurs") ?><?php the_field('oeu__duree'); ?> min</span>
+        <?php endif; ?>
 
 
           <?php // Info sur la couverture : Format ?>
 
           <?php $terms = get_field('oeu__format');
           if( $terms ): ?>
-          <span>
+          <span class="liste__de__lien">
             <?php _e("Format : ","lesailleurs") ?>
             <?php foreach( $terms as $term ): ?>
               <a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
@@ -55,15 +56,13 @@ get_header(); ?>
 
         <?php $terms = get_field('oeu__premiere');
         if( $terms ): ?>
-        <span>
+        <span class="liste__de__lien">
           <?php _e("Première : ","lesailleurs") ?>
           <?php foreach( $terms as $term ): ?>
             <a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
           <?php endforeach; ?>
         </span>
       <?php endif; ?>
-
-    <?php endif; ?>
 
   </div>
 </div>

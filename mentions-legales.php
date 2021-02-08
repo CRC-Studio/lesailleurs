@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:  Méntions légales
+Template Name:  Mentions légales
 */
 
 get_header(); ?>

@@ -19,9 +19,9 @@ jQuery( document ).ready(function( $ ) {
   // Button ReadMore Sur l'Editor Block Systeme
 
   $('#ebs__readmore-btn').click(function(){
+    console.log('click');
       $(this).parents('.ebs').toggleClass('ebs__full ebs__readmore');
   });
-
 
 	// Bouton Scroll cover
 

@@ -1,17 +1,13 @@
 <?php
 /*
-Template Name:  Edtions
+Template Name: Édtions-Single
 */
 
 get_header(); ?>
+<?php get_template_part('parts/nav') ?>
+
 <main class="main l-edition">
-  <?php get_template_part('parts/nav') ?>
-
-  <?php get_template_part('blocks/block__cover') ?>
-  <?php get_template_part('blocks/block__editorblocksystem') ?>
-  <?php get_template_part('blocks/block__accordion') ?>
-  <?php get_template_part('blocks/block__documents') ?>
-
+  <?php get_template_part('parts/part__template-single-edition') ?>
 </main>
 
 <?php get_footer(); ?>

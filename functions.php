@@ -23,6 +23,7 @@ require_once( __DIR__ . '/functions/custom-taxo__profession.php');
 require_once( __DIR__ . '/functions/custom-taxo__nationalite.php');
 require_once( __DIR__ . '/functions/custom-taxo__thematique.php');
 require_once( __DIR__ . '/functions/custom-taxo__premiere.php');
+require_once( __DIR__ . '/functions/custom-taxo__modalite.php');
 require_once( __DIR__ . '/functions/custom-taxo__mention.php');
 require_once( __DIR__ . '/functions/custom-taxo__langue.php');
 require_once( __DIR__ . '/functions/custom-taxo__format.php');
