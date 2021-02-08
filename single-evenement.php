@@ -37,7 +37,7 @@ get_header(); ?>
               <?php endif; ?>
               <?php the_field('eve__start') ?>
               <?php if( get_field('eve__end') ): ?>
-                au
+                <br>au
                 <?php the_field('eve__end') ?>
               <?php endif; ?>
             </span>

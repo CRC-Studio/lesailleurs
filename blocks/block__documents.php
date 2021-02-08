@@ -3,7 +3,7 @@
   <?php while( have_rows('doc') ): the_row(); ?>
 
 
-    <section class="doc">
+    <section class="doc bigm">
 
       <?php // Gestion de l'introduction ?>
 

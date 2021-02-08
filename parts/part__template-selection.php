@@ -6,7 +6,8 @@
     <section class="slc">
       <div class="row ebs__titre">
         <div class="m2">
-          <h2 class="subheading"><?php _e("La suite de la sélections","lesailleurs") ?></h2>
+          <!-- <h2 class="subheading"><?php _e("La suite de la sélections","lesailleurs") ?></h2> -->
+					<h2 class="subheading"><?php _e("La sélections","lesailleurs") ?></h2>
           <div class="divider"></div>
         </div>
       </div>
@@ -21,7 +22,7 @@
           <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
         </article>
         <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>
-				<?php $post = $backup_post // Utile pour relancer la loop après un wp_reset_postdata(); ?>
+				<?php $post = $backup_post; // Utile pour relancer la loop après un wp_reset_postdata(); ?>
       <?php endwhile; ?>
     </section>
   <?php endif; ?>

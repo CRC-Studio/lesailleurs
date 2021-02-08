@@ -1,13 +1,13 @@
 
 <?php if( have_rows('bigl') ): ?>
   <?php while( have_rows('bigl') ): the_row(); ?>
-
-    <section class="biglinks">
-      <div class="row bigl__titre">
-        <h2 class="subheading"><?php the_sub_field('bigl__titre') ?></h2>
-        <div class="divider"></div>
-      </div>
     <?php if( have_rows('bigl__liens') ): ?>
+      <section class="biglinks">
+        <div class="row bigl__titre">
+          <h2 class="subheading"><?php the_sub_field('bigl__titre') ?></h2>
+          <div class="divider"></div>
+        </div>
+
 
         <ul class="bigl__links">
           <?php while( have_rows('bigl__liens') ): the_row(); ?>
@@ -17,9 +17,10 @@
             </li>
           <?php endwhile; ?>
 
-    <?php endif; ?>
 
-  </ul>
-</section>
+
+        </ul>
+      </section>
+    <?php endif; ?>
   <?php endwhile; ?>
 <?php endif; ?>

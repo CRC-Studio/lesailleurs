@@ -13,17 +13,17 @@
 function custom_post_evenement() {
 
     $taxo_evenement = array(
-        'name'                => ( 'Évènements' ),
-        'singular_name'       => ( 'Évènement' ),
-        'all_items'           => ( 'Tous les évènements' ),
-        'view_item'           => ( "Voir l'évènement" ),
-        'add_new_item'        => ( 'Ajouter un évènement' ),
+        'name'                => ( 'Événements' ),
+        'singular_name'       => ( 'Événement' ),
+        'all_items'           => ( 'Tous les événements' ),
+        'view_item'           => ( "Voir l'événement" ),
+        'add_new_item'        => ( 'Ajouter un événement' ),
         'add_new'             => ( 'Ajouter' ),
         'edit_item'           => ( "Modifier"  ),
         'update_item'         => ( 'Mettre à jour' ),
-        'search_items'        => ( 'Chercher un évènement' ),
-        'not_found'           => ( 'Aucun évènement trouvé.' ),
-        'not_found_in_trash'  => ( 'Aucun évènement trouvé dans la corbeille.' )
+        'search_items'        => ( 'Chercher un événement' ),
+        'not_found'           => ( 'Aucun événement trouvé.' ),
+        'not_found_in_trash'  => ( 'Aucun événement trouvé dans la corbeille.' )
     );
     $args_evenement = array(
         'labels'              => $taxo_evenement,

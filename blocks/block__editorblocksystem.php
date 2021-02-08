@@ -7,7 +7,7 @@
     <?php $ebs__grp01 = get_sub_field('ebs__grp01'); ?>
 
 
-    <section class="ebs <?php echo esc_attr( $ebs__grp01['ebs__readmore'] ); ?>">
+    <section class="ebs bigm <?php echo esc_attr( $ebs__grp01['ebs__readmore'] ); ?> white--isnt--white">
       <div class="ebs__container col l8 m1">
 
         <?php if( have_rows('ebs__grp01') ): ?>
@@ -39,7 +39,7 @@
         <?php endif; ?>
 
         <div class="ebs__content">
-            <?php if( have_rows('ebs__grp02') ): ?>
+          <?php if( have_rows('ebs__grp02') ): ?>
             <?php while( have_rows('ebs__grp02') ): the_row(); ?>
 
               <?php // Ajout du titre ?>
@@ -55,7 +55,6 @@
 
               <?php if( have_rows('eds__editor') ): ?>
                 <?php while( have_rows('eds__editor') ): the_row(); ?>
-
 
 
                   <?php // Flexible Content : bloc texte ?>
@@ -95,27 +94,27 @@
                 </div>
                 <?php get_template_part('blocks/block__galerie-img') ?>
                 <?php if( $link ): ?>
-                <div class="ebs__container col l6 m3">
-              <?php else: ?>
-                <div class="ebs__container col l8 m1">
-              <?php endif; ?>
-                <div class="ebs__content">
+                  <div class="ebs__container col l6 m3">
+                  <?php else: ?>
+                    <div class="ebs__container col l8 m1">
+                    <?php endif; ?>
+                    <div class="ebs__content">
 
+                    <?php endif; ?>
+                  <?php endwhile; ?>
                 <?php endif; ?>
+
               <?php endwhile; ?>
             <?php endif; ?>
 
-          <?php endwhile; ?>
-        <?php endif; ?>
-
-      </div>
-      <button id="ebs__readmore-btn" class="btn btn--outline"><?php _e("En savoir plus","lesailleurs") ?></button>
-    </div>
+          </div>
+          <button id="ebs__readmore-btn" class="btn btn--outline"><?php _e("En savoir plus","lesailleurs") ?></button>
+        </div>
 
 
-      <div class="ebs__overlay"></div>
+        <div class="ebs__overlay"></div>
 
-  </section>
+      </section>
 
-<?php endwhile; ?>
-<?php endif; ?>
+    <?php endwhile; ?>
+  <?php endif; ?>

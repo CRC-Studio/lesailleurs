@@ -9,6 +9,7 @@ get_header(); ?>
 <main class="main l-apropos">
   <?php get_template_part('blocks/block__cover') ?>
   <?php get_template_part('blocks/block__editorblocksystem') ?>
+  <?php get_template_part('blocks/block__partenaires') ?>
   <?php get_template_part('blocks/block__biglinks') ?>
 
 </main>
