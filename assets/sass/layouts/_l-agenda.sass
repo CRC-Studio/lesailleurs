@@ -1,3 +1,70 @@
 // main: ../../../style.sass
 
 .l-agenda
+
+.eve__eve
+  position: relative
+  border-bottom: 1px solid $color-secondaire
+  padding: $modulor 0
+  cursor: pointer
+
+  &:hover
+    .eve__title
+      padding-left: $modulor*5
+      transition: all 0.5s
+    .eve__img
+      opacity: 1
+      transition: all 1s
+    .eve__overlay
+      opacity: 1
+      transition: all 0.5s
+    .subheading
+      padding-right: $modulor*2
+      transition: all 0.5s
+
+.eve__eve:first-of-type
+  border-top: 1px solid $color-secondaire
+
+.eve__img
+  float: left
+  width: $modulor*4
+  opacity: 0
+  transition: all 2s
+
+  img
+    border-radius: 50%
+
+.eve__info
+  background: linear-gradient(90deg, rgba($color_back, 0) 50%, rgba($color_back, 1) 90%)
+
+.eve__title
+  position: absolute
+  height: $modulor*4
+  overflow: hidden
+  z-index: -1
+  transition: all 3s
+
+.eve__desc-courte
+  background: white
+
+.eve__overlay
+  position: absolute
+  background: linear-gradient(90deg, rgba($color__06, 0) 20%, rgba(lighten($color__06, 15%), 1) 66%)
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  opacity: 0
+  transition: 3s
+
+.eve__overlay--content
+  display: flex
+  float: right
+  height: 100%
+  align-items: center
+  justify-content: space-between
+
+  .subheading
+    color: $color__03
+    padding-right: $modulor*4
+    transition: all 4s
