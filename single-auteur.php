@@ -9,7 +9,7 @@ get_header(); ?>
 <?php $auteur = get_the_title(); // Note : on stocke le nom de l'auteur pour pouvoir trier les événements un peu plus bas.  ?>
 
 
-<main class="main l-oeuvre">
+<main class="main l-auteur">
 
 
   <?php // Gestion de la cover ?>
