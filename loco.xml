@@ -6,7 +6,7 @@
         <directory>languages</directory>
       </target>
       <template>
-        <file>languages/oripeau.pot</file>
+        <file>languages/lesailleurs.pot</file>
       </template>
     </project>
   </domain>

@@ -2,13 +2,14 @@
 
   Exemple de HTML :
 
-  <form class="form" action="./core/modifier__diffuseur.php" method="post">
-    <div class="form__input-container">
-      <input type="hidden" name="diffuseur__id" placeholder="Id" class="form__input-full" value="<?php echo $row["diffuseur__id"] ?>">
-      <input type="text" name="societe" placeholder="Société" class="form__input-half" value="<?php echo $row["diffuseur__societe"] ?>">
-      <input type="text" name="siret" placeholder="Siret" class="form__input-half form__input-seperator" value="<?php echo $row["diffuseur__siret"] ?>">
+  <form action="<?php echo get_stylesheet_directory_uri(); ?>/script/action__send-contact-form.php" method="post">
+    <div class="form__input-container ">
+      <input type="text" class="form__input-half" placeholder="Nom*" name="nom" value="" required>
+      <input type="email" class="form__input-half form__input-seperator" placeholder="Email*" name="email" value="" required>
+      <input type="text" class="form__input-full" placeholder="Sujet*" name="sujet" value="" required>
+      <textarea class="form__input-full" placeholder="Message*" name="message" value="" required></textarea>
     </div>
-      <input type="submit" name="Enregistrer" value="Enregistrer" class="btn btn--plain">
+      <input type="submit" name="submit" value="<?php _e("Envoyer votre message","lesailleurs") ?>" class="btn btn--outline">
   </form>
 
 

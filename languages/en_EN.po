@@ -1,0 +1,772 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Les Ailleurs\n"
+"POT-Creation-Date: 2021-02-09 17:55-0400\n"
+"PO-Revision-Date: 2021-02-09 18:02-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: blocks/block__editorblocksystem.php:111
+msgid "En savoir plus"
+msgstr "Read More"
+
+#: blocks/block__form.php:26
+msgid "Envoyer votre message"
+msgstr "Send your message"
+
+#: functions/add-custom-block-cat.php:16
+msgid "Blocs Yoom"
+msgstr "Yoom Blocks"
+
+#: functions/add-custom-block-type.php:17
+msgid "Couverture"
+msgstr "Cover"
+
+#: functions/add-custom-block-type.php:18
+msgid "Ajouter une couverture"
+msgstr "Add a cover"
+
+#: functions/add-custom-block-type.php:31
+msgid "Texte"
+msgstr "Text"
+
+#: functions/add-custom-block-type.php:32
+msgid "Ajouter un texte centré"
+msgstr "Add a centered text"
+
+#: functions/add-custom-block-type.php:45
+msgid "Image + Texte"
+msgstr "Image - Text"
+
+#: functions/add-custom-block-type.php:46
+msgid "Ajouter un texte accompagné d'une image"
+msgstr "Add text with an image"
+
+#: functions/custom-taxo__format.php:14
+msgctxt "taxonomy general name"
+msgid "Formats"
+msgstr "Formats"
+
+#: functions/custom-taxo__format.php:15
+msgctxt "taxonomy singular name"
+msgid "Format"
+msgstr "Format"
+
+#: functions/custom-taxo__format.php:16
+msgid "Chercher un format"
+msgstr "Search for a format"
+
+#: functions/custom-taxo__format.php:17
+msgid "Tous les formats"
+msgstr "All formats"
+
+#: functions/custom-taxo__format.php:18
+msgid "Parent format"
+msgstr "Parent format"
+
+#: functions/custom-taxo__format.php:19
+msgid "Parent format:"
+msgstr "Parent format:"
+
+#: functions/custom-taxo__format.php:20 functions/custom-taxo__langue.php:20
+#: functions/custom-taxo__mention.php:20 functions/custom-taxo__modalite.php:20
+#: functions/custom-taxo__nationalite.php:20 functions/custom-taxo__pays.php:20
+#: functions/custom-taxo__premiere.php:20
+#: functions/custom-taxo__profession.php:20
+#: functions/custom-taxo__thematique.php:20
+#: functions/custom-taxo__type-evenement.php:20
+msgid "Modifier"
+msgstr "Edit"
+
+#: functions/custom-taxo__format.php:21 functions/custom-taxo__langue.php:21
+#: functions/custom-taxo__mention.php:21 functions/custom-taxo__modalite.php:21
+#: functions/custom-taxo__nationalite.php:21 functions/custom-taxo__pays.php:21
+#: functions/custom-taxo__premiere.php:21
+#: functions/custom-taxo__profession.php:21
+#: functions/custom-taxo__thematique.php:21
+#: functions/custom-taxo__type-evenement.php:21
+msgid "Mettre à jour"
+msgstr "Update"
+
+#: functions/custom-taxo__format.php:22
+msgid "Ajouter un nouveau format"
+msgstr "Add a new format"
+
+#: functions/custom-taxo__format.php:23
+msgid "Nom du nouveau format"
+msgstr "Name of new format"
+
+#: functions/custom-taxo__format.php:24
+msgid "Format"
+msgstr "Format"
+
+#: functions/custom-taxo__langue.php:14
+msgctxt "taxonomy general name"
+msgid "Langues"
+msgstr "languages"
+
+#: functions/custom-taxo__langue.php:15
+msgctxt "taxonomy singular name"
+msgid "Langue"
+msgstr "Language"
+
+#: functions/custom-taxo__langue.php:16
+msgid "Chercher une langue"
+msgstr "Searching for a language"
+
+#: functions/custom-taxo__langue.php:17
+msgid "Toutes les langues"
+msgstr "All languages"
+
+#: functions/custom-taxo__langue.php:18
+msgid "Parent langue"
+msgstr "Parent language"
+
+#: functions/custom-taxo__langue.php:19
+msgid "Parent langue:"
+msgstr "Parent language:"
+
+#: functions/custom-taxo__langue.php:22
+msgid "Ajouter une nouvelle langue"
+msgstr "Add a new language"
+
+#: functions/custom-taxo__langue.php:23
+msgid "Nom de la nouvelle langue"
+msgstr "Name of new language"
+
+#: functions/custom-taxo__langue.php:24
+msgid "Langue"
+msgstr "Language"
+
+#: functions/custom-taxo__mention.php:14
+msgctxt "taxonomy general name"
+msgid "Mentions"
+msgstr "Mentions"
+
+#: functions/custom-taxo__mention.php:15
+msgctxt "taxonomy singular name"
+msgid "Mention"
+msgstr "Mention"
+
+#: functions/custom-taxo__mention.php:16
+msgid "Chercher une mention"
+msgstr "Searching for a mention"
+
+#: functions/custom-taxo__mention.php:17 functions/custom-taxo__premiere.php:17
+msgid "Toutes les premières"
+msgstr "All the premiere"
+
+#: functions/custom-taxo__mention.php:18
+msgid "Parent mention"
+msgstr "Parent mention"
+
+#: functions/custom-taxo__mention.php:19
+msgid "Parent mention:"
+msgstr "Parent mention:"
+
+#: functions/custom-taxo__mention.php:22
+msgid "Ajouter une nouvelle mention"
+msgstr "Add a new mention"
+
+#: functions/custom-taxo__mention.php:23
+msgid "Nom de la nouvelle mention"
+msgstr "Name of new mention"
+
+#: functions/custom-taxo__mention.php:24
+msgid "Mention"
+msgstr "Mention"
+
+#: functions/custom-taxo__modalite.php:14
+msgctxt "taxonomy general name"
+msgid "Modalités"
+msgstr "Terms"
+
+#: functions/custom-taxo__modalite.php:15
+msgctxt "taxonomy singular name"
+msgid "Modalité"
+msgstr "Term"
+
+#: functions/custom-taxo__modalite.php:16
+#, fuzzy
+msgid "Chercher une modalité"
+msgstr "Looking for a modality"
+
+#: functions/custom-taxo__modalite.php:17
+#, fuzzy
+msgid "Toutes les modalités"
+msgstr "All the modalities"
+
+#: functions/custom-taxo__modalite.php:18
+#, fuzzy
+msgid "Parent modalité"
+msgstr "Parent modality"
+
+#: functions/custom-taxo__modalite.php:19
+#, fuzzy
+msgid "Parent modalité:"
+msgstr "Parent modality:"
+
+#: functions/custom-taxo__modalite.php:22
+#, fuzzy
+msgid "Ajouter une nouvelle modalité"
+msgstr "Add a new modality"
+
+#: functions/custom-taxo__modalite.php:23
+#, fuzzy
+msgid "Nom de la nouvelle modalité"
+msgstr "Name of new modality"
+
+#: functions/custom-taxo__modalite.php:24
+#, fuzzy
+msgid "Modalité"
+msgstr "Mode"
+
+#: functions/custom-taxo__nationalite.php:14
+#, fuzzy
+msgctxt "taxonomy general name"
+msgid "Nationalités"
+msgstr "Nationalities"
+
+#: functions/custom-taxo__nationalite.php:15
+#, fuzzy
+msgctxt "taxonomy singular name"
+msgid "Nationalité"
+msgstr "Nationality"
+
+#: functions/custom-taxo__nationalite.php:16
+#, fuzzy
+msgid "Chercher une nationalité"
+msgstr "Seeking nationality"
+
+#: functions/custom-taxo__nationalite.php:17
+#, fuzzy
+msgid "Toutes les nationalités"
+msgstr "All nationalities"
+
+#: functions/custom-taxo__nationalite.php:18
+#, fuzzy
+msgid "Parent nationalité"
+msgstr "Parent nationality"
+
+#: functions/custom-taxo__nationalite.php:19
+#, fuzzy
+msgid "Parent nationalité:"
+msgstr "Parent nationality:"
+
+#: functions/custom-taxo__nationalite.php:22
+#, fuzzy
+msgid "Ajouter une nouvelle nationalité"
+msgstr "Add a new nationality"
+
+#: functions/custom-taxo__nationalite.php:23
+#, fuzzy
+msgid "Nom de la nouvelle nationalité"
+msgstr "Name of new nationality"
+
+#: functions/custom-taxo__nationalite.php:24
+#, fuzzy
+msgid "Nationalité"
+msgstr "Nationality"
+
+#: functions/custom-taxo__pays.php:14
+msgctxt "taxonomy general name"
+msgid "Pays"
+msgstr "Country"
+
+#: functions/custom-taxo__pays.php:15
+msgctxt "taxonomy singular name"
+msgid "Pays"
+msgstr "Country"
+
+#: functions/custom-taxo__pays.php:16
+#, fuzzy
+msgid "Chercher un pays"
+msgstr "Looking for a country"
+
+#: functions/custom-taxo__pays.php:17
+#, fuzzy
+msgid "Tous les pays"
+msgstr "All countries"
+
+#: functions/custom-taxo__pays.php:18
+#, fuzzy
+msgid "Parent pays"
+msgstr "Parent country"
+
+#: functions/custom-taxo__pays.php:19
+#, fuzzy
+msgid "Parent pays:"
+msgstr "Parent country:"
+
+#: functions/custom-taxo__pays.php:22
+#, fuzzy
+msgid "Ajouter un nouveau pays"
+msgstr "Add a new country"
+
+#: functions/custom-taxo__pays.php:23
+#, fuzzy
+msgid "Nom du nouveau pays"
+msgstr "Name of the new country"
+
+#: functions/custom-taxo__pays.php:24
+msgid "Pays"
+msgstr "Country"
+
+#: functions/custom-taxo__premiere.php:14
+#, fuzzy
+msgctxt "taxonomy general name"
+msgid "Premières"
+msgstr "First"
+
+#: functions/custom-taxo__premiere.php:15
+#, fuzzy
+msgctxt "taxonomy singular name"
+msgid "Première"
+msgstr "First"
+
+#: functions/custom-taxo__premiere.php:16
+#, fuzzy
+msgid "Chercher une première"
+msgstr "Seeking a first"
+
+#: functions/custom-taxo__premiere.php:18
+#, fuzzy
+msgid "Parent première"
+msgstr "Parent first"
+
+#: functions/custom-taxo__premiere.php:19
+#, fuzzy
+msgid "Parent première:"
+msgstr "Parent first:"
+
+#: functions/custom-taxo__premiere.php:22
+#, fuzzy
+msgid "Ajouter une nouvelle première"
+msgstr "Add a new first"
+
+#: functions/custom-taxo__premiere.php:23
+#, fuzzy
+msgid "Nom de la nouvelle première"
+msgstr "Name of new premiere"
+
+#: functions/custom-taxo__premiere.php:24
+#, fuzzy
+msgid "Première"
+msgstr "First"
+
+#: functions/custom-taxo__profession.php:14
+#, fuzzy
+msgctxt "taxonomy general name"
+msgid "Professsions"
+msgstr "Professsions"
+
+#: functions/custom-taxo__profession.php:15
+#, fuzzy
+msgctxt "taxonomy singular name"
+msgid "Professsion"
+msgstr "Professsion"
+
+#: functions/custom-taxo__profession.php:16
+#, fuzzy
+msgid "Chercher une professsion"
+msgstr "Seeking a profession"
+
+#: functions/custom-taxo__profession.php:17
+#, fuzzy
+msgid "Toutes les professsions"
+msgstr "All professed"
+
+#: functions/custom-taxo__profession.php:18
+#, fuzzy
+msgid "Parent professsion"
+msgstr "Parent professsion"
+
+#: functions/custom-taxo__profession.php:19
+#, fuzzy
+msgid "Parent professsion:"
+msgstr "Parent professsion:"
+
+#: functions/custom-taxo__profession.php:22
+#, fuzzy
+msgid "Ajouter une nouvelle professsion"
+msgstr "Add a new profession"
+
+#: functions/custom-taxo__profession.php:23
+#, fuzzy
+msgid "Nom de la nouvelle professsion"
+msgstr "Name of the new professsion"
+
+#: functions/custom-taxo__profession.php:24
+#, fuzzy
+msgid "Professsion"
+msgstr "Professsion"
+
+#: functions/custom-taxo__thematique.php:14
+msgctxt "taxonomy general name"
+msgid "Thématiques"
+msgstr "Thematics"
+
+#: functions/custom-taxo__thematique.php:15
+msgctxt "taxonomy singular name"
+msgid "Thématique"
+msgstr "Thematic"
+
+#: functions/custom-taxo__thematique.php:16
+#, fuzzy
+msgid "Chercher une thématique"
+msgstr "Search for a theme"
+
+#: functions/custom-taxo__thematique.php:17
+msgid "Toutes les thématiques"
+msgstr "All thematics"
+
+#: functions/custom-taxo__thematique.php:18
+#, fuzzy
+msgid "Parent thématique"
+msgstr "Thematic Parent"
+
+#: functions/custom-taxo__thematique.php:19
+#, fuzzy
+msgid "Parent thématique:"
+msgstr "Thematic parent:"
+
+#: functions/custom-taxo__thematique.php:22
+msgid "Ajouter une nouvelle thématique"
+msgstr "Add New Thematic"
+
+#: functions/custom-taxo__thematique.php:23
+#, fuzzy
+msgid "Nom de la nouvelle thématique"
+msgstr "Name of the new theme"
+
+#: functions/custom-taxo__thematique.php:24
+msgid "Thématique"
+msgstr "Thematic"
+
+#: functions/custom-taxo__type-evenement.php:14
+#, fuzzy
+msgctxt "taxonomy general name"
+msgid "Type d'évenements"
+msgstr "Type of events"
+
+#: functions/custom-taxo__type-evenement.php:15
+#, fuzzy
+msgctxt "taxonomy singular name"
+msgid "Type d'évenement"
+msgstr "Type of event"
+
+#: functions/custom-taxo__type-evenement.php:16
+#, fuzzy
+msgid "Chercher un type d'évenement"
+msgstr "Look for a type of event"
+
+#: functions/custom-taxo__type-evenement.php:17
+#, fuzzy
+msgid "Tous les genres"
+msgstr "All genres"
+
+#: functions/custom-taxo__type-evenement.php:18
+#: functions/custom-taxo__type-evenement.php:19
+#, fuzzy
+msgid "Parent type d'évenement"
+msgstr "Parent type of event"
+
+#: functions/custom-taxo__type-evenement.php:22
+#, fuzzy
+msgid "Ajouter un nouveau type d'évenement"
+msgstr "Add a new type of event"
+
+#: functions/custom-taxo__type-evenement.php:23
+#, fuzzy
+msgid "Nom du nouveau type d'évenement"
+msgstr "Name of new type of event"
+
+#: functions/custom-taxo__type-evenement.php:24
+#, fuzzy
+msgid "Type d'évenement"
+msgstr "Type of event"
+
+#: functions/custom_menu.php:19
+msgid "Menu principal"
+msgstr "Main menu"
+
+#: functions/custom_menu.php:20
+#, fuzzy
+msgid "Liens Footer"
+msgstr "Footer links"
+
+#: functions/custom_menu.php:21
+#, fuzzy
+msgid "Liens secondaires"
+msgstr "Secondary links"
+
+#: functions/custom_menu.php:22
+#, fuzzy
+msgid "Menu secondaire"
+msgstr "Secondary menu"
+
+#: functions/custom_menu.php:23
+#, fuzzy
+msgid "Language Menu"
+msgstr "Language Menu"
+
+#: parts/part__template-oeuvre-selectionnee.php:15
+#, fuzzy
+msgid "Artites principaux : "
+msgstr "Main artites: "
+
+#: parts/part__template-oeuvre-selectionnee.php:29 single-oeuvre.php:21
+#, fuzzy
+msgid "Année de production : "
+msgstr "Year of production: "
+
+#: parts/part__template-selection.php:9
+#, fuzzy
+msgid "La suite de la sélections"
+msgstr "The rest of the selections"
+
+#: parts/part__template-selection.php:10
+#, fuzzy
+msgid "La sélections"
+msgstr "The selections"
+
+#: parts/part__template-single-edition.php:17
+#, fuzzy
+msgid "Voir toute la sélection"
+msgstr "See the full selection"
+
+#: parts/part__template-single-edition.php:20
+#, fuzzy
+msgid "Découvrez aussi"
+msgstr "Find out more"
+
+#: parts/part__template-single-edition.php:20
+#, fuzzy
+msgid "les sélections précédentes"
+msgstr "previous selections"
+
+#: parts/part__template-single-edition.php:52
+#, fuzzy
+msgid "Voir tous les événements"
+msgstr "See all the events"
+
+#: single-auteur.php:28
+#, fuzzy
+msgid "Profession : "
+msgstr "Profession: "
+
+#: single-auteur.php:40
+#, fuzzy
+msgid "Nationalité : "
+msgstr "Nationality: "
+
+#: single-evenement.php:24
+#, fuzzy
+msgid "Lieu : "
+msgstr "Place: "
+
+#: single-evenement.php:34
+#, fuzzy
+msgid "Date : "
+msgstr "Date: "
+
+#: single-evenement.php:52
+#, fuzzy
+msgid "Type d'événement : "
+msgstr "Type of event: "
+
+#: single-evenement.php:64
+#, fuzzy
+msgid "Modalité : "
+msgstr "Mode: "
+
+#: single-evenement.php:76
+#, fuzzy
+msgid "Intervenant : "
+msgstr "Intervener: "
+
+#: single-evenement.php:117 single-oeuvre.php:84
+msgid "Thématiques"
+msgstr "Thematics"
+
+#: single-evenement.php:127 single-oeuvre.php:94
+#, fuzzy
+msgid "Voir toutes les thématiques"
+msgstr "See all the themes"
+
+#: single-evenement.php:128 single-oeuvre.php:95
+#, fuzzy
+msgid ""
+"Les Ailleurs explorent. Jamais ne tourne en rond. Alors perdez-vous avec "
+"nous."
+msgstr ""
+"The Elsewhere are exploring. Never goes around in circles. Then lose "
+"yourself with us."
+
+#: single-oeuvre.php:29
+#, fuzzy
+msgid "Pays : "
+msgstr "Country: "
+
+#: single-oeuvre.php:39
+#, fuzzy
+msgid "Durée : "
+msgstr "Duration: "
+
+#: single-oeuvre.php:48
+#, fuzzy
+msgid "Format : "
+msgstr "Format: "
+
+#: single-oeuvre.php:60
+#, fuzzy
+msgid "Première : "
+msgstr "First: "
+
+#: single-oeuvre.php:112
+#, fuzzy
+msgid "Artites principaux"
+msgstr "Main Artites"
+
+#: single-oeuvre.php:140
+#, fuzzy
+msgid "Générique"
+msgstr "Generic"
+
+#: single-selection.php:32
+#, fuzzy
+msgid "Découvrir les sélections précédentes"
+msgstr "Discover previous selections"
+
+#: single-selection.php:33
+#, fuzzy
+msgid "Toutes exactement conformes à nos valeurs : toutes singulières."
+msgstr "All exactly in line with our values: all singular."
+
+#. Theme Name of the plugin/theme
+#, fuzzy
+msgid "Les Ailleurs"
+msgstr "The Elsewhere"
+
+#. Description of the plugin/theme
+#, fuzzy
+msgid ""
+"Les Ailleurs est un thème personalisé construit avec MonoBloc. Cette "
+"architecture modulaire conçue par CRC Studio accélére le developpement de "
+"thème Wordpress"
+msgstr ""
+"The Elsewhere is a personalized theme built with MonoBloc. This modular "
+"architecture designed by CRC Studio accelerates Wordpress theme development"
+
+#. Author of the plugin/theme
+#, fuzzy
+msgid "CRC Studio"
+msgstr "CRC Studio"
+
+#. Author URI of the plugin/theme
+#, fuzzy
+msgid "https://crc-studio.fr/"
+msgstr "https://crc-studio.fr/"
+
+#. Template Name of the plugin/theme
+msgid "À propos"
+msgstr "About"
+
+#. Template Name of the plugin/theme
+msgid "Agenda"
+msgstr "Events"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Appel à Projet"
+msgstr "Call for Project"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Auteurs"
+msgstr "Authors"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Éditions"
+msgstr "Editions"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Event category"
+msgstr "Event category"
+
+#. Template Name of the plugin/theme
+msgid "Page d'accueil"
+msgstr "Home page"
+
+#. Template Name of the plugin/theme
+msgid "Industrie"
+msgstr "Industry"
+
+#. Template Name of the plugin/theme
+msgid "Mentions légales"
+msgstr "Terms and condition"
+
+#. Template Name of the plugin/theme
+msgid "Partenaire"
+msgstr "Partner"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Résidence d'écriture"
+msgstr "Writing residency"
+
+#. Template Name of the plugin/theme
+msgid "Sélection"
+msgstr "Select"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Auteur Single"
+msgstr "Single Author"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Édtions Single"
+msgstr "Single editions"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Événement Single"
+msgstr "Single Event"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Œuvre Single"
+msgstr "Single Work"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Partenaire Single"
+msgstr "Single Partner"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Sélection Single"
+msgstr "Single selection"
+
+#. Template Name of the plugin/theme
+#, fuzzy
+msgid "Taxonomie"
+msgstr "Taxonomy"
