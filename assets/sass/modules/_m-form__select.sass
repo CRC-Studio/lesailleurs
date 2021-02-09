@@ -1,0 +1,40 @@
+.form__custom-select
+  position: relative
+  font-family: Arial
+
+  select
+    display: none
+
+  .select-selected
+    &:after
+      position: absolute
+      content: ""
+      top: 14px
+      right: 10px
+      width: 0
+      height: 0
+    &.select-arrow-active:after
+      top: 7px
+
+  .select-items div, .select-selected
+    color: $color-principale
+    cursor: pointer
+
+  .select-items
+    position: absolute
+    background-color: $color-back
+    top: 100%
+    left: 0
+    right: 0
+    z-index: 99
+    border: 1px solid #CCC
+
+    div
+      padding: ($modulor/3)*2
+      border-bottom: 1px solid #CCC
+
+  .select-hide
+    display: none
+
+  .select-items div:hover, .same-as-selected
+    background-color: rgba(0, 0, 0, 0.1)

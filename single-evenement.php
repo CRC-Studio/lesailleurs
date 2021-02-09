@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Événement-Single
+Template Name: Événement Single
 */
 
 get_header(); ?>

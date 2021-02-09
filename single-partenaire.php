@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:  Partenaire-Single
+Template Name: Partenaire Single
 */
 
 get_header(); ?>

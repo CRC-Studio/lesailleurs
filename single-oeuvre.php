@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:  Œuvre Single
+Template Name: Œuvre Single
 */
 
 get_header(); ?>

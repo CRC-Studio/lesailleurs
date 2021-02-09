@@ -1,8 +1,20 @@
 // main: ../../../style.sass
 
+  Exemple de HTML :
+
+  <form class="form" action="./core/modifier__diffuseur.php" method="post">
+    <div class="form__input-container">
+      <input type="hidden" name="diffuseur__id" placeholder="Id" class="form__input-full" value="<?php echo $row["diffuseur__id"] ?>">
+      <input type="text" name="societe" placeholder="Société" class="form__input-half" value="<?php echo $row["diffuseur__societe"] ?>">
+      <input type="text" name="siret" placeholder="Siret" class="form__input-half form__input-seperator" value="<?php echo $row["diffuseur__siret"] ?>">
+    </div>
+      <input type="submit" name="Enregistrer" value="Enregistrer" class="btn btn--plain">
+  </form>
+
+
 
 ::placeholder
-  color: $color-accent
+  color: $color-secondaire
 .form
   float: left
   width: 100%
@@ -13,30 +25,30 @@
   width: 100%
 
 .form__input-container
-  margin: $modulor 0
+  margin: $modulor*3 0
   float: left
   width: 100%
-  border: 1px solid #CCC
+  border-top: 1px solid $color-secondaire
   border-bottom: none
 
   input, textarea, .form__custom-select
     float: left
     height: $modulor*2
-    padding: ($modulor/3)*2
+    padding: $modulor*3 0
     border: none
-    border-bottom: 1px solid #CCC
+    border-bottom: 1px solid $color-secondaire
     resize: none
-    font-size: 17px
-    font-family: 'Yantramanav', sans-serif
-    color: $color-text
+    font-size: $modulor*3
+    color: $color-principale
     background: white
     transition: background 0.5s
 
   textarea
-    height: auto
+    padding: $modulor 0
+    height: $modulor*14
 
   input:focus, textarea:focus
-    background: #fafafa
+    background: lighten($color-secondaire, 30%)
     outline: none
     transition: background 0.5s
 
@@ -47,48 +59,8 @@
     width: 50%
 
   .form__input-seperator
-    border-right: 1px solid #CCC
-
-.form__custom-select
-  position: relative
-  font-family: Arial
-
-  select
-    display: none
-
-  .select-selected
-    &:after
-      position: absolute
-      content: ""
-      top: 14px
-      right: 10px
-      width: 0
-      height: 0
-    &.select-arrow-active:after
-      top: 7px
-
-  .select-items div, .select-selected
-    color: $color-text
-    cursor: pointer
-
-  .select-items
-    position: absolute
-    background-color: $color-back
-    top: 100%
-    left: 0
-    right: 0
-    z-index: 99
-    border: 1px solid #CCC
-
-    div
-      padding: ($modulor/3)*2
-      border-bottom: 1px solid #CCC
-
-  .select-hide
-    display: none
-
-  .select-items div:hover, .same-as-selected
-    background-color: rgba(0, 0, 0, 0.1)
+    padding-left: $modulor*2
+    border-left: 1px solid $color-secondaire
 
 
 @media (max-width: 576px)

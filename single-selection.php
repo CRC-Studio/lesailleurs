@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:  Sélection-Single
+Template Name:  Sélection Single
 */
 
 get_header(); ?>

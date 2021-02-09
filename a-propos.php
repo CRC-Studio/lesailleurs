@@ -11,6 +11,7 @@ get_header(); ?>
   <?php get_template_part('blocks/block__editorblocksystem') ?>
   <?php get_template_part('blocks/block__partenaires') ?>
   <?php get_template_part('blocks/block__biglinks') ?>
+  <?php get_template_part('blocks/block__form') ?>
 
 </main>
 

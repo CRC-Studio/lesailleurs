@@ -70,7 +70,3 @@ function multilangue_support(){
 // Support des images de couvertures
 
 add_theme_support( 'post-thumbnails' );
-
-// Desactivé bar admin
-
-show_admin_bar(false);

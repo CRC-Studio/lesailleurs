@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name:  Résidence d'écriture
+Template Name: Taxonomie
 */
 
 get_header(); ?>

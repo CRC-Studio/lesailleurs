@@ -36,8 +36,10 @@
             </div>
             <div class="cover__img-overlay"></div>
           </div>
-        <?php endif; ?>
-      </div>
-    </section>
-  <?php endwhile; ?>
+        <?php else: ?>
+        <div class="cover__is--empty"></div>
+      <?php endif; ?>
+    </div>
+  </section>
+<?php endwhile; ?>
 <?php endif; ?>

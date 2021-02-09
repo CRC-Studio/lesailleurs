@@ -33,11 +33,8 @@ $language_menu = wp_nav_menu(
 
 <header class="l-header row">
 	<div class="l3">
-		<a href="<?php echo home_url(); ?>" class="headline tooltip--hover">
+		<a href="<?php echo home_url(); ?>" class="headline">
 			<?php bloginfo( 'name' ); ?>
-			<div class="tooltip tooltip_top">
-				<div class="tooltip__content">A tooltip</div>
-			</div>
 		</a>
 	</div>
 	<div class="l-header__baseline l3">
@@ -45,34 +42,69 @@ $language_menu = wp_nav_menu(
 		<span>QUI EXPLORE L'IMMERSION</span>
 	</div>
 
+	<div class="l-header__nav-fixed">
+		<?php // menu Changement de ville ?>
 
-
-	<div class="nav__button">
-		<span id="mobile_control_1" class="">&nbsp;</span>
-		<span id="mobile_control_2" class="">&nbsp;</span>
-		<span id="mobile_control_3" class="">&nbsp;</span>
-	</div>
-
-	<?php // menu Changement de Villes ?>
-	<div class="l3">
-		
-	</div>
-
-
-	<?php // menu Changement de Langues ?>
-
-	<?php if ( $language_menu ): ?>
-		<div class="l-header__nav-language l3">
-			<?php echo $language_menu; ?>
+		<div class="l-header__nav-editons">
+			<span class="body">Explorer</span>
+			<div class="divider-h"></div>
+			<span class="body">Paris</span>
+			<label class="switch tooltip--hover">
+				<input type="checkbox">
+				<span class="slider round"></span>
+				<div class="tooltip tooltip_top">
+					<div class="tooltip__content">Coming Soon!</div>
+				</div>
+			</label>
+			<span>Arles</span>
 		</div>
-		<?php endif; ?>
+
+		<div class="l-header__nav-r">
+			<?php // menu Changement de Langues ?>
+
+			<?php if ( $language_menu ): ?>
+				<div class="l-header__nav-language isv--parent">
+					<?php echo $language_menu; ?>
+				</div>
+			<?php endif; ?>
+
+			<?php // button Menu ?>
+
+			<div class="nav__button">
+				<span id="mobile_control_1" class="">&nbsp;</span>
+				<span id="mobile_control_2" class="">&nbsp;</span>
+				<span id="mobile_control_3" class="">&nbsp;</span>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
 
 
 
 	<?php // menu Fullscreen ?>
 
-	<div class="l-header__nav">
-		<div class="l6 l-header__scene"></div>
+
+	<?php // couverture ?>
+
+	<div class="l-header__nav cover__big">
+		<div class="l6 l-header__scene cover__color09">
+			<?php $images = get_field('edt__menu-imgs'); ?>
+			<?php if ($images): ?>
+				<?php $rand = array_rand($images, 1); // On choisi une image au hasard dans la galerie ?>
+				<div class="image-full">
+					<div class="image-full__content">
+						<img src="<?php echo $images[$rand]['url']; ?>" alt="<?php echo $images[$rand]['alt']; ?>" />
+					</div>
+				</div>
+			<?php else: ?>
+				<div class="cover__is--empty"></div>
+			<?php endif; ?>
+		</div>
 		<div class="l6 l-header__content">
 
 			<?php // menu principal ?>
@@ -81,17 +113,30 @@ $language_menu = wp_nav_menu(
 				<nav class="l-header__nav-main">
 					<?php echo $primary_menu; ?>
 				</nav>
-
-
-				<div class="divider"></div>
 			<?php endif; ?>
 
 			<?php // menu secondaire ?>
 
-
+			<?php if( have_rows('edt__menu') ): ?>
+				<div class="divider"></div>
+				<nav class="nav__secondaire color__legende">
+					<?php while( have_rows('edt__menu') ): the_row(); ?>
+						<?php
+						$link = get_sub_field('edt__menu-url');
+						if( $link ):
+							$link_url = $link['url'];
+							$link_title = $link['title'];
+							$link_target = $link['target'] ? $link['target'] : '_self';
+							?>
+							<li>
+								<a class="lead_paragraph" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+							</li>
+						<?php endif; ?>
+					<?php endwhile; ?>
+				</nav>
+			<?php endif; ?>
 
 			<?php // liens secondaire ?>
-
 
 			<?php if ( $secondary_links ): ?>
 				<div class="l-header__links row body">

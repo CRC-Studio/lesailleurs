@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Édtions-Single
+Template Name: Édtions Single
 */
 
 get_header(); ?>
