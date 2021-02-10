@@ -6,8 +6,8 @@
     <section class="slc">
       <div class="row ebs__titre">
         <div class="m2">
-          <!-- <h2 class="subheading"><?php _e("La suite de la sélections","lesailleurs") ?></h2> -->
-					<h2 class="subheading"><?php _e("La sélections","lesailleurs") ?></h2>
+          <!-- <h2 class="subheading"><?php _e("La suite de la sélection","lesailleurs") ?></h2> -->
+					<h2 class="subheading"><?php _e("La sélection","lesailleurs") ?></h2>
           <div class="divider"></div>
         </div>
       </div>

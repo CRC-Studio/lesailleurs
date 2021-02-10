@@ -28,7 +28,7 @@
 					<?php endforeach; ?>
 				</span>
 			<?php endif; ?>
-			<span class="subheading">En savoir plus →</span>
+			<span class="subheading"><?php _e("En savoir plus","lesailleurs") ?> →</span>
 		</div>
 	</div>
 </li>
