@@ -63,7 +63,7 @@ add_action('add_meta_boxes', 'plt_hide_wordpress_seo_metaboxes', 20);
 
 add_filter( 'manage_edit-post_columns', 'yoast_seo_admin_remove_columns', 10, 1 );
 add_filter( 'manage_edit-page_columns', 'yoast_seo_admin_remove_columns', 10, 1 );
-add_filter( 'manage_edit-edtion_columns', 'yoast_seo_admin_remove_columns', 10, 1 );
+add_filter( 'manage_edit-edition_columns', 'yoast_seo_admin_remove_columns', 10, 1 );
 add_filter( 'manage_edit-auteur_columns', 'yoast_seo_admin_remove_columns', 10, 1 );
 add_filter( 'manage_edit-evenement_columns', 'yoast_seo_admin_remove_columns', 10, 1 );
 add_filter( 'manage_edit-partenaire_columns', 'yoast_seo_admin_remove_columns', 10, 1 );

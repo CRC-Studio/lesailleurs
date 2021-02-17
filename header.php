@@ -7,7 +7,7 @@
 		<meta content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 		<!-- <meta content="" name="description">
 		<meta content="" name="keywords">
-		<meta name="contact" content="oripeau@la-casse.com"> -->
+		<meta name="contact" content="hello@crc-sutdio.fr"> -->
 		<meta name="robots" content="index, follow, all">
 		<meta name="googlebot" content="index, follow, all">
 		<meta name="googlebot-image" content="index, follow, all">

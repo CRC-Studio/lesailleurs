@@ -18,7 +18,7 @@
         <?php  $slc__marh = random_int(1, 6); ?>
         <?php  $slc__marv = random_int(1, 6); ?>
         <?php  $slc__vit = random_int(1, 6); ?>
-        <article class="slc__slc  <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($slc__vit)) {echo " slc__vit".$slc__vit;}; ?>" onclick="location.href='<?php the_permalink(); ?>'">
+        <article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($slc__vit)) {echo " slc__vit".$slc__vit;}; ?>" onclick="location.href='<?php the_permalink(); ?>'">
           <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
         </article>
         <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>

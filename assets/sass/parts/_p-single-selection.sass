@@ -12,7 +12,7 @@
 
   &:hover
     border-radius: $modulor
-    background-color: $color-secondaire
+    background-color: lighten($color-secondaire, 30%)
     transition: all 0.5s
 
     .slc__overlay
@@ -70,7 +70,7 @@
   bottom: 0
   left: 0
   right: 0
-  background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 1) 20%)
+  background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 0.97) 20%)
   opacity: 1
   transition: all 4s
 
@@ -95,13 +95,13 @@
     height: 25vw
 
   .slc__overlay
-    background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 1) 50%)
+    background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 0.97) 50%)
 
 .slc__lar3, .slc__lar4
   width: 50%
 
   .slc__overlay
-    background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 1) 33%)
+    background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 0.97) 33%)
 
 .slc__lar5, .slc__lar6
   width: 75%
@@ -129,3 +129,16 @@
   margin-bottom: $modulor*6
 .slc__marv6
   margin-bottom: $modulor*12
+
+.slc__vit1
+  top: $modulor*3
+.slc__vit2
+  top: $modulor*6
+.slc__vit3
+  top: $modulor*9
+.slc__vit4
+  top: $modulor*12
+.slc__vit5
+  top: $modulor*15
+.slc__vit6
+  top: $modulor*18

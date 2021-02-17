@@ -18,7 +18,7 @@
     <?php // Construction du HTML ?>
 
     <section class="cover <?php echo $cover__size." ".$cover__color ?>">
-      <div class="cover__container isv--parent">
+      <div class="cover__container cover__text isv--parent">
         <div class="cover__content">
           <h1 class="cover__title display3"><?php the_title(); ?></h1>
           <?php if( $soustitre ): ?>
@@ -27,7 +27,7 @@
           <?php endif; ?>
         </div>
       </div>
-      <div class="cover__image">
+      <div class="cover__container cover__image">
         <?php $image = get_sub_field('cover__img'); ?>
         <?php if( !empty( $image ) ): ?>
           <div class="image-full">
@@ -40,6 +40,11 @@
         <div class="cover__is--empty"></div>
       <?php endif; ?>
     </div>
+    <?php if( $cover__size == "cover__big" ): ?>
+    <div class="cover__scroll-down">
+      <?php get_template_part('assets/img/inline', 'icon_scroll-down.svg'); ?>
+    </div>
+    <?php endif; ?>
   </section>
 <?php endwhile; ?>
 <?php endif; ?>

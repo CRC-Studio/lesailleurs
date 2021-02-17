@@ -5,14 +5,14 @@
   display: flex
   padding: 0
 
-.cover > div
+.cover__container
   float: left
   width: 50%
 
-.cover__big .cover__container
-  height: 100vh
+.cover__big .cover__text
+  height: calc(100vh - #{$header_barre-height})
 
-.cover__small .cover__container
+.cover__small .cover__text
   min-height: 33vh
 
 .cover__small
@@ -26,12 +26,32 @@
 .cover__content
   padding: $modulor
 
-.btn__scroll-cover
+.cover__scroll-down
   position: absolute
-  width: 50px
-  height: 50px
-  bottom: 60px
+  left: 50%
+  bottom: $modulor*0.5
+  width: $modulor*4.5
+  height: $modulor*4.5
+  border-radius: $modulor*4.5
   cursor: pointer
+  transform: translate(-50%, -50%)
+  transition: all 2s
+
+  svg
+    margin: $modulor*1.5
+    width: $modulor*1.5
+    transition: all 2s
+
+  &:hover
+    width: $modulor*5
+    height: $modulor*5
+    background: $color-secondaire !important
+    box-shadow: 0 10px 20px rgba($color__12, 0.19), 0 6px 6px rgba($color__12, 0.23)
+    transition: all 0.2s
+
+    svg
+      width: $modulor*2
+      transition: all 0.2s
 
 // Les classes .cover__info et .cover__nocolor sont utilisées sur les page Single-oeuvre.php et Single-aritiste.php. See you broth'
 
@@ -59,10 +79,11 @@
   &::after
     content: ""
     position: absolute
-    top: 33%
-    left: 16.66%
     width: 66%
+    top: 100%
+    left: 50%
     padding-top: 66%
+    transform: translate(-50%, -50%)
     border-radius: 50%
 
 // Theme coloré 001
@@ -81,6 +102,10 @@
     background: linear-gradient(100deg, rgba($color__01, 1) 20%, rgba($color__01, 0) 80%)
   .cover__is--empty::after
     background: $color__06
+  .cover__scroll-down
+    background: $color__04
+    svg
+      fill: $color__01
 
 // Theme coloré 002
 
@@ -98,6 +123,10 @@
     background: linear-gradient(100deg, rgba($color__02, 1) 20%, rgba($color__02, 0) 80%)
   .cover__is--empty::after
     background: $color__06
+  .cover__scroll-down
+    background: $color__05
+    svg
+      fill: $color__02
 
 // Theme coloré 003
 
@@ -115,6 +144,10 @@
     background: linear-gradient(100deg, rgba($color__03, 1) 20%, rgba($color__03, 0) 80%)
   .cover__is--empty::after
     background: $color__06
+  .cover__scroll-down
+    background: $color__01
+    svg
+      fill: $color__03
 
 // Theme coloré 004
 
@@ -132,6 +165,10 @@
     background: linear-gradient(100deg, rgba($color__04, 1) 20%, rgba($color__04, 0) 80%)
   .cover__is--empty::after
     background: $color__08
+  .cover__scroll-down
+    background: $color__01
+    svg
+      fill: $color__04
 
 // Theme coloré 005
 
@@ -149,6 +186,10 @@
     background: linear-gradient(100deg, rgba($color__05, 1) 20%, rgba($color__05, 0) 80%)
   .cover__is--empty::after
     background: $color__06
+  .cover__scroll-down
+    background: $color__02
+    svg
+      fill: $color__05
 
 // Theme coloré 006
 
@@ -166,6 +207,10 @@
     background: linear-gradient(100deg, rgba($color__06, 1) 20%, rgba($color__06, 0) 80%)
   .cover__is--empty::after
     background: $color__06
+  .cover__scroll-down
+    background: $color__08
+    svg
+      fill: $color__06
 
 // Theme coloré 007
 
@@ -183,6 +228,10 @@
     background: linear-gradient(100deg, rgba($color__07, 1) 20%, rgba($color__07, 0) 80%)
   .cover__is--empty::after
     background: $color__08
+  .cover__scroll-down
+    background: $color__06
+    svg
+      fill: $color__07
 
 // Theme coloré 008
 
@@ -200,6 +249,10 @@
     background: linear-gradient(100deg, rgba($color__08, 1) 20%, rgba($color__08, 0) 80%)
   .cover__is--empty::after
     background: $color__03
+  .cover__scroll-down
+    background: $color__10
+    svg
+      fill: $color__08
 
 // Theme coloré 009
 
@@ -217,6 +270,10 @@
     background: linear-gradient(100deg, rgba($color__09, 1) 20%, rgba($color__09, 0) 80%)
   .cover__is--empty::after
     background: $color__06
+  .cover__scroll-down
+    background: $color__06
+    svg
+      fill: $color__09
 
 // Theme coloré 010
 
@@ -234,6 +291,10 @@
     background: linear-gradient(100deg, rgba($color__10, 1) 20%, rgba($color__10, 0) 80%)
   .cover__is--empty::after
     background: $color__06
+  .cover__scroll-down
+    background: $color__08
+    svg
+      fill: $color__10
 
 // Theme coloré 011
 
@@ -251,6 +312,10 @@
     background: linear-gradient(100deg, rgba($color__11, 1) 20%, rgba($color__11, 0) 80%)
   .cover__is--empty::after
     background: $color__06
+  .cover__scroll-down
+    background: $color__08
+    svg
+      fill: $color__11
 
 // Theme coloré 012
 
@@ -268,3 +333,7 @@
     background: linear-gradient(100deg, rgba($color__12, 1) 20%, rgba($color__12, 0) 80%)
   .cover__is--empty::after
     background: $color__08
+  .cover__scroll-down
+    background: $color__09
+    svg
+      fill: $color__12

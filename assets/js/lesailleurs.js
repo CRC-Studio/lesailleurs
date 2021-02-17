@@ -25,13 +25,12 @@ jQuery( document ).ready(function( $ ) {
 
 	// Bouton Scroll cover
 
-	$('.btn__scroll-cover').click(function(){
+	$('.cover__scroll-down').click(function(){
     var y = $(window).scrollTop();
     var y_next = Math.ceil( y / $(window).height() );
     if ( y >= y_next ){ y_next++ };
-    $("html, body").animate({ scrollTop: y_next * $(window).height() }, 1500, 'easeInOutExpo');
+    $("html, body").animate({ scrollTop: y_next * $(window).height() }, 3000, 'easeInOutQuart');
   });
-
 
 	// Block Accordion
 
@@ -43,6 +42,12 @@ jQuery( document ).ready(function( $ ) {
 				$(this).closest('.accordion').addClass('is--active');
 			}
 		});
+
+    // Effet is--float
+
+    $(".is--float").appear(function() {
+        $(this).css("top", 0)
+    });
 
 
 		// Extention Mailchimp
