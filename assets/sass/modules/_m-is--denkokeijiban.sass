@@ -1,0 +1,38 @@
+// main: ../../../style.sass
+
+  Le module Is--DenkoKeijiban permet de faire défiler
+  le contenu de <li> à la façon d'un panneau à LED.
+
+  Attention : pensez à activer le module is--denko
+  dans le fichier assets/js/monobloc.js
+
+  Exemple de HTML :
+
+  <ul>
+    <li class="is--denko">
+      <span>Something</span>
+    </li>
+    <li class="is--denko">
+      <span>Something</span>
+    </li>
+    <li class="is--denko">
+      <span>Something</span>
+    </li>
+  </ul>
+
+
+
+// main: ../../../style.sass
+
+
+.is--denko
+  display: block
+  float: left
+  width: max-content
+  animation: denkokeijiban 600s linear infinite alternate
+
+@keyframes denkokeijiban
+  from
+    transform: translate(0%)
+  to
+    transform: translate(-90%)

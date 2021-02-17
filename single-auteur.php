@@ -15,7 +15,7 @@ get_header(); ?>
   <?php // Gestion de la cover ?>
 
   <section class="cover cover__small cover__nocolor">
-    <div class="cover__container isv--parent">
+    <div class="cover__container cover__text isv--parent">
       <div class="cover__content">
         <h1 class="cover__title display3"><?php the_title(); ?></h1>
         <div class="cover__info lead_paragraph l10 m2">
@@ -75,7 +75,7 @@ get_header(); ?>
       <?php foreach( $oeuvres as $oeuvre ): ?>
         <?php $post = $oeuvre; ?>
         <?php setup_postdata($post); // Setup this post for WP functions (variable must be named $post). ?>
-        <article class="slc__slc slc__lar6 slc__marh5" onclick="location.href='<?php the_permalink(); ?>'">
+        <article class="slc__slc slc__lar6 slc__marh5 isf__vit2 is--zoooom is--float" onclick="location.href='<?php the_permalink(); ?>'">
           <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
         </article>
         <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>

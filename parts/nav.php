@@ -4,7 +4,7 @@
 	array(
 		'menu'						=> 'Menu principal',
 		'theme_location'  => 'primary-menu',
-		'items_wrap' 			=> '<ul class="nav__main display1">%3$s</ul>',
+		'items_wrap' 			=> '<ul class="nav__main display1 is--not--hover">%3$s</ul>',
 		'container'				=> true,
 		'echo'						=> false
 	)
@@ -13,7 +13,7 @@ $secondary_links = wp_nav_menu(
 	array(
 		'menu'						=> 'Liens secondaires',
 		'theme_location'  => 'secondary-links',
-		'items_wrap' 			=> '<ul>%3$s</ul>',
+		'items_wrap' 			=> '<ul class="is--not--hover">%3$s</ul>',
 		'container'				=> false,
 		'echo'						=> false
 	)
@@ -22,7 +22,7 @@ $language_menu = wp_nav_menu(
 	array(
 		'menu'						=> 'Language Menu',
 		'theme_location'  => 'language-menu',
-		'items_wrap' 			=> '<ul>%3$s</ul>',
+		'items_wrap' 			=> '<ul class="is--not--hover">%3$s</ul>',
 		'container'				=> false,
 		'echo'						=> false
 	)

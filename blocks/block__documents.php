@@ -24,7 +24,7 @@
       <?php // Gestion des documents avec avec un fields Flexible Content.  ?>
       <?php // ↳ On utilise des Flexible Content au cas où des docs seront héberger Ailleurs  ?>
 
-      <div class="row l12 doc__docs">
+      <div class="row doc__docs">
 
         <?php if( have_rows('doc__docs') ): ?>
           <?php while( have_rows('doc__docs') ): the_row(); ?>
@@ -38,8 +38,10 @@
               <?php if( have_rows('doc__group02') ): ?>
                 <?php while( have_rows('doc__group02') ): the_row(); ?>
                   <?php $image = get_sub_field('doc__cover'); ?>
+                  <?php  $isf__vit = random_int(1, 3); ?>
 
-                  <div class="doc__doc <?php the_sub_field('doc__size'); ?>">
+
+                  <div class="doc__doc <?php the_sub_field('doc__size'); ?> is--float <?php if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>">
                     <div class="doc__wrapper">
                       <div class="doc__container">
                         <?php echo wp_get_attachment_image( $image['ID'], 'full' ); ?>

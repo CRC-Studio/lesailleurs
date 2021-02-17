@@ -58,7 +58,7 @@
       <?php // Reapeter accordion ?>
 
       <?php if( $acn__repeater ): ?>
-        <ul class="acn__acn col l8">
+        <ul class="acn__acn col l8 is--not--hover">
           <?php foreach( $acn__repeater as $row ) : ?>
             <li class="accordion">
               <div class="accordion__titre">

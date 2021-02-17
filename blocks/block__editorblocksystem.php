@@ -108,7 +108,7 @@
             <?php endif; ?>
 
           </div>
-          <button id="ebs__readmore-btn" class="btn btn--outline"><?php _e("En savoir plus","lesailleurs") ?></button>
+          <button class="btn btn--outline ebs__readmore-btn"><?php _e("En savoir plus","lesailleurs") ?></button>
         </div>
 
 

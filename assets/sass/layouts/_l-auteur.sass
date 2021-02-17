@@ -5,17 +5,23 @@
   border-top: 1px solid $color__02
 
 .l-auteurs__item
-  padding: $modulor*3 0
   border-bottom: 1px solid $color__02
   overflow: hidden
   background-color: $color__08
   background-image: linear-gradient(90deg, rgba($color__06, 0) 0%, $color__06 100%)
   transition: all 5s
 
+  a:link
+    padding: $modulor*3 0
+
+
   &:hover
-    padding: $modulor*6 0
     background-color: lighten($color__08, 20)
-    transition: all 0.5ss
+    transition: all 0.5s
+
+    a:link
+      padding: $modulor*6 0
+
 
   span
     color: $color__01

@@ -4,7 +4,7 @@
 			array(
 				'menu'						=> 'Liens Footer',
 				'theme_location'  => 'footer-links',
-				'items_wrap' 			=> '<ul class="row">%3$s</ul>',
+				'items_wrap' 			=> '<ul class="row is--not--hover">%3$s</ul>',
 				'container'				=> false,
 				'echo'						=> false
 			)

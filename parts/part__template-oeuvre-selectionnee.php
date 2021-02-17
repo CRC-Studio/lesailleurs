@@ -62,7 +62,7 @@
 </ul>
 </div>
 </div>
-<div class="slc__img">
+<div class="slc__img is--zoooom--box">
 	<div class="image-full__content">
 		<?php the_post_thumbnail(); ?>
 	</div>

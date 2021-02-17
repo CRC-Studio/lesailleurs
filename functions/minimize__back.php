@@ -1,37 +1,23 @@
 <?php
 
 
+
 /***************************************/
 /*                                     */
-/*    		 minimize Wordpress  	       */
+/*  		  minimize Backoffice    	     */
 /*                                     */
 /***************************************/
 
-
-// Desactivé bar admin
+/**
+* Desactivé bar admin
+*/
 
 show_admin_bar(false);
 
-// function to remove the dashboard widgets, but only for non-admin users
-// if you want to remove the widgets for admin(s) too, remove the 'if' statement within the function
-
-function remove_dashboard_widgets() {
-  if ( ! current_user_can( 'manage_options' ) ) {
-    remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
-    remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
-    remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
-    remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
-    remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
-    remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
-    remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
-    remove_meta_box( 'dashboard_secondary', 'dashboard', 'side' );
-  }
-}
-add_action( 'wp_dashboard_setup', 'remove_dashboard_widgets' );
 
 
 /**
-* Remove Yoast Dash Widget
+* Supprime les Widget de Yoast
 */
 
 
@@ -85,7 +71,6 @@ function yoast_seo_admin_remove_columns( $columns ) {
 
 add_action( 'init', function () {
     $wpseo_front = WPSEO_Frontend::get_instance();
-
     remove_filter( 'pre_get_document_title', array( $wpseo_front, 'title' ), 15 );
     remove_filter( 'wp_title', array( $wpseo_front, 'title' ), 15 );
 } );
@@ -106,7 +91,6 @@ function plt_hide_wordpress_seo_menus() {
 	//Hide "SEO → Premium".
 	remove_submenu_page('wpseo_dashboard', 'wpseo_licenses');
 }
-
 add_action('admin_menu', 'plt_hide_wordpress_seo_menus', 11);
 
 
@@ -114,6 +98,7 @@ add_action('admin_menu', 'plt_hide_wordpress_seo_menus', 11);
 /**
 * Remove all taxonomy box from edit screen
 */
+
 function mytheme_remove_all_metaboxes() {
   $args = array(
     'public'   => true,

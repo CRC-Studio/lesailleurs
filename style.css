@@ -327,14 +327,14 @@ svg {
   transition: opacity 3s;
 }
 
-#ebs__readmore-btn {
+.ebs__readmore-btn {
   position: absolute;
   bottom: 42px;
   z-index: 1;
 }
 
 .ebs__full .ebs__overlay,
-.ebs__full #ebs__readmore-btn {
+.ebs__full .ebs__readmore-btn {
   pointer-events: none;
   opacity: 0;
   transition: opacity 3s;
@@ -1224,6 +1224,22 @@ svg {
   fill: #09203F;
 }
 
+.is--denko {
+  display: block;
+  float: left;
+  width: max-content;
+  animation: denkokeijiban 600s linear infinite alternate;
+}
+
+@keyframes denkokeijiban {
+  from {
+    transform: translate(0%);
+  }
+  to {
+    transform: translate(-90%);
+  }
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 14px;
@@ -1244,6 +1260,14 @@ svg {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: black;
+}
+
+.is--not--hover li {
+  transition: opacity 0.5s;
+}
+
+.not--hover {
+  opacity: 0.4;
 }
 
 .isv--parent {
@@ -1410,6 +1434,56 @@ em {
   height: 2px;
   margin: 14px 0;
   background: black;
+}
+
+.is--zoooom--box {
+  overflow: hidden;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: all 0.5s;
+}
+
+.is--zoooom--box img {
+  transform: scale(1);
+  transition: transform 2s ease-in;
+}
+
+.is--zoooom:hover .is--zoooom--box {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+  transition: all 1s;
+}
+
+.is--zoooom:hover img {
+  transform: scale(1.1);
+  transition: transform 15s ease-out;
+}
+
+.is--float {
+  position: relative;
+  transition: top 5s ease-out;
+}
+
+.isf__vit1 {
+  top: 42px;
+}
+
+.isf__vit2 {
+  top: 84px;
+}
+
+.isf__vit3 {
+  top: 126px;
+}
+
+.isf__vit4 {
+  top: 168px;
+}
+
+.isf__vit5 {
+  top: 210px;
+}
+
+.isf__vit6 {
+  top: 252px;
 }
 
 .tooltip--hover {
@@ -1976,30 +2050,6 @@ em {
   margin-bottom: 168px;
 }
 
-.slc__vit1 {
-  top: 42px;
-}
-
-.slc__vit2 {
-  top: 84px;
-}
-
-.slc__vit3 {
-  top: 126px;
-}
-
-.slc__vit4 {
-  top: 168px;
-}
-
-.slc__vit5 {
-  top: 210px;
-}
-
-.slc__vit6 {
-  top: 252px;
-}
-
 .l-error {
   background: black;
   color: white;
@@ -2288,7 +2338,6 @@ em {
 }
 
 .l-auteurs__item {
-  padding: 42px 0;
   border-bottom: 1px solid #523D80;
   overflow: hidden;
   background-color: #667EE4;
@@ -2296,10 +2345,17 @@ em {
   transition: all 5s;
 }
 
+.l-auteurs__item a:link {
+  padding: 42px 0;
+}
+
 .l-auteurs__item:hover {
-  padding: 84px 0;
   background-color: #bdc7f3;
-  transition: all 0.5ss;
+  transition: all 0.5s;
+}
+
+.l-auteurs__item:hover a:link {
+  padding: 84px 0;
 }
 
 .l-auteurs__item span {
