@@ -5,14 +5,61 @@
 @media (max-width: 1200px)
  display: block
 
+@media (max-width: 1080px)
+ .switch input
+  width: $modulor *2.5
+
+ input:checked+.slider:before
+  transform: translateX(19px)
+
 // Large devices (desktops, 992px and up)
 @media (max-width: 992px)
-  display: block
+ .ebs__links, .display1
+   padding-right: $modulor
+
+ .col
+   padding-right: $modulor /2
 
 // Medium devices (tablets, 768px and up)
 @media (max-width: 768px)
- display: block
+
+ .ebs__links, .display1
+   padding-right: $modulor*2
+
+ .cover__content
+   padding: $modulor*2
+
+ .display3
+   font-size: $modulor*3
+
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px)
- display: block
+
+ .l-header__baseline.l3
+   display: none
+
+ .l-header__nav-fixed
+   width: 66%
+
+ .ebs__links li
+   padding-bottom: $modulor
+
+ .cover__container, .l5
+
+ .display1
+   font-size: $modulor*2
+   margin-right: 8.33%
+
+ input.form__input-half.form__input-seperator
+   width: 100%
+   padding-left: 0
+
+ .l5
+   width: 100%
+
+ .l8
+   width: 83.34%
+
+ input.btn.btn--outline
+   display: inline-block
