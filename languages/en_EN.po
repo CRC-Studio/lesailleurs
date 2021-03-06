@@ -1,13 +1,15 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: Les Ailleurs\n"
-"POT-Creation-Date: 2021-02-09 18:36-0400\n"
-"PO-Revision-Date: 2021-02-16 19:41-0400\n"
+"POT-Creation-Date: 2021-03-06 11:55-0400\n"
+"PO-Revision-Date: 2021-03-06 12:07-0400\n"
+"Last-Translator: CRC Studio <hello@crc-studio.fr>\n"
 "Language-Team: CRC Studio <hello@crc-studio.fr>\n"
+"Language: en_EN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -16,13 +18,11 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: CRC Studio <hello@crc-studio.fr>\n"
-"Language: en_EN\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #: blocks/block__editorblocksystem.php:111
-#: parts/part__template-evenement-single.php:31
+#: parts/part__template-evenement-single.php:31 parts/rgpd.php:14
 msgid "En savoir plus"
 msgstr "Read More"
 
@@ -479,24 +479,24 @@ msgstr "Name of new type of event"
 msgid "Type d'évenement"
 msgstr "Type of event"
 
-#: functions/custom_menu.php:19
+#: functions/custom_menu.php:26
 msgid "Menu principal"
 msgstr "Main menu"
 
-#: functions/custom_menu.php:20
+#: functions/custom_menu.php:27
 #, fuzzy
 msgid "Liens Footer"
 msgstr "Footer links"
 
-#: functions/custom_menu.php:21
+#: functions/custom_menu.php:28
 msgid "Liens secondaires"
 msgstr "Secondary links"
 
-#: functions/custom_menu.php:22
+#: functions/custom_menu.php:29
 msgid "Menu secondaire"
 msgstr "Secondary menu"
 
-#: functions/custom_menu.php:23
+#: functions/custom_menu.php:30
 msgid "Language Menu"
 msgstr "Language Menu"
 
@@ -535,6 +535,14 @@ msgstr "previous selections"
 #: parts/part__template-single-edition.php:52
 msgid "Voir tous les événements"
 msgstr "See all the events"
+
+#: parts/rgpd.php:13
+msgid "OK"
+msgstr "OK"
+
+#: parts/rgpd.php:15
+msgid "Décliner"
+msgstr "Refuse"
 
 #: single-auteur.php:28
 #, fuzzy

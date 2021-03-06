@@ -38,8 +38,8 @@ $language_menu = wp_nav_menu(
 		</a>
 	</div>
 	<div class="l-header__baseline l3">
-		<span>LE FESTIVAL</span>
-		<span>QUI EXPLORE L'IMMERSION</span>
+		<span><?php _e("LE FESTIVAL","lesailleurs") ?></span>
+		<span><?php _e("QUI EXPLORE L'IMMERSION","lesailleurs") ?></span>
 	</div>
 
 	<div class="l-header__nav-fixed">
@@ -77,11 +77,6 @@ $language_menu = wp_nav_menu(
 			</div>
 		</div>
 	</div>
-
-
-
-
-
 
 
 

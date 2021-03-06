@@ -1,3 +1,13 @@
+
+<!--
+Le fichier loco.xml permet de supporter la traduction d'élément
+situé dans le code du template
+
+  Exemple d'HTML :
+    <?php _e("OK","lesailleurs") ?
+ -->
+
+
 <?xml version="1.0" encoding="utf-8"?>
 <bundle name="lesailleurs">
   <domain name="lesailleurs">
