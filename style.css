@@ -2529,6 +2529,7 @@ em {
   input:checked + .slider:before {
     transform: translateX(19px);
   }
+<<<<<<< Updated upstream
   .slc__marv1, .slc__marv2, .slc__marv4, .slc__marv3, .slc__marv5, .slc__marv6 {
     margin-bottom: 42px;
     margin-top: 42px;
@@ -2539,10 +2540,21 @@ em {
   .slc__marv1, .slc__marv2, .slc__marv3, .slc__marv4, .slc__marv5, .slc__marv6 {
     margin-bottom: 56px;
     margin-top: 56px;
+=======
+}
+
+@media (max-width: 992px) {
+  .ebs__links, .display1 {
+    padding-right: 14px;
+  }
+  .col {
+    padding-right: 7px;
+>>>>>>> Stashed changes
   }
 }
 
 @media (max-width: 768px) {
+<<<<<<< Updated upstream
   .slc__marh1, .slc__marh2, .slc__marh3, .slc__marh4, .slc__marh5, .slc__marh6 {
     margin: 0;
   }
@@ -2580,17 +2592,27 @@ em {
   .lead_paragraph *, .lead_paragraph {
     font-size: 14px;
     line-height: 28px;
+=======
+  .ebs__links, .display1 {
+    padding-right: 28px;
+>>>>>>> Stashed changes
   }
   .cover__content {
     padding: 28px;
   }
+<<<<<<< Updated upstream
   .l-footer__rs ul {
     width: 100%;
     margin-left: 0;
+=======
+  .display3 {
+    font-size: 42px;
+>>>>>>> Stashed changes
   }
 }
 
 @media (max-width: 576px) {
+<<<<<<< Updated upstream
   .cover__container {
     width: 100%;
   }
@@ -2659,5 +2681,32 @@ em {
   }
   .thm__more p {
     width: 100%;
+=======
+  .l-header__baseline.l3 {
+    display: none;
+  }
+  .l-header__nav-fixed {
+    width: 66%;
+  }
+  .ebs__links li {
+    padding-bottom: 14px;
+  }
+  .display1 {
+    font-size: 28px;
+    margin-right: 8.33%;
+  }
+  input.form__input-half.form__input-seperator {
+    width: 100%;
+    padding-left: 0;
+  }
+  .l5 {
+    width: 100%;
+  }
+  .l8 {
+    width: 83.34%;
+  }
+  input.btn.btn--outline {
+    display: inline-block;
+>>>>>>> Stashed changes
   }
 }

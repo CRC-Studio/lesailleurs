@@ -25,7 +25,6 @@ add_action( 'wp_enqueue_scripts',  'reset_wordpress' );
 * (peut faire déconner de vieux plugin)
 */
 
-
 add_action('wp_default_scripts', function ($scripts) {
     if (!empty($scripts->registered['jquery'])) {
         $scripts->registered['jquery']->deps = array_diff($scripts->registered['jquery']->deps, ['jquery-migrate']);
@@ -59,3 +58,15 @@ function disable_emojis_tinymce( $plugins ) {
 		return array();
 	}
 }
+
+
+/**
+* Clean Menu Wordpress
+*/
+
+function wp_nav_menu_attributes_filter($var) {
+	return is_array($var) ? array_intersect($var, array('current-menu-item')) : '';
+}
+add_filter('nav_menu_css_class', 'wp_nav_menu_attributes_filter', 100, 1);
+add_filter('nav_menu_item_id', 'wp_nav_menu_attributes_filter', 100, 1);
+add_filter('page_css_class', 'wp_nav_menu_attributes_filter', 100, 1);

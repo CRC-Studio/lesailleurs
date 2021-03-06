@@ -109,8 +109,6 @@ if ($loop->have_posts()) :?>
   <ul>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-
-
       <?php // On sort le nom des intervenants
       $evenement = $post;
       $backup_post = $post; // Utile pour relancer la loop après un wp_reset_postdata();
