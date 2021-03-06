@@ -73,6 +73,15 @@ jQuery( document ).ready(function( $ ) {
   });
 
 
+  // Bloc partenaire minimize
+
+  var n = 0;
+  while(n < 3){
+    var par_par = $('.par').find('.par__container').eq(n);
+    $('.par__first').append($(par_par).clone());
+    n += 1
+  };
+
 
   // Extention Mailchimp
 

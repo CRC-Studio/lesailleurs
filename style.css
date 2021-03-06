@@ -515,6 +515,8 @@ svg {
 }
 
 .par {
+  position: relative;
+  overflow: hidden;
   background: #667EE4;
 }
 
@@ -553,7 +555,7 @@ svg {
   transition: all 5s;
 }
 
-.par__container {
+.par__all .par__container {
   position: absolute;
   margin: auto;
   top: 56px;
@@ -562,7 +564,7 @@ svg {
   right: 56px;
 }
 
-.par__container img {
+.par__all img {
   display: block;
   position: absolute;
   margin: auto;
@@ -596,6 +598,35 @@ svg {
 .par__overlay .par__read-more {
   position: absolute;
   bottom: 56px;
+}
+
+.par__first {
+  display: none;
+}
+
+.par--is--minimize {
+  height: 364px;
+}
+
+.par--is--minimize .par__all {
+  display: none;
+}
+
+.par--is--minimize .par__first {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  right: -9%;
+  flex-direction: row;
+}
+
+.par--is--minimize .par__container {
+  width: 100%;
+  margin-left: 14px;
+}
+
+.par--is--minimize img {
+  border-radius: 7px;
 }
 
 .acn {

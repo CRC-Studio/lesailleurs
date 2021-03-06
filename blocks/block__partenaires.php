@@ -1,6 +1,6 @@
 
 <?php if( have_rows('par') ): ?>
-  <section class="par">
+  <section class="par par--is--minimize">
 
     <?php if( get_field('par__intro') ): ?>
       <div class="row">
@@ -10,13 +10,19 @@
       </div>
     <?php endif; ?>
 
-    <ul>
+
+    <ul class="par__all">
       <?php while( have_rows('par') ): the_row(); ?>
-        <li>
-          <h3 class="display1"><?php the_sub_field('par__cath'); ?></h3>
+        <li class="accordion is--active">
+          <div class="accordion__titre">
+            <h3 class="display1"><?php the_sub_field('par__cath'); ?></h3>
+            <div class="accordion__icon">
+              <?php get_template_part('assets/img/inline', 'icon_arrow_accordion.svg'); ?>
+            </div>
+          </div>
 
           <?php if( have_rows('par__qqn') ): ?>
-            <ul class="par_pars row">
+            <ul class="par__pars row accordion__container">
               <?php while( have_rows('par__qqn') ): the_row(); ?>
 
                 <?php
@@ -78,5 +84,10 @@
         </li>
       <?php endwhile; ?>
     </ul>
+
+    <div class="par__first">
+      <?php  // Cet <div> se remplie grace à une fonction de assets/js/lesailleurs.js ?>
+    </div>
+
   </section>
 <?php endif; ?>
