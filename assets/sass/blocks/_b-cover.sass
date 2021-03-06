@@ -26,6 +26,20 @@
 .cover__content
   padding: $modulor
 
+
+// Cover Fullscreen
+
+.cover__full
+  .cover__image, .cover__text
+    width: 100%
+    height: calc(100vh - #{$header_barre-height})
+  .cover__text
+    position: absolute
+    z-index: 1
+
+
+// Bouton Scroll Down
+
 .cover__scroll-down
   position: absolute
   left: 50%
@@ -34,6 +48,7 @@
   height: $modulor*4.5
   border-radius: $modulor*4.5
   cursor: pointer
+  z-index: 1
   transform: translate(-50%, -50%)
   transition: all 2s
 
@@ -53,7 +68,9 @@
       width: $modulor*2
       transition: all 0.2s
 
-// Les classes .cover__info et .cover__nocolor sont utilisées sur les page Single-oeuvre.php et Single-aritiste.php. See you broth'
+
+// Les classes .cover__info et .cover__nocolor sont utilisées
+   sur les page Single-oeuvre.php et Single-aritiste.php.
 
 .cover__nocolor
   background: $color__08
@@ -85,6 +102,7 @@
     padding-top: 66%
     transform: translate(-50%, -50%)
     border-radius: 50%
+
 
 // Theme coloré 001
 

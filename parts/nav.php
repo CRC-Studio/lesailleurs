@@ -46,7 +46,7 @@ $language_menu = wp_nav_menu(
 		<?php // menu Changement de ville ?>
 
 		<div class="l-header__nav-editons">
-			<span class="body">Explorer</span>
+			<!-- <span class="body">Explorer</span>
 			<div class="divider-h"></div>
 			<span class="body">Paris</span>
 			<label class="switch tooltip--hover">
@@ -56,7 +56,7 @@ $language_menu = wp_nav_menu(
 					<div class="tooltip__content">Coming Soon!</div>
 				</div>
 			</label>
-			<span>Arles</span>
+			<span>Arles</span> -->
 		</div>
 
 		<div class="l-header__nav-r">
@@ -85,11 +85,14 @@ $language_menu = wp_nav_menu(
 	<?php // menu Fullscreen ?>
 
 
+<?php $frontpage_id = get_option( 'page_on_front' ); ?>
+<?php $menu_id = get_field('home', $frontpage_id); ?>
+
 	<?php // couverture ?>
 
 	<div class="l-header__nav cover__big">
 		<div class="l6 l-header__scene cover__color09">
-			<?php $images = get_field('edt__menu-imgs'); ?>
+			<?php $images = get_field('edt__menu-imgs', $menu_id); ?>
 			<?php if ($images): ?>
 				<?php $rand = array_rand($images, 1); // On choisi une image au hasard dans la galerie ?>
 				<div class="image-full">
@@ -113,12 +116,12 @@ $language_menu = wp_nav_menu(
 
 			<?php // menu secondaire ?>
 
-			<?php if( have_rows('edt__menu') ): ?>
+			<?php if( have_rows('edt__menu',$menu_id) ): ?>
 				<div class="divider"></div>
 				<nav class="nav__secondaire color__legende">
-					<?php while( have_rows('edt__menu') ): the_row(); ?>
+					<?php while( have_rows('edt__menu', $menu_id) ): the_row(); ?>
 						<?php
-						$link = get_sub_field('edt__menu-url');
+						$link = get_sub_field('edt__menu-url', $menu_id);
 						if( $link ):
 							$link_url = $link['url'];
 							$link_title = $link['title'];

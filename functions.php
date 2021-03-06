@@ -7,7 +7,7 @@ require_once( __DIR__ . '/functions/options.php');
 require_once( __DIR__ . '/functions/include.php');
 require_once( __DIR__ . '/functions/minimize__back.php');
 require_once( __DIR__ . '/functions/minimize__front.php');
-require_once( __DIR__ . '/functions/acf-fields.php');
+// require_once( __DIR__ . '/functions/acf-fields.php');
 
 /*        ADD Custom Type        */
 
@@ -63,6 +63,7 @@ require_once( __DIR__ . '/functions/custom_html_wp_nav_menu.php');
 
 
 // filter
+
 function my_posts_where( $where ) {
 	$where = str_replace("meta_key = 'eve__qqn_$", "meta_key LIKE 'eve__qqn_%", $where);
 	return $where;
