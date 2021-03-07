@@ -18,7 +18,6 @@ jQuery( document ).ready(function( $ ) {
   // Button ReadMore Sur l'Editor Block Systeme
 
   $('.ebs__readmore-btn').on('click', function(){
-    console.log('click');
     $(this).parents('.ebs').toggleClass('ebs__full ebs__readmore');
   });
 
@@ -77,10 +76,17 @@ jQuery( document ).ready(function( $ ) {
 
   var n = 0;
   while(n < 3){
-    var par_par = $('.par').find('.par__container').eq(n);
+    var par_par = $('.par').find('.par__par').eq(n);
     $('.par__first').append($(par_par).clone());
+    $('.par__first').find('.par__overlay').remove();
     n += 1
   };
+
+
+  $('.par__readmore-btn').on('click', function(){
+    $('.par').toggleClass('par--is--minimize');
+    // $('.par__first').fadeOut();
+  });
 
 
   // Extention Mailchimp

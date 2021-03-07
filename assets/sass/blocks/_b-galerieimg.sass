@@ -3,6 +3,10 @@
 .gal
   text-align: center
 
+  .not--hover
+    .image-full__content
+      transform: scale(0.90)
+
 .gal__images
     display: flex
 
@@ -10,3 +14,25 @@
   float: left
   width: 50%
   padding: 1px
+
+  .image-full__content
+    border-radius: 0
+    box-shadow: none
+    transition: all 1s
+
+  img
+    transform: scale(1)
+    transition: all 1s
+
+
+  &:hover
+
+    .image-full__content
+      transform: scale(1)
+      border-radius: $modulor*3
+      @include box-shadow(100, $color__12)
+      transition: all 1s
+
+    img
+      transform: scale(1.1)
+      transition: all 1s

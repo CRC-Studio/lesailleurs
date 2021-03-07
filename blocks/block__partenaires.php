@@ -11,7 +11,7 @@
     <?php endif; ?>
 
 
-    <ul class="par__all">
+    <ul class="par__all row">
       <?php while( have_rows('par') ): the_row(); ?>
         <li class="accordion is--active">
           <div class="accordion__titre">
@@ -69,7 +69,7 @@
                             <p class="lead_paragraph"><?php echo $par__title ?></p>
                             <span class="subheading"><?php echo $par__sous_title ?></span>
                           </div>
-                          <span class="par__read-more subheading">↘ En savoir plus</span>
+                          <span class="par__read-more subheading"><?php _e("↘ En savoir plus","lesailleurs") ?></span>
                         </div>
                       </div>
                     </li>
@@ -85,9 +85,12 @@
       <?php endwhile; ?>
     </ul>
 
-    <div class="par__first">
-      <?php  // Cet <div> se remplie grace à une fonction de assets/js/lesailleurs.js ?>
-    </div>
+    <ul class="par__first">
+      <?php  // Cet <ul> se remplie grace à une fonction de assets/js/lesailleurs.js ?>
+    </ul>
+
+    <button class="btn btn--outline par__readmore-btn"><?php _e("En savoir plus","lesailleurs") ?></button>
+
 
   </section>
 <?php endif; ?>

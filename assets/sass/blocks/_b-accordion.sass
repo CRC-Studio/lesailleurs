@@ -1,5 +1,24 @@
 // main: ../../../style.sass
 
+  Le bloc Accordion permet de créer des accordions
+  rapidement
+
+
+  Exemple de HTML :
+
+    <li class="accordion">
+      <div class="accordion__titre">
+        <h3>Ici, le titre de l'accordion</h3>
+        <div class="accordion__icon">
+          <?php get_template_part('assets/img/inline', 'icon_arrow_accordion.svg'); ?>
+        </div>
+      </div>
+      <div class="accordion__container">
+        Ici, le contenu de l'accordion
+      </div>
+    </li>
+
+
 .acn
   position: relative
   background: linear-gradient(-45deg, $color__05 0%, $color__06 100%)
@@ -45,7 +64,7 @@
 
   .accordion__container
     opacity: 1
-    max-height: 1000px
+    max-height: 1000vh
     margin: 5px 0 30px 0
     transition: all 1s
 

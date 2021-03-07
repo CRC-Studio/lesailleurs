@@ -3,12 +3,12 @@
   <?php while( have_rows('gal') ): the_row(); ?>
 
 
-  <div class="gal row">
+  <div class="gal row is--lightbox">
     <?php
     $images = get_sub_field('gal__gal');
     $size = 'full'; // (thumbnail, medium, large, full or custom size)
     if( $images ): ?>
-    <ul class="gal__images">
+    <ul class="gal__images is--not--hover">
       <?php foreach( $images as $image_id ): ?>
         <li class="gal__image">
           <div class="image-full__ratio-1-1">
