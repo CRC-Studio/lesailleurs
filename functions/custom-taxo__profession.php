@@ -11,17 +11,17 @@
 function custom_taxo_profession() {
 
     $labels = array(
-        'name'              => _x( 'Professsions', 'taxonomy general name', 'lesailleurs' ),
-        'singular_name'     => _x( 'Professsion', 'taxonomy singular name', 'lesailleurs' ),
-        'search_items'      => __( 'Chercher une professsion', 'lesailleurs' ),
-        'all_items'         => __( 'Toutes les professsions', 'lesailleurs' ),
-        'parent_item'       => __( 'Parent professsion', 'lesailleurs' ),
-        'parent_item_colon' => __( 'Parent professsion:', 'lesailleurs' ),
+        'name'              => _x( 'Professions', 'taxonomy general name', 'lesailleurs' ),
+        'singular_name'     => _x( 'Profession', 'taxonomy singular name', 'lesailleurs' ),
+        'search_items'      => __( 'Chercher une profession', 'lesailleurs' ),
+        'all_items'         => __( 'Toutes les professions', 'lesailleurs' ),
+        'parent_item'       => __( 'Parent profession', 'lesailleurs' ),
+        'parent_item_colon' => __( 'Parent profession:', 'lesailleurs' ),
         'edit_item'         => __( 'Modifier', 'lesailleurs' ),
         'update_item'       => __( 'Mettre à jour', 'lesailleurs' ),
-        'add_new_item'      => __( 'Ajouter une nouvelle professsion', 'lesailleurs' ),
-        'new_item_name'     => __( 'Nom de la nouvelle professsion', 'lesailleurs' ),
-        'menu_name'         => __( 'Professsion', 'lesailleurs' ),
+        'add_new_item'      => __( 'Ajouter une nouvelle profession', 'lesailleurs' ),
+        'new_item_name'     => __( 'Nom de la nouvelle profession', 'lesailleurs' ),
+        'menu_name'         => __( 'Profession', 'lesailleurs' ),
     );
 
     $args = array(
