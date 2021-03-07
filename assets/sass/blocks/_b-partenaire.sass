@@ -2,6 +2,8 @@
 
 
 .par
+  position: relative // necessaire pour la variante minimize
+  overflow: hidden // necessaire pour la variante minimize
   background: $color-secondaire
 
 .par__par
@@ -33,13 +35,14 @@
   background: $color-back
   transition: all 5s
 
-.par__container
-  position: absolute
-  margin: auto
-  top: $modulor*4
-  bottom: $modulor*4
-  left: $modulor*4
-  right: $modulor*4
+.par__all
+  .par__container
+    position: absolute
+    margin: auto
+    top: $modulor*4
+    bottom: $modulor*4
+    left: $modulor*4
+    right: $modulor*4
 
   img
     display: block
@@ -72,3 +75,29 @@
   .par__read-more
     position: absolute
     bottom: $modulor*4
+
+
+
+  // Variation section partenaire minimize
+
+.par__first
+  display: none
+
+.par--is--minimize
+  height: $modulor*26
+  .par__all
+    display: none
+
+  .par__first
+    position: absolute
+    display: flex
+    left: 50%
+    right: -9%
+    flex-direction: row
+
+  .par__container
+    width: 100%
+    margin-left: $modulor
+
+  img
+    border-radius: $modulor/2
