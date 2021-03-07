@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Les Ailleurs\n"
-"POT-Creation-Date: 2021-03-06 22:22-0400\n"
-"PO-Revision-Date: 2021-03-06 22:22-0400\n"
+"POT-Creation-Date: 2021-03-06 22:24-0400\n"
+"PO-Revision-Date: 2021-03-06 22:25-0400\n"
 "Last-Translator: CRC Studio <hello@crc-studio.fr>\n"
 "Language-Team: CRC Studio <hello@crc-studio.fr>\n"
 "Language: en_EN\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: blocks/block__editorblocksystem.php:111
+#: blocks/block__editorblocksystem.php:111 blocks/block__partenaires.php:92
 #: parts/part__template-evenement-single.php:31 parts/rgpd.php:14
 msgid "En savoir plus"
 msgstr "Read More"
@@ -29,6 +29,10 @@ msgstr "Read More"
 #: blocks/block__form.php:26
 msgid "Envoyer votre message"
 msgstr "Send your message"
+
+#: blocks/block__partenaires.php:72
+msgid "↘ En savoir plus"
+msgstr "↘ Read More"
 
 #: functions/add-custom-block-cat.php:16
 msgid "Blocs Yoom"
@@ -318,7 +322,7 @@ msgstr "Première"
 
 #: functions/custom-taxo__premiere.php:16
 msgid "Chercher une première"
-msgstr "Search for a première "
+msgstr "Search for a première"
 
 #: functions/custom-taxo__premiere.php:18
 msgid "Parent première"
