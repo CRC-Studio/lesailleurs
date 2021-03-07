@@ -342,40 +342,40 @@ msgstr ""
 
 #: functions/custom-taxo__profession.php:14
 msgctxt "taxonomy general name"
-msgid "Professsions"
+msgid "Professions"
 msgstr ""
 
 #: functions/custom-taxo__profession.php:15
 msgctxt "taxonomy singular name"
-msgid "Professsion"
+msgid "Profession"
 msgstr ""
 
 #: functions/custom-taxo__profession.php:16
-msgid "Chercher une professsion"
+msgid "Chercher une profession"
 msgstr ""
 
 #: functions/custom-taxo__profession.php:17
-msgid "Toutes les professsions"
+msgid "Toutes les professions"
 msgstr ""
 
 #: functions/custom-taxo__profession.php:18
-msgid "Parent professsion"
+msgid "Parent profession"
 msgstr ""
 
 #: functions/custom-taxo__profession.php:19
-msgid "Parent professsion:"
+msgid "Parent profession:"
 msgstr ""
 
 #: functions/custom-taxo__profession.php:22
-msgid "Ajouter une nouvelle professsion"
+msgid "Ajouter une nouvelle profession"
 msgstr ""
 
 #: functions/custom-taxo__profession.php:23
-msgid "Nom de la nouvelle professsion"
+msgid "Nom de la nouvelle profession"
 msgstr ""
 
 #: functions/custom-taxo__profession.php:24
-msgid "Professsion"
+msgid "Profession"
 msgstr ""
 
 #: functions/custom-taxo__thematique.php:14

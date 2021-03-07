@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Les Ailleurs\n"
-"POT-Creation-Date: 2021-03-06 11:55-0400\n"
-"PO-Revision-Date: 2021-03-06 12:07-0400\n"
+"POT-Creation-Date: 2021-03-06 20:16-0400\n"
+"PO-Revision-Date: 2021-03-06 20:16-0400\n"
 "Last-Translator: CRC Studio <hello@crc-studio.fr>\n"
 "Language-Team: CRC Studio <hello@crc-studio.fr>\n"
 "Language: en_EN\n"
@@ -204,27 +204,27 @@ msgstr "Term"
 
 #: functions/custom-taxo__modalite.php:16
 msgid "Chercher une modalité"
-msgstr "Looking for a modality"
+msgstr "Search for a term"
 
 #: functions/custom-taxo__modalite.php:17
 msgid "Toutes les modalités"
-msgstr "All the modalities"
+msgstr "All the terms"
 
 #: functions/custom-taxo__modalite.php:18
 msgid "Parent modalité"
-msgstr "Parent modality"
+msgstr "Parent term"
 
 #: functions/custom-taxo__modalite.php:19
 msgid "Parent modalité:"
-msgstr "Parent modality:"
+msgstr "Parent term:"
 
 #: functions/custom-taxo__modalite.php:22
 msgid "Ajouter une nouvelle modalité"
-msgstr "Add a new modality"
+msgstr "Add a new term"
 
 #: functions/custom-taxo__modalite.php:23
 msgid "Nom de la nouvelle modalité"
-msgstr "Name of new modality"
+msgstr "Name of new term"
 
 #: functions/custom-taxo__modalite.php:24
 msgid "Modalité"
@@ -238,11 +238,11 @@ msgstr "Nationalities"
 #: functions/custom-taxo__nationalite.php:15
 msgctxt "taxonomy singular name"
 msgid "Nationalité"
-msgstr "Nationality: "
+msgstr "Nationality"
 
 #: functions/custom-taxo__nationalite.php:16
 msgid "Chercher une nationalité"
-msgstr "Seeking nationality"
+msgstr "Search for a nationality"
 
 #: functions/custom-taxo__nationalite.php:17
 msgid "Toutes les nationalités"
@@ -266,12 +266,12 @@ msgstr "Name of new nationality"
 
 #: functions/custom-taxo__nationalite.php:24
 msgid "Nationalité"
-msgstr "Nationality: "
+msgstr "Nationality"
 
 #: functions/custom-taxo__pays.php:14
 msgctxt "taxonomy general name"
 msgid "Pays"
-msgstr "Country"
+msgstr "Countries"
 
 #: functions/custom-taxo__pays.php:15
 msgctxt "taxonomy singular name"
@@ -280,19 +280,17 @@ msgstr "Country"
 
 #: functions/custom-taxo__pays.php:16
 msgid "Chercher un pays"
-msgstr "Looking for a country"
+msgstr "Seach for a country"
 
 #: functions/custom-taxo__pays.php:17
 msgid "Tous les pays"
 msgstr "All countries"
 
 #: functions/custom-taxo__pays.php:18
-#, fuzzy
 msgid "Parent pays"
 msgstr "Parent country"
 
 #: functions/custom-taxo__pays.php:19
-#, fuzzy
 msgid "Parent pays:"
 msgstr "Parent country:"
 
@@ -311,171 +309,145 @@ msgstr "Country"
 #: functions/custom-taxo__premiere.php:14
 msgctxt "taxonomy general name"
 msgid "Premières"
-msgstr "First"
+msgstr "Premières"
 
 #: functions/custom-taxo__premiere.php:15
 msgctxt "taxonomy singular name"
 msgid "Première"
-msgstr "First"
+msgstr "Première"
 
 #: functions/custom-taxo__premiere.php:16
-#, fuzzy
 msgid "Chercher une première"
-msgstr "Seeking a first"
+msgstr "Search for a première "
 
 #: functions/custom-taxo__premiere.php:18
-#, fuzzy
 msgid "Parent première"
-msgstr "Parent first"
+msgstr "Parent première"
 
 #: functions/custom-taxo__premiere.php:19
-#, fuzzy
 msgid "Parent première:"
-msgstr "Parent first:"
+msgstr "Parent première:"
 
 #: functions/custom-taxo__premiere.php:22
 msgid "Ajouter une nouvelle première"
-msgstr "Add a new first"
+msgstr "Add a new première"
 
 #: functions/custom-taxo__premiere.php:23
-#, fuzzy
 msgid "Nom de la nouvelle première"
-msgstr "Name of new premiere"
+msgstr "Name of new première"
 
 #: functions/custom-taxo__premiere.php:24
-#, fuzzy
 msgid "Première"
-msgstr "First"
+msgstr "Première"
 
 #: functions/custom-taxo__profession.php:14
-#, fuzzy
 msgctxt "taxonomy general name"
-msgid "Professsions"
-msgstr "Professsions"
+msgid "Professions"
+msgstr "Professions"
 
 #: functions/custom-taxo__profession.php:15
-#, fuzzy
 msgctxt "taxonomy singular name"
-msgid "Professsion"
-msgstr "Professsion"
+msgid "Profession"
+msgstr "Profession"
 
 #: functions/custom-taxo__profession.php:16
-#, fuzzy
-msgid "Chercher une professsion"
-msgstr "Seeking a profession"
+msgid "Chercher une profession"
+msgstr "Search for a profession"
 
 #: functions/custom-taxo__profession.php:17
-#, fuzzy
-msgid "Toutes les professsions"
-msgstr "All professed"
+msgid "Toutes les professions"
+msgstr "All the professions"
 
 #: functions/custom-taxo__profession.php:18
-#, fuzzy
-msgid "Parent professsion"
-msgstr "Parent professsion"
+msgid "Parent profession"
+msgstr "Parent profession"
 
 #: functions/custom-taxo__profession.php:19
-#, fuzzy
-msgid "Parent professsion:"
-msgstr "Parent professsion:"
+msgid "Parent profession:"
+msgstr "Parent profession:"
 
 #: functions/custom-taxo__profession.php:22
-#, fuzzy
-msgid "Ajouter une nouvelle professsion"
+msgid "Ajouter une nouvelle profession"
 msgstr "Add a new profession"
 
 #: functions/custom-taxo__profession.php:23
-#, fuzzy
-msgid "Nom de la nouvelle professsion"
-msgstr "Name of the new professsion"
+msgid "Nom de la nouvelle profession"
+msgstr "Name of the new profession"
 
 #: functions/custom-taxo__profession.php:24
-#, fuzzy
-msgid "Professsion"
-msgstr "Professsion"
+msgid "Profession"
+msgstr "Profession"
 
 #: functions/custom-taxo__thematique.php:14
 msgctxt "taxonomy general name"
 msgid "Thématiques"
-msgstr "Thematics"
+msgstr "Themes"
 
 #: functions/custom-taxo__thematique.php:15
 msgctxt "taxonomy singular name"
 msgid "Thématique"
-msgstr "Thematic"
+msgstr "Theme"
 
 #: functions/custom-taxo__thematique.php:16
-#, fuzzy
 msgid "Chercher une thématique"
 msgstr "Search for a theme"
 
 #: functions/custom-taxo__thematique.php:17
 msgid "Toutes les thématiques"
-msgstr "All thematics"
+msgstr "All themes"
 
 #: functions/custom-taxo__thematique.php:18
-#, fuzzy
 msgid "Parent thématique"
-msgstr "Thematic Parent"
+msgstr "Parent theme"
 
 #: functions/custom-taxo__thematique.php:19
-#, fuzzy
 msgid "Parent thématique:"
-msgstr "Thematic parent:"
+msgstr "Parent theme:"
 
 #: functions/custom-taxo__thematique.php:22
 msgid "Ajouter une nouvelle thématique"
-msgstr "Add New Thematic"
+msgstr "Add New Theme"
 
 #: functions/custom-taxo__thematique.php:23
-#, fuzzy
 msgid "Nom de la nouvelle thématique"
 msgstr "Name of the new theme"
 
 #: functions/custom-taxo__thematique.php:24
 msgid "Thématique"
-msgstr "Thematic"
+msgstr "Theme"
 
 #: functions/custom-taxo__type-evenement.php:14
-#, fuzzy
 msgctxt "taxonomy general name"
 msgid "Type d'évenements"
 msgstr "Type of events"
 
 #: functions/custom-taxo__type-evenement.php:15
-#, fuzzy
 msgctxt "taxonomy singular name"
 msgid "Type d'évenement"
 msgstr "Type of event"
 
 #: functions/custom-taxo__type-evenement.php:16
-#, fuzzy
 msgid "Chercher un type d'évenement"
-msgstr "Look for a type of event"
+msgstr "Search for a type of event"
 
 #: functions/custom-taxo__type-evenement.php:17
-#, fuzzy
 msgid "Tous les genres"
 msgstr "All genres"
 
 #: functions/custom-taxo__type-evenement.php:18
 #: functions/custom-taxo__type-evenement.php:19
-#, fuzzy
 msgid "Parent type d'évenement"
 msgstr "Parent type of event"
 
 #: functions/custom-taxo__type-evenement.php:22
-#, fuzzy
 msgid "Ajouter un nouveau type d'évenement"
 msgstr "Add a new type of event"
 
 #: functions/custom-taxo__type-evenement.php:23
-#, fuzzy
 msgid "Nom du nouveau type d'évenement"
 msgstr "Name of new type of event"
 
 #: functions/custom-taxo__type-evenement.php:24
-#, fuzzy
 msgid "Type d'évenement"
 msgstr "Type of event"
 
@@ -484,7 +456,6 @@ msgid "Menu principal"
 msgstr "Main menu"
 
 #: functions/custom_menu.php:27
-#, fuzzy
 msgid "Liens Footer"
 msgstr "Footer links"
 
@@ -500,8 +471,15 @@ msgstr "Secondary menu"
 msgid "Language Menu"
 msgstr "Language Menu"
 
+#: parts/nav.php:41
+msgid "LE FESTIVAL"
+msgstr "THE FESTIVAL"
+
+#: parts/nav.php:42
+msgid "QUI EXPLORE L'IMMERSION"
+msgstr "WHICH EXPLORES IMMERSION"
+
 #: parts/part__template-oeuvre-selectionnee.php:15
-#, fuzzy
 msgid "Artites principaux : "
 msgstr "Main artites: "
 
@@ -510,27 +488,24 @@ msgid "Année de production : "
 msgstr "Production Year: "
 
 #: parts/part__template-selection.php:9
-#, fuzzy
 msgid "La suite de la sélection"
-msgstr "The rest of the selection"
+msgstr "The rest of the selected works"
 
 #: parts/part__template-selection.php:10
 msgid "La sélection"
-msgstr "The selections"
+msgstr "The selected works"
 
 #: parts/part__template-single-edition.php:17
-#, fuzzy
 msgid "Voir toute la sélection"
-msgstr "See the full selection"
+msgstr "See all selected works"
 
 #: parts/part__template-single-edition.php:20
-#, fuzzy
 msgid "Découvrez aussi"
-msgstr "Find out more"
+msgstr "See more"
 
 #: parts/part__template-single-edition.php:20
 msgid "les sélections précédentes"
-msgstr "previous selections"
+msgstr "previous selected works"
 
 #: parts/part__template-single-edition.php:52
 msgid "Voir tous les événements"
@@ -545,7 +520,6 @@ msgid "Décliner"
 msgstr "Refuse"
 
 #: single-auteur.php:28
-#, fuzzy
 msgid "Profession : "
 msgstr "Profession: "
 
@@ -562,37 +536,31 @@ msgid "Date : "
 msgstr "Date: "
 
 #: single-evenement.php:52
-#, fuzzy
 msgid "Type d'événement : "
 msgstr "Type of event: "
 
 #: single-evenement.php:64
-#, fuzzy
 msgid "Modalité : "
-msgstr "Term"
+msgstr "Term "
 
 #: single-evenement.php:76
-#, fuzzy
 msgid "Intervenant : "
-msgstr "Intervener: "
+msgstr "Workshop leader: "
 
 #: single-evenement.php:117 single-oeuvre.php:84
 msgid "Thématiques"
-msgstr "Thematics"
+msgstr "Themes"
 
 #: single-evenement.php:127 single-oeuvre.php:94
-#, fuzzy
 msgid "Voir toutes les thématiques"
 msgstr "See all the themes"
 
 #: single-evenement.php:128 single-oeuvre.php:95
-#, fuzzy
 msgid ""
 "Les Ailleurs explorent. Jamais ne tourne en rond. Alors perdez-vous avec "
 "nous."
 msgstr ""
-"The Elsewhere are exploring. Never goes around in circles. Then lose "
-"yourself with us."
+"The Ailleurs is exploring, never turns in circles. So, lose yourself with us."
 
 #: single-oeuvre.php:29
 msgid "Pays : "
@@ -604,27 +572,25 @@ msgstr "Duration: "
 
 #: single-oeuvre.php:48
 msgid "Format : "
-msgstr "Format"
+msgstr "Format "
 
 #: single-oeuvre.php:60
 msgid "Première : "
-msgstr "First: "
+msgstr "Première: "
 
 #: single-oeuvre.php:112
 msgid "Artites principaux"
 msgstr "Main Artites"
 
 #: single-oeuvre.php:140
-#, fuzzy
 msgid "Générique"
-msgstr "Generic"
+msgstr "Credits"
 
 #: single-selection.php:32
 msgid "Découvrir les sélections précédentes"
-msgstr "Discover previous selections"
+msgstr "Discover previous selected works"
 
 #: single-selection.php:33
-#, fuzzy
 msgid "Toutes exactement conformes à nos valeurs : toutes singulières."
 msgstr "All exactly in line with our values: all singular."
 
@@ -650,78 +616,77 @@ msgid "https://crc-studio.fr/"
 msgstr "https://crc-studio.fr/"
 
 #. Template Name of the plugin/theme
+msgid "Taxonomie"
+msgstr "Taxonomy"
+
+#. Template Name of the plugin/theme
 msgid "À propos"
 msgstr "About"
-
-#. Template Name of the plugin/theme
-msgid "Agenda"
-msgstr "Events"
-
-#. Template Name of the plugin/theme
-msgid "Appel à Projet"
-msgstr "Call for Project"
-
-#. Template Name of the plugin/theme
-msgid "Auteurs"
-msgstr "Authors"
 
 #. Template Name of the plugin/theme
 msgid "Éditions"
 msgstr "Editions"
 
 #. Template Name of the plugin/theme
-msgid "Event category"
-msgstr "Event category"
-
-#. Template Name of the plugin/theme
-msgid "Page d'accueil"
-msgstr "Home page"
-
-#. Template Name of the plugin/theme
-msgid "Industrie"
-msgstr "Industry"
+msgid "Partenaire"
+msgstr "Partner"
 
 #. Template Name of the plugin/theme
 msgid "Mentions légales"
 msgstr "Terms and condition"
 
 #. Template Name of the plugin/theme
-msgid "Partenaire"
-msgstr "Partner"
-
-#. Template Name of the plugin/theme
-msgid "Résidence d'écriture"
-msgstr "Writing residency"
-
-#. Template Name of the plugin/theme
-msgid "Sélection"
-msgstr "Select"
-
-#. Template Name of the plugin/theme
-msgid "Auteur Single"
-msgstr "Single Author"
+msgid "Événement Single"
+msgstr "Single Event"
 
 #. Template Name of the plugin/theme
 msgid "Édtions Single"
 msgstr "Single editions"
 
 #. Template Name of the plugin/theme
-msgid "Événement Single"
-msgstr "Single Event"
+msgid "Page d'accueil"
+msgstr "Home page"
 
 #. Template Name of the plugin/theme
-msgid "Œuvre Single"
-msgstr "Single Work"
+msgid "Appel à Projet"
+msgstr "Call for Project"
 
 #. Template Name of the plugin/theme
-#, fuzzy
+msgid "Industrie"
+msgstr "Industry"
+
+#. Template Name of the plugin/theme
+msgid "Sélection"
+msgstr "Select"
+
+#. Template Name of the plugin/theme
+msgid "Auteurs"
+msgstr "Authors"
+
+#. Template Name of the plugin/theme
 msgid "Partenaire Single"
 msgstr "Single Partner"
+
+#. Template Name of the plugin/theme
+msgid "Event category"
+msgstr "Event category"
+
+#. Template Name of the plugin/theme
+msgid "Résidence d'écriture"
+msgstr "Writing residency"
 
 #. Template Name of the plugin/theme
 msgid "Sélection Single"
 msgstr "Single selection"
 
 #. Template Name of the plugin/theme
-msgid "Taxonomie"
-msgstr "Taxonomy"
+msgid "Agenda"
+msgstr "Events"
+
+#. Template Name of the plugin/theme
+msgid "Œuvre Single"
+msgstr "Single Work"
+
+#. Template Name of the plugin/theme
+msgid "Auteur Single"
+msgstr "Single Author"
