@@ -9,8 +9,20 @@ get_header(); ?>
 <main class="main l-evenement">
   <?php // Gestion de la cover ?>
 
-  <section class="cover cover__small cover__nocolor">
-    <div class="cover__container isv--parent">
+  <section class="cover cover__big cover cover__big cover__color09">
+    <div class="cover__container cover__image">
+      <?php $image = get_sub_field('cover__img'); ?>
+      <?php if( has_post_thumbnail() ): ?>
+        <div class="image-full">
+          <div class="image-full__nocrop">
+            <?php the_post_thumbnail(); ?>
+          </div>
+        </div>
+      <?php else: ?>
+      <div class="cover__is--empty"></div>
+    <?php endif; ?>
+  </div>
+    <div class="cover__container cover__text isv--parent">
       <div class="cover__content">
         <h1 class="cover__title display3"><?php the_title(); ?></h1>
         <div class="cover__info lead_paragraph l10 m2">
@@ -100,6 +112,13 @@ get_header(); ?>
     </div>
   </div>
 </div>
+
+<?php // Ajout du boutton Scroll Down ?>
+
+<div class="cover__scroll-down">
+  <?php get_template_part('assets/img/inline', 'icon_scroll-down.svg'); ?>
+</div>
+
 </section>
 
 <?php // Description ? ?>

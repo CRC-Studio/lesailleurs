@@ -23,11 +23,11 @@ get_header(); ?>
   );
   if ($loop->have_posts()) :?>
   <section>
-    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-      <a href="<?php the_permalink(); ?>">
-        <div class="row"><h3 class="display2"><?php the_title(); ?></h3></div>
-      </a>
-    <?php endwhile; ?>
+    <ul>
+      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <?php get_template_part('parts/part__list') ?>
+      <?php endwhile; ?>
+    </ul>
   </section>
 <?php endif; wp_reset_query(); ?>
 

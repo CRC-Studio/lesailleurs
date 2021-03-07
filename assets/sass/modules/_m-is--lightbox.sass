@@ -1,0 +1,48 @@
+// main: ../../../style.sass
+
+  Le module is--lightbox permet de créer des lightbox
+  facilement. Idéale pour afficher une image
+  en plein écran.
+
+  Attention : pensez à activer le module is--lightbox
+  dans le fichier assets/js/monobloc.js
+
+  Exemple de HTML :
+
+    <div class="is--lightbox">
+      <img>
+    </div>
+
+
+.is--lightbox
+  cursor: pointer
+
+.lightbox__img
+  display: flex
+  padding: $modulor*9
+  width: 100%
+  height: 100vh
+  justify-content: center
+
+  img
+    width: auto
+    border-radius: $modulor
+    border: 2px solid $color-principale
+    @include box-shadow(100, $color__12)
+
+.lightbox__overlay
+  display: none
+  position: fixed
+  z-index: 5000
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  background: rgba($color__08, 0.95)
+
+.lightbox__close
+  position: fixed
+  right: $modulor*3
+  top: $modulor*3
+  color: $color-back
+  cursor: pointer

@@ -42,31 +42,31 @@
 
 .cover__scroll-down
   position: absolute
+  display: flex
+  justify-content: center
+  align-items: center
   left: 50%
   bottom: $modulor*0.5
-  width: $modulor*4.5
-  height: $modulor*4.5
+  width: $modulor*5
+  height: $modulor*5
   border-radius: $modulor*4.5
   cursor: pointer
   z-index: 1
   transform: translate(-50%, -50%)
-  transition: all 2s
+  transition: all 4s
 
   svg
-    margin: $modulor*1.5
-    width: $modulor*1.5
-    transition: all 2s
+    width: $modulor*2
+    transition: all 4s
 
   &:hover
-    width: $modulor*5
-    height: $modulor*5
+    border-radius: $modulor*1.8
     background: $color-secondaire !important
-    box-shadow: 0 10px 20px rgba($color__12, 0.19), 0 6px 6px rgba($color__12, 0.23)
-    transition: all 0.2s
+    transition: all 0.5s
+    @include box-shadow(100, $color__12)
 
     svg
-      width: $modulor*2
-      transition: all 0.2s
+      transition: all 0.5s
 
 
 // Les classes .cover__info et .cover__nocolor sont utilisées

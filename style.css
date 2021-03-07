@@ -823,34 +823,34 @@ svg {
 
 .cover__scroll-down {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   left: 50%;
   bottom: 7px;
-  width: 63px;
-  height: 63px;
+  width: 70px;
+  height: 70px;
   border-radius: 63px;
   cursor: pointer;
   z-index: 1;
   transform: translate(-50%, -50%);
-  transition: all 2s;
+  transition: all 4s;
 }
 
 .cover__scroll-down svg {
-  margin: 21px;
-  width: 21px;
-  transition: all 2s;
+  width: 28px;
+  transition: all 4s;
 }
 
 .cover__scroll-down:hover {
-  width: 70px;
-  height: 70px;
+  border-radius: 25.2px;
   background: #667EE4 !important;
-  box-shadow: 0 10px 20px rgba(9, 32, 63, 0.19), 0 6px 6px rgba(9, 32, 63, 0.23);
-  transition: all 0.2s;
+  transition: all 0.5s;
+  box-shadow: 0 2.8px 2.2px rgba(9, 32, 63, 0.034), 0 6.7px 5.3px rgba(9, 32, 63, 0.048), 0 12.5px 10px rgba(9, 32, 63, 0.06), 0 22.3px 17.9px rgba(9, 32, 63, 0.072), 0 41.8px 33.4px rgba(9, 32, 63, 0.086), 0 100px 80px rgba(9, 32, 63, 0.12);
 }
 
 .cover__scroll-down:hover svg {
-  width: 28px;
-  transition: all 0.2s;
+  transition: all 0.5s;
 }
 
 .cover__nocolor {
@@ -1328,7 +1328,7 @@ svg {
   display: block;
   float: left;
   width: max-content;
-  animation: denkokeijiban 600s linear infinite alternate;
+  animation: denkokeijiban 1000s linear infinite alternate;
 }
 
 @keyframes denkokeijiban {
@@ -1434,6 +1434,44 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.is--lightbox {
+  cursor: pointer;
+}
+
+.lightbox__img {
+  display: flex;
+  padding: 126px;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+
+.lightbox__img img {
+  width: auto;
+  border-radius: 14px;
+  border: 2px solid black;
+  box-shadow: 0 2.8px 2.2px rgba(9, 32, 63, 0.034), 0 6.7px 5.3px rgba(9, 32, 63, 0.048), 0 12.5px 10px rgba(9, 32, 63, 0.06), 0 22.3px 17.9px rgba(9, 32, 63, 0.072), 0 41.8px 33.4px rgba(9, 32, 63, 0.086), 0 100px 80px rgba(9, 32, 63, 0.12);
+}
+
+.lightbox__overlay {
+  display: none;
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(102, 126, 228, 0.95);
+}
+
+.lightbox__close {
+  position: fixed;
+  right: 42px;
+  top: 42px;
+  color: white;
+  cursor: pointer;
 }
 
 * {
@@ -1725,8 +1763,88 @@ em {
   object-fit: cover;
 }
 
+.image-full__nocrop {
+  display: flex;
+  padding: 126px;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+}
+
+.image-full__nocrop img {
+  width: auto;
+  border-radius: 14px;
+  border: 2px solid black;
+  box-shadow: 0 2.8px 2.2px rgba(9, 32, 63, 0.034), 0 6.7px 5.3px rgba(9, 32, 63, 0.048), 0 12.5px 10px rgba(9, 32, 63, 0.06), 0 22.3px 17.9px rgba(9, 32, 63, 0.072), 0 41.8px 33.4px rgba(9, 32, 63, 0.086), 0 100px 80px rgba(9, 32, 63, 0.12);
+}
+
 .image--is--circle {
   border-radius: 50%;
+}
+
+.modal__overlay {
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(180deg, #09203f 50%, #2d2e60 90%);
+  background: rgba(153, 166, 224, 0.9);
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 33%;
+  height: auto;
+  padding: 84px;
+  text-align: center;
+  background: white;
+  border-radius: 42px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2.8px 2.2px rgba(9, 32, 63, 0.034), 0 6.7px 5.3px rgba(9, 32, 63, 0.048), 0 12.5px 10px rgba(9, 32, 63, 0.06), 0 22.3px 17.9px rgba(9, 32, 63, 0.072), 0 41.8px 33.4px rgba(9, 32, 63, 0.086), 0 100px 80px rgba(9, 32, 63, 0.12);
+  z-index: 5000;
+}
+
+.modal__btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  top: -35px;
+  right: -35px;
+  padding: 14px;
+  border-radius: 70px;
+  background: #1A3C5A;
+  cursor: pointer;
+  transition: all 4s;
+  box-shadow: 0 0.938em 2.188em rgba(45, 46, 96, 0.15), 0 0.313em 0.938em rgba(45, 46, 96, 0.1);
+}
+
+.modal__btn svg {
+  width: 28px;
+  height: 28px;
+  fill: #667EE4;
+  transition: all 4s;
+}
+
+.modal__btn:hover {
+  border-radius: 28px;
+  background: #486BAA;
+  box-shadow: 0 2.8px 2.2px rgba(9, 32, 63, 0.034), 0 6.7px 5.3px rgba(9, 32, 63, 0.048), 0 12.5px 10px rgba(9, 32, 63, 0.06), 0 22.3px 17.9px rgba(9, 32, 63, 0.072), 0 41.8px 33.4px rgba(9, 32, 63, 0.086), 0 100px 80px rgba(9, 32, 63, 0.12);
+  transition: all .5s;
+}
+
+.modal__btn:hover svg {
+  fill: #99A6E0;
+  transition: all .5s;
 }
 
 .row {
@@ -1985,6 +2103,44 @@ em {
     width: 50%;
     margin: 0 auto;
   }
+}
+
+.slc {
+  position: relative;
+  overflow: hidden;
+  max-height: 1000vh;
+  transition: all 3s cubic-bezier(1, 0.03, 1, 1);
+}
+
+.slc__readmore {
+  max-height: 150vh;
+  transition: all 3s;
+}
+
+.slc__readmore-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, white 20%, rgba(255, 255, 255, 0) 66%);
+  pointer-events: none;
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 3s;
+}
+
+.ebs__readmore-btn {
+  position: absolute;
+  bottom: 42px;
+  z-index: 1;
+}
+
+.slc__full .slc__readmore-overlay,
+.slc__full .slc__readmore-btn {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 3s;
 }
 
 .slc__slc {
@@ -2444,9 +2600,9 @@ em {
 
 .l-auteurs__item {
   border-bottom: 1px solid #523D80;
-  overflow: hidden;
   background-color: #667EE4;
   background-image: linear-gradient(90deg, rgba(153, 166, 224, 0) 0%, #99A6E0 100%);
+  overflow: hidden;
   transition: all 5s;
 }
 

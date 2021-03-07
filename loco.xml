@@ -4,7 +4,7 @@ Le fichier loco.xml permet de supporter la traduction d'élément
 situé dans le code du template
 
   Exemple d'HTML :
-    <?php _e("OK","lesailleurs") ?
+    <?php _e("OK","lesailleurs") ?>
  -->
 
 

@@ -14,7 +14,7 @@
 <?php // Voir les autres sélections ?>
 
 <section class="thm white--isnt--white">
-  <button id="thm__readmore-btn" class="btn btn--outline"><?php _e("Voir toute la sélection","lesailleurs") ?></button>
+  <button class="btn btn--outline slc__readmore-btn"><?php _e("Voir toute la sélection","lesailleurs") ?></button>
     <div class="row thm__more">
       <div class="divider"></div>
         <p class="body color__legende"><?php _e("Découvrez aussi","lesailleurs") ?><br><a href="<?php echo home_url(); ?>/selections"><?php _e("les sélections précédentes","lesailleurs") ?></a></p>

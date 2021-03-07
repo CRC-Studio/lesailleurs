@@ -70,7 +70,11 @@ get_header(); ?>
 ));
 ?>
 <?php if( $oeuvres ): ?>
-  <section>
+  <section class="row white--isnt--white">
+    <div class="col l6 m1">
+      <h2 class="subheading"><?php _e("Œuvres présentées aux AiIlleurs","lesailleurs") ?></h2>
+      <div class="divider"></div>
+    </div>
     <div class="l-gallery__container">
       <?php foreach( $oeuvres as $oeuvre ): ?>
         <?php $post = $oeuvre; ?>
@@ -89,8 +93,8 @@ get_header(); ?>
 <?php // Événements ? ?>
 <?php
 // Note : l'Auteur étant dans un groupe, lui même dans un reapter
-//du custom type evenement, nous n'avons pas trouvé de meilleur solution
-//de sortir tous les événements, puis d'afficher uniquement ceux avec l'Auteur.
+// du custom type evenement, nous n'avons pas trouvé de meilleur solution
+// de sortir tous les événements, puis d'afficher uniquement ceux avec l'Auteur.
 ?>
 
 <?php $loop = new WP_Query(
@@ -106,6 +110,10 @@ if ($loop->have_posts()) :?>
 
 
 <section class="eve row">
+  <div class="col l6">
+    <h2 class="subheading"><?php _e("Évévenments avec","lesailleurs") ?> <?php the_title(); ?></h2>
+    <div class="divider"></div>
+  </div>
   <ul>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
@@ -138,12 +146,42 @@ if ($loop->have_posts()) :?>
   ?>
 
 
-
-
-
 <?php endwhile; ?>
 </ul>
 </section>
 <?php endif; wp_reset_query(); ?>
+
+
+<?php // Découvrir d'autres auteurs ?>
+
+<?php $loop = new WP_Query(
+  array(
+    'post_type'       => 'auteur',
+    'orderby'         => 'rand',
+    'order'           => 'ASC',
+    'posts_per_page'  => -1
+  )
+);
+if ($loop->have_posts()) :?>
+
+
+  <section>
+    <div class="col l6 m2">
+      <h2 class="subheading"><?php _e("Rencontrer d'autres auteurs","lesailleurs") ?></h2>
+      <div class="divider"></div>
+    </div>
+  </section>
+
+  <ul class="l-auteurs__items l12">
+    <li class="l-auteurs__item display3 l12">
+      <a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="is--denko">
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+          <span><?php the_title(); ?></span>
+        <?php endwhile; ?>
+      </a>
+    </li>
+  </ul>
+<?php endif; wp_reset_query(); ?>
+
 
 <?php get_footer(); ?>

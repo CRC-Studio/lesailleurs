@@ -36,16 +36,36 @@ get_header(); ?>
         </a>
       <?php endwhile; ?>
     </section>
-<?php endif;?>
+  <?php endif;?>
 
 
-<section>
-  <?php $terms = get_field('oeu__thematique'); ?>
-  <?php foreach( $terms as $term ): ?>
-    <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" class="btn btn--outline">#<?php echo esc_html( $term->name ); ?></a>
-  <?php endforeach; ?>
-</section>
+  <?php // Afficher toutes les autres taxo  ?>
 
-</main>
+  <section class="thm__thms">
 
-<?php get_footer(); ?>
+    <?php
+
+    $query_obj = get_queried_object();
+    $taxonomy  = get_taxonomy( $query_obj->taxonomy );
+    if ( $taxonomy ):
+      $parentslug =  $taxonomy->query_var;
+      $parentname=  $taxonomy->labels->name;
+      $terms = get_terms([
+        'taxonomy' => $parentslug,
+        'hide_empty' => false,
+      ]); ?>
+
+      <section class="thm__thms col m1 l8">
+        <div class="row">
+          <h2 class="subheading">Autres <?php echo $parentname; ?></h2>
+          <div class="divider"></div>
+        </div>
+        <?php foreach( $terms as $term ): ?>
+          <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" class="btn btn--outline">#<?php echo esc_html( $term->name ); ?></a>
+        <?php endforeach; ?>
+      </section>
+    <?php endif; ?>
+
+  </main>
+
+  <?php get_footer(); ?>

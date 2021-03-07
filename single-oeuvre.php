@@ -109,7 +109,7 @@ $featured_posts  = get_field('oeu__main-auteurs');
 if( $featured_posts ): ?>
 <div class="row oeu__main-auteurs">
   <div class="m3">
-    <h2 class="subheading"><?php _e("Artites principaux","lesailleurs") ?></h2>
+    <h2 class="subheading"><?php _e("Principaux Auteurs","lesailleurs") ?></h2>
     <div class="divider"></div>
   </div>
   <ul class="l-auteurs__items l12">

@@ -22,6 +22,14 @@ jQuery( document ).ready(function( $ ) {
   });
 
 
+  // Button ReadMore Sur le block Selection
+
+  $('.slc__readmore-btn').on('click', function(){
+    $('.slc').toggleClass('slc__full slc__readmore');
+    $(this).fadeOut();
+  });
+
+
   // Bouton Scroll cover
 
   $('.cover__scroll-down').click(function(){
@@ -64,13 +72,38 @@ jQuery( document ).ready(function( $ ) {
   // Effet is--DenkoKeijiban
 
   $('.is--denko').each(function() {
+    var clone = $(this).find('*')
     var n = 100;
     while(n > 0){
-      $(this).append($(this).children().first().clone());
+      $(this).append(clone.clone());
       n -= 1;
     }
   });
 
+
+  // Effet is--lightbox
+
+  $('.is--lightbox').click(function(){
+    var img = $(this).find('img').attr('src');
+    $('body').addClass('lightbox--is--active').append('<div class="lightbox__overlay"></div>');
+    $('.lightbox__overlay').html('<div class="lightbox__img"><img src="' + img +'"></div><div class="lightbox__close subheading">fermer</div>');
+    $('.lightbox__overlay').fadeIn();
+  });
+  $(document).mouseup(function(e) {
+    var container = $('.lightbox__img').find('img');
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      $('.lightbox__overlay').fadeOut( 500, function() {
+        $('.lightbox__overlay').remove();
+      });
+    }
+  });
+
+
+  // Fermeture de la modal
+
+  $('.modal__btn').on('click', function(){
+    $('.modal__container').fadeOut();
+  });
 
   // Bloc partenaire minimize
 
@@ -85,7 +118,6 @@ jQuery( document ).ready(function( $ ) {
 
   $('.par__readmore-btn').on('click', function(){
     $('.par').toggleClass('par--is--minimize');
-    // $('.par__first').fadeOut();
   });
 
 
@@ -99,28 +131,10 @@ jQuery( document ).ready(function( $ ) {
   // });
 
 
-  // Lightbox
+});  //Fin du jQuery( document ).ready
 
-  $('.is--lightbox').click(function(){
-    var img = $(this).find('img').attr('src');
-    $('body').addClass('lightbox--is--active').append('<div class="lightbox__overlay"></div>');
-    $('.lightbox__overlay').html('<img class="lightbox__img" src="' + img +'"><div class="lightbox__close subheading">fermer</div>');
-    $('.lightbox__overlay').fadeIn();
-  });
-  $(document).mouseup(function(e)
-  {
-    var container = $('.lightbox__img');
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
-      $('.lightbox__overlay').fadeOut( 500, function() {
-        $('.lightbox__overlay').remove();
-      });
-    }
-  });
 
-  $('#close__modal').click(function(){
-    $('.modal__overlay').fadeOut();
-  });
-});
+
 
 
 // Changement de skin du header si scroll
@@ -151,7 +165,6 @@ function responsive(){
 
 function message__init() {
   $('.rgpd__oui').click(function(){
-    console.log('click');
     $(this).closest('.rgpd').removeClass('is--open');
     var idMessage = $(this).closest('.rgpd').attr('id')
     Cookies.set(idMessage, 'is--hidden', { expires: 1 });

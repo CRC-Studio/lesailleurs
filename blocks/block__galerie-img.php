@@ -10,7 +10,7 @@
     if( $images ): ?>
     <ul class="gal__images is--not--hover">
       <?php foreach( $images as $image_id ): ?>
-        <li class="gal__image">
+        <li class="gal__image is--lightbox">
           <div class="image-full__ratio-1-1">
             <div class="image-full__content">
               <?php echo wp_get_attachment_image( $image_id, $size ); ?>

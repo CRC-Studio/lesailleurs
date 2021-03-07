@@ -1,5 +1,50 @@
 // main: ../../../style.sass
 
+
+  Le part selection gère l'affichage des selections sur le site
+
+
+.slc
+  position: relative
+  overflow: hidden
+  max-height: 1000vh
+  transition: all 3s cubic-bezier(1, 0.03, 1, 1)
+
+
+// ReadMore System
+
+
+.slc__readmore
+  max-height: 150vh
+  transition: all 3s
+
+.slc__readmore-overlay
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: linear-gradient(0deg, rgba($color-back, 1) 20%, rgba($color-back, 0) 66%)
+  pointer-events: none
+  opacity: 1
+  z-index: 1
+  transition: opacity 3s
+
+.ebs__readmore-btn
+  position: absolute
+  bottom: $modulor*3
+  z-index: 1
+
+.slc__full
+  .slc__readmore-overlay,
+  .slc__readmore-btn
+    pointer-events: none
+    opacity: 0
+    transition: opacity 3s
+
+
+// Template des oeuvres selectionnées
+
 .slc__slc
   display: flex
   height: 25vw

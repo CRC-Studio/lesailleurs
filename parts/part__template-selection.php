@@ -3,7 +3,7 @@
 	<?php get_template_part('blocks/block__editorblocksystem') ?>
 
   <?php if( have_rows('slc') ): ?>
-    <section class="slc">
+    <section class="slc slc__readmore">
       <div class="row ebs__titre">
         <div class="m2">
           <!-- <h2 class="subheading"><?php _e("La suite de la sélection","lesailleurs") ?></h2> -->
@@ -24,5 +24,6 @@
         <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>
 				<?php $post = $backup_post; // Utile pour relancer la loop après un wp_reset_postdata(); ?>
       <?php endwhile; ?>
+			<div class="slc__readmore-overlay"></div>
     </section>
   <?php endif; ?>
