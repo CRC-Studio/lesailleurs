@@ -3,7 +3,7 @@
   <?php while( have_rows('gal') ): the_row(); ?>
 
 
-  <div class="gal row is--lightbox">
+  <div class="gal row">
     <?php
     $images = get_sub_field('gal__gal');
     $size = 'full'; // (thumbnail, medium, large, full or custom size)

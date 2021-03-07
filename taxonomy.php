@@ -39,6 +39,13 @@ get_header(); ?>
 <?php endif;?>
 
 
+<section>
+  <?php $terms = get_field('oeu__thematique'); ?>
+  <?php foreach( $terms as $term ): ?>
+    <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" class="btn btn--outline">#<?php echo esc_html( $term->name ); ?></a>
+  <?php endforeach; ?>
+</section>
+
 </main>
 
 <?php get_footer(); ?>

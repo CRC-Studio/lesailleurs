@@ -1,7 +1,7 @@
 <?php
 
 get_header(); ?>
-
+<?php get_template_part('parts/nav') ?>
 
 
 <section class="cover cover__big cover__color12">
