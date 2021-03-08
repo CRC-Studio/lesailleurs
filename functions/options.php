@@ -24,8 +24,8 @@ add_theme_support( 'post-thumbnails' );
 function webtoffee_strictly_enabled_cookie_categories($strict_categories) {
 
     $count = count($strict_categories);
-    $strict_categories[$count] = 'necessaire';
-    $strict_categories[$count+1] = 'necessary';
+    $strict_categories[$count] = 'necessary';
+    $strict_categories[$count+1] = 'necessaire';
 
     return $strict_categories;
 }
