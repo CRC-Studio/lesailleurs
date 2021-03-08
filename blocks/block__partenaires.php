@@ -33,9 +33,9 @@
                 ?>
                 <?php if( have_rows('par__grp02') ): ?>
                   <?php while( have_rows('par__grp02') ): the_row(); ?>
-
                     <?php // On toutes les données avant de les envoyer au Template ?>
                     <?php if ($par__doweknowhim == 'oui'): // Si le partenaire n'est pas dans la base de donnée :
+                      $backup_post = $post; // Utile pour relancer la loop après un wp_reset_postdata();
                       $post = get_sub_field('par__partenaire');
                       setup_postdata($post); // Setup this post for WP functions (variable must be named $post).
 
@@ -45,6 +45,7 @@
                       $par__logo = get_field('par__logo');
 
                       wp_reset_postdata();  // Reset the global post object so that the rest of the page works correctly.
+                      $post = $backup_post; // Utile pour relancer la loop après un wp_reset_postdata();
                       ?>
 
                     <?php else: // Si le partenaire n'est pas dans la base de donnée :

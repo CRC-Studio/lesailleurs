@@ -116,9 +116,10 @@ jQuery( document ).ready(function( $ ) {
   };
 
 
-  $('.par__readmore-btn').on('click', function(){
+  $('.par__readmore-btn, .par__first').on('click', function(){
     $('.par').toggleClass('par--is--minimize');
   });
+
 
 
   // Extention Mailchimp

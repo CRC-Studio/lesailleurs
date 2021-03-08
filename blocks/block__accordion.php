@@ -25,7 +25,7 @@
 
 <?php // Block accordion ?>
 
-
+<?php if( $acn__repeater ): ?>
     <section class="acn">
       <div class="col l4">
         <h2 class="display1"><?php echo $acn__titre;?></h2>
@@ -77,5 +77,6 @@
 
 
     </section>
+    <?php endif; ?>
   <?php endwhile; ?>
 <?php endif; ?>

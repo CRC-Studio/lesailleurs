@@ -33,8 +33,6 @@
 		</section>
 	<?php endif; ?>
 
-	<?php get_template_part('parts/rgpd') ?>
-
 	<?php wp_footer(); ?>
 </footer>
 </body>

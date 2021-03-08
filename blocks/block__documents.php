@@ -3,6 +3,9 @@
   <?php while( have_rows('doc') ): the_row(); ?>
 
 
+    <?php if( get_sub_field('doc__titre') || get_sub_field('doc__intro') || get_sub_field('doc__docs') ): ?>
+
+
     <section class="doc bigm">
 
       <?php // Gestion de l'introduction ?>
@@ -70,5 +73,6 @@
     </div>
 
   </section>
+  <?php endif; ?>
 <?php endwhile; ?>
 <?php endif; ?>

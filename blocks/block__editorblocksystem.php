@@ -5,6 +5,10 @@
   <?php while( have_rows('ebs') ): the_row(); ?>
 
     <?php $ebs__grp01 = get_sub_field('ebs__grp01'); ?>
+    <?php $ebs__grp02 = get_sub_field('ebs__grp02'); ?>
+
+
+    <?php if ($ebs__grp01['ebs__link'] || $ebs__grp02['ebs__titre'] || $ebs__grp02['eds__editor'] ): ?>
 
 
     <section class="ebs bigm <?php echo esc_attr( $ebs__grp01['ebs__readmore'] ); ?> white--isnt--white">
@@ -121,6 +125,8 @@
         <div class="ebs__overlay"></div>
 
       </section>
+
+    <?php endif; ?>
 
     <?php endwhile; ?>
   <?php endif; ?>
