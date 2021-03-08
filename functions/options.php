@@ -20,14 +20,13 @@ add_theme_support( 'post-thumbnails' );
 *  https://www.webtoffee.com/modify-strictly-enabled-cookie-categories-using-webtoffee-gdpr-cookie-consent-plugin/
 */
 
-
-function webtoffee_strictly_enabled_cookie_categories($strict_categories) {
-
-    $count = count($strict_categories);
-    $strict_categories[$count] = 'necessary';
-    $strict_categories[$count+1] = 'necessaire';
-
-    return $strict_categories;
-}
-
-add_filter('gdpr_strictly_enabled_category', 'webtoffee_strictly_enabled_cookie_categories');
+// function webtoffee_strictly_enabled_cookie_categories($strict_categories) {
+//
+//     $count = count($strict_categories);
+//     $strict_categories[$count] = 'skroutz';
+//     $strict_categories[$count+1] = 'pixel';
+//
+//     return $strict_categories;
+// }
+//
+// add_filter('gdpr_strictly_enabled_category', 'webtoffee_strictly_enabled_cookie_categories');
