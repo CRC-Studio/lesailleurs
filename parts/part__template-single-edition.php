@@ -4,12 +4,16 @@
 
 <?php // Voir les sélections ?>
 
+
+<?php $backup_post = $post // Utile pour relancer la loop après un wp_reset_postdata(); ?>
 <?php $post = get_field('edt__slc'); ?>
 <?php if( $post ): ?>
   <?php setup_postdata($post); // Setup this post for WP functions (variable must be named $post).?>
   <?php get_template_part('parts/part__template-selection') ?>
   <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly. ?>
 <?php endif; ?>
+<?php $post = $backup_post // Utile pour relancer la loop après un wp_reset_postdata(); ?>
+
 
 <?php // Voir les autres sélections ?>
 
@@ -37,6 +41,7 @@
 ));
 ?>
 <?php if( $evenements ): ?>
+  <?php $backup_post = $post // Utile pour relancer la loop après un wp_reset_postdata(); ?>
   <section>
     <ul>
       <?php foreach( $evenements as $evenement ): ?>
@@ -53,6 +58,7 @@
       </div>
     </div>
   </section>
+  <?php $post = $backup_post // Utile pour relancer la loop après un wp_reset_postdata(); ?>
 <?php endif; ?>
 
 
