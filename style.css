@@ -648,6 +648,7 @@ svg {
   right: -7vw;
   flex-direction: row;
   opacity: 0;
+  cursor: pointer;
   transition: 2s all;
 }
 
@@ -661,8 +662,17 @@ svg {
   background: linear-gradient(90deg, #667ee4 0%, #667ee400 100%);
 }
 
+.par__first .par__wrapper {
+  border-radius: 28px;
+}
+
 .par__first .par__par {
   width: 100%;
+}
+
+.par__first:hover {
+  transform: translateX(-28px);
+  transition: all .5s;
 }
 
 .par .btn--outline {
@@ -857,6 +867,7 @@ svg {
 }
 
 .cover__scroll-down:hover svg {
+  fill: #2B5876 !important;
   transition: all 0.5s;
 }
 

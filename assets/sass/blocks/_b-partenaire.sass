@@ -92,6 +92,7 @@
   right: -7vw
   flex-direction: row
   opacity: 0
+  cursor: pointer
   transition: 2s all
 
   &::after
@@ -103,8 +104,15 @@
     right: 0
     background: linear-gradient(90deg, #667ee4 0%, #667ee400 100%)
 
+  .par__wrapper
+    border-radius: $modulor*2
+
   .par__par
     width: 100%
+
+  &:hover
+    transform: translateX(-$modulor*2)
+    transition: all .5s
 
 .par .btn--outline
   display: block

@@ -160,7 +160,7 @@ if ($loop->have_posts()) :?>
     'post_type'       => 'auteur',
     'orderby'         => 'rand',
     'order'           => 'ASC',
-    'posts_per_page'  => -1
+    'posts_per_page'  => 5
   )
 );
 if ($loop->have_posts()) :?>
@@ -175,7 +175,7 @@ if ($loop->have_posts()) :?>
 
   <ul class="l-auteurs__items l12">
     <li class="l-auteurs__item display3 l12">
-      <a href="<?php echo get_polypage_link('agenda'); ?>" title="<?php the_title()?>" class="is--denko">
+      <a href="<?php echo get_polypage_link('auteurs'); ?>" title="<?php the_title()?>" class="is--denko">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <span><?php the_title(); ?></span>
         <?php endwhile; ?>
