@@ -99,7 +99,6 @@
                     <div class="ebs__container col l8 m1">
                     <?php endif; ?>
                     <div class="ebs__content">
-
                     <?php endif; ?>
                   <?php endwhile; ?>
                 <?php endif; ?>
@@ -108,9 +107,16 @@
             <?php endif; ?>
 
           </div>
-          <button class="btn btn--outline ebs__readmore-btn"><?php _e("En savoir plus","lesailleurs") ?></button>
         </div>
-
+        <?php if( $link ): ?>
+          <div class="ebs__container col l6 m3">
+          <?php else: ?>
+            <div class="ebs__container col l8 m1">
+          <?php endif; ?>
+            <div class="ebs__content">
+              <button class="btn btn--outline ebs__readmore-btn"><?php _e("En savoir plus","lesailleurs") ?></button>
+            </div>
+          </div>
 
         <div class="ebs__overlay"></div>
 

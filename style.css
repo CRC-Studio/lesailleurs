@@ -362,6 +362,14 @@ svg {
   width: 33%;
 }
 
+.thm__big {
+  background: #2B5876;
+}
+
+.thm__big li {
+  display: inline-block;
+}
+
 .vdo {
   background: linear-gradient(90deg, #09203F 0%, #523D80 100%);
   padding: 70px;
@@ -1689,9 +1697,9 @@ em {
   transition: all 2s;
 }
 
-.btn:hover, a.btn:hover {
+.btn:hover, a:link.btn:hover, a:visited.btn:hover {
   border-radius: 7px;
-  box-shadow: 0 10px 20px rgba(153, 166, 224, 0.19), 0 6px 6px rgba(153, 166, 224, 0.23);
+  box-shadow: 0 0.938em 2.188em rgba(153, 166, 224, 0.15), 0 0.313em 0.938em rgba(153, 166, 224, 0.1);
   transition: all 0.2s;
 }
 
@@ -1705,6 +1713,27 @@ em {
   background: none;
   color: black;
   border: 2px solid #667EE4;
+}
+
+.btn--big, a:link.btn--big, a:visited.btn--big {
+  display: inline-block;
+  margin: 2.8px;
+  padding: 21px 28px;
+  border-radius: 70px;
+  font-size: 42px;
+  line-height: 42px;
+  color: black;
+  background: white;
+  border: 3px solid #2B5876;
+  box-shadow: none;
+  transition: all 2s;
+}
+
+.btn--big:hover, a:link.btn--big:hover, a:visited.btn--big:hover {
+  border-radius: 14px;
+  border: 3px solid #99A6E0;
+  box-shadow: 0 2.8px 2.2px rgba(9, 32, 63, 0.034), 0 6.7px 5.3px rgba(9, 32, 63, 0.048), 0 12.5px 10px rgba(9, 32, 63, 0.06), 0 22.3px 17.9px rgba(9, 32, 63, 0.072), 0 41.8px 33.4px rgba(9, 32, 63, 0.086), 0 100px 80px rgba(9, 32, 63, 0.12);
+  transition: all 0.2s;
 }
 
 .image-full {

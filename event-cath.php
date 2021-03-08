@@ -3,7 +3,9 @@
 Template Name:  Event category
 */
 
-get_header(); ?>
+get_header();
+get_template_part('parts/nav');
+?>
 
 <section class="l-event-cath row">
   <div class="col l12">

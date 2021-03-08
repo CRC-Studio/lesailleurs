@@ -3,7 +3,9 @@
 Template Name:  Industrie
 */
 
-get_header(); ?>
+get_header();
+get_template_part('parts/nav');
+?>
 
 <section class="l-industrie row">
   <div class="col l12">

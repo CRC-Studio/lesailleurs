@@ -3,8 +3,9 @@
 Template Name: Événement Single
 */
 
-get_header(); ?>
-<?php get_template_part('parts/nav') ?>
+get_header();
+get_template_part('parts/nav');
+?>
 
 <main class="main l-evenement">
   <?php // Gestion de la cover ?>
@@ -143,7 +144,7 @@ if( $terms ): ?>
     </div>
     <div class="row thm__more">
       <div class="divider"></div>
-      <a href="<?php echo esc_url( get_term_link( $term ) ); ?>" class="btn btn--outline"><?php _e("Voir toutes les thématiques","lesailleurs") ?></a>
+      <a href="<?php echo get_polypage_link('thematique'); ?>" class="btn btn--outline"><?php _e("Voir toutes les thématiques","lesailleurs") ?></a>
       <p class="body color__legende"><?php _e("Les Ailleurs explorent. Jamais ne tourne en rond. Alors perdez-vous avec nous.","lesailleurs") ?></p>
     </div>
   </div>

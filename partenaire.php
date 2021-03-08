@@ -3,7 +3,9 @@
 Template Name:  Partenaire
 */
 
-get_header(); ?>
+get_header();
+get_template_part('parts/nav');
+?>
 
 <section class="l-partenaire row">
   <div class="col l12">

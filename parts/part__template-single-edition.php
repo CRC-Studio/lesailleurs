@@ -54,13 +54,12 @@
     <div class="thm"> <?php // Voir tous les événements ?>
       <div class="row thm__more">
         <div class="divider"></div>
-        <a href="<?php echo home_url(); ?>/agenda" class="btn btn--outline"><?php _e("Voir tous les événements","lesailleurs") ?></a>
+        <a href="<?php echo get_polypage_link('agenda'); ?>" class="btn btn--outline"><?php _e("Voir tous les événements","lesailleurs") ?></a>
       </div>
     </div>
   </section>
   <?php $post = $backup_post // Utile pour relancer la loop après un wp_reset_postdata(); ?>
 <?php endif; ?>
-
 
 
 <?php get_template_part('blocks/block__accordion') ?>

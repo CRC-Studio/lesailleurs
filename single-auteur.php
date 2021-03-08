@@ -3,8 +3,9 @@
 Template Name:  Auteur Single
 */
 
-get_header(); ?>
-<?php get_template_part('parts/nav') ?>
+get_header();
+get_template_part('parts/nav');
+?>
 
 <?php $auteur = get_the_title(); // Note : on stocke le nom de l'auteur pour pouvoir trier les événements un peu plus bas.  ?>
 
@@ -174,7 +175,7 @@ if ($loop->have_posts()) :?>
 
   <ul class="l-auteurs__items l12">
     <li class="l-auteurs__item display3 l12">
-      <a href="<?php the_permalink() ?>" title="<?php the_title()?>" class="is--denko">
+      <a href="<?php echo get_polypage_link('agenda'); ?>" title="<?php the_title()?>" class="is--denko">
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
           <span><?php the_title(); ?></span>
         <?php endwhile; ?>

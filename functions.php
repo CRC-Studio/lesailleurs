@@ -7,6 +7,7 @@ require_once( __DIR__ . '/functions/options.php');
 require_once( __DIR__ . '/functions/include.php');
 require_once( __DIR__ . '/functions/minimize__back.php');
 require_once( __DIR__ . '/functions/minimize__front.php');
+require_once( __DIR__ . '/functions/multilangue.php');
 require_once( __DIR__ . '/functions/acf-fields.php');
 
 /*        ADD Custom Type        */
@@ -74,8 +75,5 @@ add_filter('posts_where', 'my_posts_where');
 
 
 /**
-* On fait des trucs affreux pour les taxo
+* On fait des trucs affreux pour des liens dans polylangue
 */
-
-
-?>

@@ -3,8 +3,9 @@
 Template Name:  Agenda
 */
 
-get_header(); ?>
-<?php get_template_part('parts/nav') ?>
+get_header();
+get_template_part('parts/nav');
+?>
 
 <main class="main l-agenda">
   <?php get_template_part('blocks/block__cover') ?>

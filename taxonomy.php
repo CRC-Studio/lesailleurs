@@ -1,17 +1,19 @@
 <?php
 /*
-Template Name: Taxonomie
+Template Name: Taxonomie Single
 */
 
-get_header(); ?>
-<?php get_template_part('parts/nav') ?>
+get_header();
+get_template_part('parts/nav');
+?>
+
 
 <main class="main l-taxo">
 
   <?php // Gestion de la cover ?>
 
   <section class="cover cover__small cover__nocolor">
-    <div class="cover__container isv--parent">
+    <div class="cover__container cover__text isv--parent">
       <div class="cover__content">
         <h1 class="cover__title display3"><?php single_term_title(); ?></h1>
         <div class="cover__info lead_paragraph l10 m2">
@@ -28,13 +30,15 @@ get_header(); ?>
   </section>
   <?php  if ( have_posts() ) : ?>
     <section>
+      <div class="row">
+        <h2 class="subheading"><?php _e("Événement ou Œuvre en rapport","lesailleurs") ?></h2>
+        <div class="divider"></div>
+      </div>
+      <ul class="is--not--hover">
       <?php while (have_posts()) : the_post(); ?>
-        <a href="<?php the_permalink(); ?>">
-          <div class="row">
-            <h3 class="display2"><?php the_title(); ?></h3>
-          </div>
-        </a>
+        <?php get_template_part('parts/part__list') ?>
       <?php endwhile; ?>
+      </ul>
     </section>
   <?php endif;?>
 
@@ -55,9 +59,9 @@ get_header(); ?>
         'hide_empty' => false,
       ]); ?>
 
-      <section class="thm__thms col m1 l8">
+      <section class="thm__thms col l6">
         <div class="row">
-          <h2 class="subheading">Autres <?php echo $parentname; ?></h2>
+          <h2 class="subheading"><?php _e("Autres","lesailleurs") ?> <?php echo $parentname; ?></h2>
           <div class="divider"></div>
         </div>
         <?php foreach( $terms as $term ): ?>

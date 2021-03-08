@@ -62,7 +62,7 @@ jQuery( document ).ready(function( $ ) {
   // Effet is--not--hover
 
   $('.is--not--hover').find('li').hover(function() {
-    $('.is--not--hover').find('li').addClass('not--hover');
+    $(this).siblings('li').addClass('not--hover');
     $(this).removeClass('not--hover');
   },function() {
     $('.is--not--hover').find('li').removeClass('not--hover');

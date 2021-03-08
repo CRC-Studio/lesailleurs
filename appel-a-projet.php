@@ -3,7 +3,9 @@
 Template Name:  Appel à Projet
 */
 
-get_header(); ?>
+get_header();
+get_template_part('parts/nav');
+?>
 
 <section class="l-appel-a-projet row">
   <div class="col l12">

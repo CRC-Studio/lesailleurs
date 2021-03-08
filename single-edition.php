@@ -3,8 +3,9 @@
 Template Name: Édtions Single
 */
 
-get_header(); ?>
-<?php get_template_part('parts/nav') ?>
+get_header();
+get_template_part('parts/nav');
+?>
 
 <main class="main l-edition">
   <?php get_template_part('parts/part__template-single-edition') ?>

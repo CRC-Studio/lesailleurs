@@ -3,8 +3,9 @@
 Template Name: Partenaire Single
 */
 
-get_header(); ?>
-<?php get_template_part('parts/nav') ?>
+get_header();
+get_template_part('parts/nav');
+?>
 
 <main class="main l-partenaire">
   <section class="cover cover__small cover__nocolor">
