@@ -7,8 +7,6 @@ get_header();
 get_template_part('parts/nav');
 ?>
 <main class="main l-selection">
-  <?php get_template_part('parts/nav') ?>
-
   <?php get_template_part('blocks/block__cover') ?>
 
   <?php // Voir les sélections ?>

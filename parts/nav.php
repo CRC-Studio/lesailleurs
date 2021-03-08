@@ -85,14 +85,11 @@ $language_menu = wp_nav_menu(
 	<?php // menu Fullscreen ?>
 
 
-<?php $frontpage_id = get_option( 'page_on_front' ); ?>
-<?php $menu_id = get_field('home', $frontpage_id); ?>
-
 	<?php // couverture ?>
 
 	<div class="l-header__nav cover__big">
 		<div class="l6 l-header__scene cover__color09">
-			<?php $images = get_field('edt__menu-imgs', $menu_id); ?>
+			<?php $images = get_field('edt__menu-imgs', HOMEPAGEID); ?>
 			<?php if ($images): ?>
 				<?php $rand = array_rand($images, 1); // On choisi une image au hasard dans la galerie ?>
 				<div class="image-full">
@@ -116,12 +113,12 @@ $language_menu = wp_nav_menu(
 
 			<?php // menu secondaire ?>
 
-			<?php if( have_rows('edt__menu',$menu_id) ): ?>
+			<?php if( have_rows('edt__menu',HOMEPAGEID) ): ?>
 				<div class="divider"></div>
 				<nav class="nav__secondaire color__legende">
-					<?php while( have_rows('edt__menu', $menu_id) ): the_row(); ?>
+					<?php while( have_rows('edt__menu',HOMEPAGEID) ): the_row(); ?>
 						<?php
-						$link = get_sub_field('edt__menu-url', $menu_id);
+						$link = get_sub_field('edt__menu-url',HOMEPAGEID);
 						if( $link ):
 							$link_url = $link['url'];
 							$link_title = $link['title'];

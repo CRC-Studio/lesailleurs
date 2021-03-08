@@ -12,6 +12,10 @@ require_once( __DIR__ . '/functions/acf-fields.php');
 
 /*        ADD Custom Type        */
 
+require_once( __DIR__ . '/functions/where--is--ailleurs.php');
+
+/*        ADD Custom Type        */
+
 require_once( __DIR__ . '/functions/custom-post-type__auteurs.php');
 require_once( __DIR__ . '/functions/custom-post-type__oeuvre.php');
 require_once( __DIR__ . '/functions/custom-post-type__selection.php');
@@ -75,5 +79,5 @@ add_filter('posts_where', 'my_posts_where');
 
 
 /**
-* On fait des trucs affreux pour des liens dans polylangue
+* On fait des trucs affreux ici
 */
