@@ -32,9 +32,12 @@ $language_menu = wp_nav_menu(
 
 
 <header class="l-header row">
-	<div class="l3">
+	<div class="l3 l-header__logo">
 		<a href="<?php echo home_url(); ?>" class="headline">
-			<?php bloginfo( 'name' ); ?>
+			<?php
+				// bloginfo( 'name' );
+				get_template_part('assets/img/inline', 'logo.svg');
+			?>
 		</a>
 	</div>
 	<div class="l-header__baseline l3">

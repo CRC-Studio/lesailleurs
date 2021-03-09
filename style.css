@@ -2406,6 +2406,10 @@ em {
   padding-left: 42px;
 }
 
+.l-header__logo svg {
+  height: 28px;
+}
+
 .l-header__nav-fixed {
   display: flex;
   flex-direction: row;
