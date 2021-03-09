@@ -115,7 +115,7 @@ $language_menu = wp_nav_menu(
 
 			<?php if( have_rows('edt__menu',HOMEPAGEID) ): ?>
 				<div class="divider"></div>
-				<nav class="nav__secondaire color__legende">
+				<nav class="nav__secondaire color__legende is--not--hover">
 					<?php while( have_rows('edt__menu',HOMEPAGEID) ): the_row(); ?>
 						<?php
 						$link = get_sub_field('edt__menu-url',HOMEPAGEID);

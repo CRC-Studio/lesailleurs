@@ -7,12 +7,48 @@ get_header();
 get_template_part('parts/nav');
 ?>
 
-<section class="l-partenaire row">
-  <div class="col l12">
-    <h1><?php the_title(); ?></h1>
-  </div>
-  <?php get_template_part( 'parts/elements' ); ?>
-</section>
+
+<main class="main l-partenaire">
+
+  <?php get_template_part('blocks/block__cover') ?>
+  <?php get_template_part('blocks/block__editorblocksystem') ?>
+
+
+  <?php // Voir tous les partenaires? ?>
+
+  <?php $loop = new WP_Query(
+    array(
+      'post_type'       => 'partenaire',
+      'orderby'         => 'title',
+      'order'           => 'ASC',
+      'posts_per_page'  => -1
+    )
+  );
+  if ($loop->have_posts()) :?>
+
+  <section class="par bigm">
+    <ul class="par__pars par__all row">
+    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+      <li class="par__par par__small" onclick="location.href='<?php the_permalink(); ?>'">
+        <div class="par__wrapper">
+          <div class="par__container">
+            <?php $image = get_field('par__logo'); ?>
+            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+          </div>
+          <div class="par__overlay">
+            <div>
+              <p class="lead_paragraph"><?php the_title(); ?></p>
+              <span class="subheading"><?php the_field('par__soustitre') ?></span>
+            </div>
+            <span class="par__read-more subheading"><?php _e("↘ En savoir plus","lesailleurs") ?></span>
+          </div>
+        </div>
+      </li>
+    <?php endwhile; ?>
+    <ul>
+  </section>
+<?php endif; wp_reset_query(); ?>
 
 
 <?php get_footer(); ?>
