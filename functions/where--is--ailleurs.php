@@ -19,5 +19,5 @@ add_action('wp_enqueue_scripts', 'where__is__ailleurs');
 
   // Récupère l'ID de l'édition actuellement sur la Home
 
-$frontpage_id = get_option( 'page_on_front' );
-define('HOMEPAGEID', get_field('home', $frontpage_id) );
+	$frontpage_id = get_option( 'page_on_front' );
+	define('HOMEPAGEID', get_field('home', $frontpage_id) );

@@ -11,6 +11,22 @@
   transition: all 3s cubic-bezier(1, 0.03, 1, 1)
 
 
+#slc__label
+  position: absolute
+  top: -$modulor*5
+  left: -$modulor*5
+  width: $modulor*10
+  height: $modulor*10
+  z-index: 1
+  animation: 20s infinite ease-in-out  slc__label-rotate
+
+@keyframes slc__label-rotate
+  from
+    transform: rotate(360deg)
+
+  to
+    transform: rotate(0)
+
 // ReadMore System
 
 
@@ -35,7 +51,9 @@
   bottom: $modulor*3
   z-index: 1
 
-.slc__full
+.slc__full, .l-selection
+  .slc__readmore
+      max-height: 1000vh
   .slc__readmore-overlay,
   .slc__readmore-btn
     pointer-events: none
@@ -47,6 +65,7 @@
 
 .slc__slc
   display: flex
+  position: relative
   height: 25vw
   position: relative
   float: left

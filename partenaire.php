@@ -30,7 +30,11 @@ get_template_part('parts/nav');
     <ul class="par__pars par__all row">
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-      <li class="par__par par__small" onclick="location.href='<?php the_permalink(); ?>'">
+      <?php if (get_permalink()): ?>
+        <li class="par__par par__small par__link" onclick="location.href='<?php the_permalink(); ?>'">
+      <?php else: ?>
+        <li class="par__par par__small">
+      <?php endif; ?>
         <div class="par__wrapper">
           <div class="par__container">
             <?php $image = get_field('par__logo'); ?>
@@ -41,7 +45,9 @@ get_template_part('parts/nav');
               <p class="lead_paragraph"><?php the_title(); ?></p>
               <span class="subheading"><?php the_field('par__soustitre') ?></span>
             </div>
-            <span class="par__read-more subheading"><?php _e("↘ En savoir plus","lesailleurs") ?></span>
+            <?php if (get_permalink()): ?>
+              <span class="par__read-more subheading"><?php _e("↘ En savoir plus","lesailleurs") ?></span>
+            <?php endif; ?>
           </div>
         </div>
       </li>

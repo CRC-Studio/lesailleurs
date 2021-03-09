@@ -60,7 +60,11 @@
                     <?php  // Ici commence le Template ?>
 
 
-                    <li class="par__par <?php echo $par__size ?>" onclick="location.href='<?php echo $par__url ?>'">
+                    <?php if ($par__url): ?>
+                      <li class="par__par par__link <?php echo $par__size ?>" onclick="location.href='<?php echo $par__url ?>'">
+                    <?php else: ?>
+                      <li class="par__par <?php echo $par__size ?>">
+                    <?php endif; ?>
                       <div class="par__wrapper">
                         <div class="par__container">
                           <?php echo wp_get_attachment_image( $par__logo['ID'], 'full' ); ?>
@@ -70,7 +74,9 @@
                             <p class="lead_paragraph"><?php echo $par__title ?></p>
                             <span class="subheading"><?php echo $par__sous_title ?></span>
                           </div>
-                          <span class="par__read-more subheading"><?php _e("↘ En savoir plus","lesailleurs") ?></span>
+                          <?php if ($par__url): ?>
+                            <span class="par__read-more subheading"><?php _e("↘ En savoir plus","lesailleurs") ?></span>
+                          <?php endif; ?>
                         </div>
                       </div>
                     </li>

@@ -33,6 +33,6 @@ function custom_taxo_mention() {
         'rewrite'           => array( 'slug' => 'mention' ),
     );
 
-    register_taxonomy( 'mention', array( 'selection' ), $args );
+    register_taxonomy( 'mention', array( 'oeuvre', 'selection' ), $args );
 }
 add_action( 'init', 'custom_taxo_mention', 0 );

@@ -640,6 +640,10 @@ svg {
   bottom: 56px;
 }
 
+.par__link {
+  cursor: pointer;
+}
+
 .par__first {
   position: absolute;
   display: flex;
@@ -2151,6 +2155,25 @@ em {
   transition: all 3s cubic-bezier(1, 0.03, 1, 1);
 }
 
+#slc__label {
+  position: absolute;
+  top: -70px;
+  left: -70px;
+  width: 140px;
+  height: 140px;
+  z-index: 1;
+  animation: 20s infinite ease-in-out  slc__label-rotate;
+}
+
+@keyframes slc__label-rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0);
+  }
+}
+
 .slc__readmore {
   max-height: 150vh;
   transition: all 3s;
@@ -2175,8 +2198,13 @@ em {
   z-index: 1;
 }
 
+.slc__full .slc__readmore, .l-selection .slc__readmore {
+  max-height: 1000vh;
+}
+
 .slc__full .slc__readmore-overlay,
-.slc__full .slc__readmore-btn {
+.slc__full .slc__readmore-btn, .l-selection .slc__readmore-overlay,
+.l-selection .slc__readmore-btn {
   pointer-events: none;
   opacity: 0;
   transition: opacity 3s;
@@ -2184,6 +2212,7 @@ em {
 
 .slc__slc {
   display: flex;
+  position: relative;
   height: 25vw;
   position: relative;
   float: left;
