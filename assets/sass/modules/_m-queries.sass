@@ -37,6 +37,9 @@
   .slc__lar1, .slc__lar2, .slc__lar3, .slc__lar4, .slc__lar5, .slc__lar6
     width: 100%
 
+  .biglinks, .vdo
+    padding: $modulor*2 $modulor
+
   .slc__slc
     min-height: 25vh
     height: auto
@@ -45,7 +48,7 @@
     width: 50%
 
   .slc__overlay
-    opacity: 0
+    display: none
 
   .l-header__baseline.l3
     display: none
@@ -54,13 +57,10 @@
     font-size: $modulor *2
     line-height: $modulor *3
 
-  .display2 *, .display2
+  .display2 *, .display2,
+  .display3 *, .display3
     font-size: $modulor *3
     line-height: $modulor *4
-
-  .display3 *, .display3
-    font-size: $modulor *5
-    line-height: $modulor *6
 
   .l-footer__rs
     ul
@@ -70,7 +70,7 @@
 // Small devices (landscape phones, up to 576px)
 @media (max-width: 576px)
 
-  .cover__text.isv--parent,
+  .cover__full .isv--parent,
   .ebs__container
     display: block
 
@@ -88,6 +88,19 @@
 
   .doc__small
     width: 50%
+
+  .cover.cover__big
+    flex-direction: column
+    .cover__container
+      height: 50vh
+    .cover__is--empty
+      display: none
+
+  .l-evenement
+    .cover__container
+      height: 100vh !important
+    .cover__is--empty
+      display: block
 
   .acn
     grid-template-columns: repeat(1, 1fr)
@@ -115,7 +128,13 @@
     padding-bottom: $modulor
 
   .l-header__content
-    width: calc(100% - #{$modulor})
+    width: 83.33%
+    .lead_paragraph
+      font-size: $modulor
+      line-height: $modulor*1.5
+
+  .l-header__scene
+    width: 16.66%
 
   .l-header__nav-fixed
     width: 75%
@@ -125,12 +144,8 @@
     padding: $modulor/2
 
   .l-header__links
-    li
-      display: flex
-      padding: 0
-
-    &:first-of-type
-      padding: 0
+    li, li:first-of-type
+      padding: $modulor/2 $modulor 0 0
 
   .cover__scroll-down
     left: $modulor*3
@@ -169,6 +184,7 @@
     padding-bottom: $modulor
 
   .l-footer__nav li
+    border-bottom: 1px solid $color__11
     width: 100%
     &:nth-child(even)
       text-align: left
@@ -181,15 +197,36 @@
       padding-left: 0
       border-left: 0px
 
+  .vdo__vdo
+    opacity: 1
+
+  .slc__slc
+    width: 100%
+    height: auto
+    padding: 0
+    margin: 0 0 $modulor*3 0 !important
+    flex-direction: column-reverse
+
+    .slc__infos
+      width: 100%
+      padding-right: 0
+
+    .slc__infos-top
+      margin: $modulor 0
+
+    .divider-h
+      display: none
+
+    .slc__img
+      flex-grow: 0
+      height: 50vw
+
 
 // Small devices (portraite phone up to 414px)
 @media (max-width: 414px)
 
   .thm__more p
     width: 100%
-
-  .thm
-    text-align: left
 
   .thm__more
     p

@@ -75,9 +75,9 @@ $language_menu = wp_nav_menu(
 			<?php // button Menu ?>
 
 			<div class="nav__button">
-				<span id="mobile_control_1" class="">&nbsp;</span>
-				<span id="mobile_control_2" class="">&nbsp;</span>
-				<span id="mobile_control_3" class="">&nbsp;</span>
+				<span id="mobile_control_1">&nbsp;</span>
+				<span id="mobile_control_2">&nbsp;</span>
+				<span id="mobile_control_3">&nbsp;</span>
 			</div>
 		</div>
 	</div>
