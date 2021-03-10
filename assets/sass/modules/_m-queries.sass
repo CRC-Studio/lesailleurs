@@ -5,7 +5,6 @@
 @media (max-width: 1200px)
     display: block
 
-
 @media (max-width: 1080px)
   .switch input
     width: $modulor *2.5
@@ -63,13 +62,6 @@
     font-size: $modulor *5
     line-height: $modulor *6
 
-  .lead_paragraph *, .lead_paragraph
-    font-size: $modulor
-    line-height: $modulor *2
-
-  .cover__content
-    padding: $modulor*2
-
   .l-footer__rs
     ul
       width: 100%
@@ -78,8 +70,52 @@
 // Small devices (landscape phones, up to 576px)
 @media (max-width: 576px)
 
-  .cover__container
+  .cover__text.isv--parent,
+  .ebs__container
+    display: block
+
+  .col.l4.eve__desc-courte,
+  .ebs__links,
+  .eve__overlay, .eve__img
+    display: none
+    visibility: hidden
+
+  .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8, .l9, .l10, .l11, .l12,
+  .cover__container,
+  .doc__big,
+  .acn > *
     width: 100%
+
+  .doc__small
+    width: 50%
+
+  .acn
+    grid-template-columns: repeat(1, 1fr)
+    grid-auto-rows: repeat(3, auto)
+
+  .acn__titre
+    grid-column: 1
+    grid-row: 1
+
+  .acn__links
+    grid-column: 1
+    grid-row: 3
+
+  .acn__acn
+    grid-column: 1
+    grid-row: 2
+
+  .m1, .m2, .m3, .m4, .m5, .m6, .m7, .m8, .m9, .m10, .m11
+    margin-left: 0
+
+  .accordion__icon
+    width: $modulor*2
+
+  section.bigm
+    padding-bottom: $modulor
+
+  .l-header__content
+    width: calc(100% - #{$modulor})
 
   .l-header__nav-fixed
     width: 75%
@@ -88,21 +124,41 @@
   .l-header__nav-language
     padding: $modulor/2
 
-  .col.l4.eve__desc-courte
-    display: none
+  .l-header__links
+    li
+      display: flex
+      padding: 0
 
-  .l2
-    width: 100%
+    &:first-of-type
+      padding: 0
 
-  .l8
-    width: 83.34%
+  .cover__scroll-down
+    left: $modulor*3
+    width: $modulor*3
+    width: $modulor*3
 
-  .body
-    br
-      display: none
+  .doc__container
+    top: $modulor*2
+    bottom: $modulor*2
+    left: $modulor*2
+    right: $modulor*2
 
-  .eve__eve, .col
-    padding: 0
+  .l-footer__nav li:nth-child(even)
+    text-align: left
+
+  .eve__eve
+    display: flex
+    flex-direction: column
+    .col
+      padding: 0
+
+  .eve__info
+    order: -1
+
+  .eve__title
+    position: relative
+    height: auto
+    overflow: auto
 
   .ebs__container
     display: block
@@ -112,19 +168,13 @@
     padding-top: $modulor
     padding-bottom: $modulor
 
-  .l-footer__nav
-    li
-      width: 100%
-      padding: 0
+  .l-footer__nav li
+    width: 100%
+    &:nth-child(even)
+      text-align: left
 
-  .l-header__links
-    li
-      display: flex
-      padding: 0
-
-  .l-header__links
-    li:first-of-type
-      padding: 0
+  .l-footer__rs ul
+    justify-content: left
 
   .form__input-container
     .form__input-seperator
@@ -135,17 +185,8 @@
 // Small devices (portraite phone up to 414px)
 @media (max-width: 414px)
 
-  .m4
-    margin: 0
-
-  .m3
-    margin-left: 8.33%
-
-  .l4
+  .thm__more p
     width: 100%
-
-  .l6
-    width: 50%
 
   .thm
     text-align: left

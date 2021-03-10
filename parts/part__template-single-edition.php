@@ -42,7 +42,7 @@
 ?>
 <?php if( $evenements ): ?>
   <?php $backup_post = $post // Utile pour relancer la loop après un wp_reset_postdata(); ?>
-  <section>
+  <section class="eve">
     <ul>
       <?php foreach( $evenements as $evenement ): ?>
         <?php $post = $evenement; ?>

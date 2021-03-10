@@ -26,7 +26,7 @@
 			$terms = get_sub_field('slc__mention');
 			if( $terms ):
 				foreach( $terms as $term ):
-					$slc__labeltext = esc_html( $term->name )." Les Ailleurs ".get_the_title();
+					$slc__labeltext = esc_html( $term->name )." ".get_the_title();
 					set_query_var( 'slc__labeltext', $slc__labeltext );
 				endforeach;
 			else:

@@ -22,15 +22,40 @@
     <?php endif; ?>
 
 
+    <?php // Block accordion ?>
 
-<?php // Block accordion ?>
+    <?php if( $acn__repeater ): ?>
+      <section class="acn">
 
-<?php if( $acn__repeater ): ?>
-    <section class="acn">
-      <div class="col l4">
-        <h2 class="display1"><?php echo $acn__titre;?></h2>
+        <?php // Accordion Titre ?>
 
-        <?php // Reapeter Lien ?>
+        <div class="acn__titre">
+          <h2 class="display1"><?php echo $acn__titre;?></h2>
+        </div>
+
+
+        <?php // Reapeter Accordion ?>
+
+        <?php if( $acn__repeater ): ?>
+          <ul class="acn__acn is--not--hover">
+            <?php foreach( $acn__repeater as $row ) : ?>
+              <li class="accordion">
+                <div class="accordion__titre">
+                  <h3 class="display1"><?php echo $row['acn__subtitle']; ?></h3>
+                  <div class="accordion__icon">
+                    <?php get_template_part('assets/img/inline', 'icon_arrow_accordion.svg'); ?>
+                  </div>
+                </div>
+                <div class="accordion__container lead_paragraph">
+                  <?php echo $row['acn__content']; ?>
+                </div>
+              </li>
+            <?php endforeach ?>
+          </ul>
+        <?php endif; ?>
+
+
+        <?php // Accordion Reapeter Lien ?>
 
         <?php if( $acn__link ): ?>
           <div class="acn__links">
@@ -41,42 +66,19 @@
                 <?php
                 $link = $links['acn__link-url'];
                 if( $link ):
-                    $link_url = $link['url'];
-                    $link_title = $link['title'];
-                    $link_target = $link['target'] ? $link['target'] : '_self';
-                    ?>
-                    <li class="acn__link"><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></li>
+                  $link_url = $link['url'];
+                  $link_title = $link['title'];
+                  $link_target = $link['target'] ? $link['target'] : '_self';
+                  ?>
+                  <li class="acn__link"><a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a></li>
                 <?php endif; ?>
               <?php endforeach ?>
             </ul>
           </div>
-
         <?php endif; ?>
 
-      </div>
 
-      <?php // Reapeter accordion ?>
-
-      <?php if( $acn__repeater ): ?>
-        <ul class="acn__acn col l8 is--not--hover">
-          <?php foreach( $acn__repeater as $row ) : ?>
-            <li class="accordion">
-              <div class="accordion__titre">
-                <h3 class="display1"><?php echo $row['acn__subtitle']; ?></h3>
-                <div class="accordion__icon">
-                  <?php get_template_part('assets/img/inline', 'icon_arrow_accordion.svg'); ?>
-                </div>
-              </div>
-              <div class="accordion__container lead_paragraph">
-                <?php echo $row['acn__content']; ?>
-              </div>
-            </li>
-          <?php endforeach ?>
-        </ul>
-      <?php endif; ?>
-
-
-    </section>
+      </section>
     <?php endif; ?>
   <?php endwhile; ?>
 <?php endif; ?>

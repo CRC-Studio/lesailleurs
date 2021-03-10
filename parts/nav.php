@@ -91,7 +91,7 @@ $language_menu = wp_nav_menu(
 	<?php // couverture ?>
 
 	<div class="l-header__nav cover__big">
-		<div class="l6 l-header__scene cover__color09">
+		<div class="l-header__scene cover__color09">
 			<?php $images = get_field('edt__menu-imgs', HOMEPAGEID); ?>
 			<?php if ($images): ?>
 				<?php $rand = array_rand($images, 1); // On choisi une image au hasard dans la galerie ?>
@@ -104,7 +104,10 @@ $language_menu = wp_nav_menu(
 				<div class="cover__is--empty"></div>
 			<?php endif; ?>
 		</div>
-		<div class="l6 l-header__content">
+
+		<?php // menus ?>
+
+		<div class="l-header__content">
 
 			<?php // menu principal ?>
 

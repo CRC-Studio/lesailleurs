@@ -20,13 +20,33 @@
 
 
 .acn
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-auto-rows: minmax(100px, auto)
+  grid-gap: $modulor
   position: relative
   background: linear-gradient(-45deg, $color__05 0%, $color__06 100%)
 
   h2, h3
     color: $color__10
 
+.acn__titre,
+  grid-column: 1
+  grid-row: 1
+
+.acn__links
+  grid-column: 1
+  grid-row: 2
+  align-self: end
+
+.acn__acn
+  grid-column: 2/4
+  grid-row: 1/3
+
 .accordion__titre
+  display: flex
+  align-content: center
+  justify-content: space-between
   position: relative
   float: left
   width: 100%
@@ -36,10 +56,7 @@
   border-bottom: 1px solid $color__05
 
 .accordion__icon
-  position: absolute
   transform: rotate(-90deg)
-  right: 0
-  top: 0
   width: $modulor*4
   transition: transform 0.5s
 
@@ -69,8 +86,6 @@
     transition: all 1s
 
 .acn__links
-  position: absolute
-  bottom: $modulor*3
 
   .divider
     background: $color__05

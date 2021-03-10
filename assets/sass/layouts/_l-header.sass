@@ -97,21 +97,22 @@
 
 .l-header__nav
   display: none
-  position: fixed
-  z-index: 10
-  width: 100%
-  top: 0
-  right: 0
-  background: $color-back
-  z-index: 100
+
+  &.is--active
+    display: flex
+    flex-direction: row
+    position: fixed
+    z-index: 10
+    width: 100%
+    top: 0
+    right: 0
+    background: $color-back
+    z-index: 100
 
 .l-header__nav > *
   position: relative
-  float: left
+  width: 50%
   height: 100vh
-
-.l-header__nav.is--active
-  display: block
 
 .nav__main
   float: left
