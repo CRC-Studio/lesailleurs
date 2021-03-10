@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Les Ailleurs\n"
-"POT-Creation-Date: 2021-03-06 22:24-0400\n"
-"PO-Revision-Date: 2021-03-06 22:25-0400\n"
+"POT-Creation-Date: 2021-03-10 14:20-0400\n"
+"PO-Revision-Date: 2021-03-10 14:20-0400\n"
 "Last-Translator: CRC Studio <hello@crc-studio.fr>\n"
 "Language-Team: CRC Studio <hello@crc-studio.fr>\n"
 "Language: en_EN\n"
@@ -21,16 +21,42 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
-#: blocks/block__editorblocksystem.php:111 blocks/block__partenaires.php:92
+#: 404.php:10
+msgid "Erreur"
+msgstr "Error"
+
+#: 404.php:12
+msgid ""
+"Vous arrivez sur les rivages du Styx. Après s'étendent les Terra Incognita."
+msgstr ""
+"You arrive on the shores of the Styx. After spread the Terra Incognita."
+
+#: 404.php:12
+msgid "Retour à la page d'accueil"
+msgstr "Back to homepage"
+
+#: blocks/block__editorblocksystem.php:121 blocks/block__partenaires.php:99
 #: parts/part__template-evenement-single.php:31 parts/rgpd.php:14
 msgid "En savoir plus"
 msgstr "Read More"
 
-#: blocks/block__form.php:26
+#: blocks/block__form.php:28
 msgid "Envoyer votre message"
 msgstr "Send your message"
 
-#: blocks/block__partenaires.php:72
+#: blocks/block__form.php:37
+msgid ""
+"Merci pour votre message. Il a bien été envoyer. Nous le recevrons ici dans "
+"quelques secondes."
+msgstr ""
+"Thank you for your message. It has been sent. We'll read it here in a few "
+"seconds."
+
+#: blocks/block__form.php:39
+msgid "L'équipe des Ailleurs"
+msgstr "Team Les Ailleurs"
+
+#: blocks/block__partenaires.php:78 partenaire.php:49
 msgid "↘ En savoir plus"
 msgstr "↘ Read More"
 
@@ -475,11 +501,11 @@ msgstr "Secondary menu"
 msgid "Language Menu"
 msgstr "Language Menu"
 
-#: parts/nav.php:41
+#: parts/nav.php:44
 msgid "LE FESTIVAL"
 msgstr "THE FESTIVAL"
 
-#: parts/nav.php:42
+#: parts/nav.php:45
 msgid "QUI EXPLORE L'IMMERSION"
 msgstr "WHICH EXPLORES IMMERSION"
 
@@ -487,7 +513,7 @@ msgstr "WHICH EXPLORES IMMERSION"
 msgid "Artites principaux : "
 msgstr "Main artites: "
 
-#: parts/part__template-oeuvre-selectionnee.php:29 single-oeuvre.php:21
+#: parts/part__template-oeuvre-selectionnee.php:29 single-oeuvre.php:22
 msgid "Année de production : "
 msgstr "Production Year: "
 
@@ -499,19 +525,19 @@ msgstr "The rest of the selected works"
 msgid "La sélection"
 msgstr "The selected works"
 
-#: parts/part__template-single-edition.php:17
+#: parts/part__template-single-edition.php:21
 msgid "Voir toute la sélection"
 msgstr "See all selected works"
 
-#: parts/part__template-single-edition.php:20
+#: parts/part__template-single-edition.php:24
 msgid "Découvrez aussi"
 msgstr "See more"
 
-#: parts/part__template-single-edition.php:20
+#: parts/part__template-single-edition.php:24
 msgid "les sélections précédentes"
 msgstr "previous selected works"
 
-#: parts/part__template-single-edition.php:52
+#: parts/part__template-single-edition.php:57
 msgid "Voir tous les événements"
 msgstr "See all the events"
 
@@ -523,80 +549,104 @@ msgstr "OK"
 msgid "Décliner"
 msgstr "Refuse"
 
-#: single-auteur.php:28
+#: selections.php:30
+msgid "Découvrir toutes sélections"
+msgstr "See all selected works"
+
+#: single-auteur.php:29
 msgid "Profession : "
 msgstr "Profession: "
 
-#: single-auteur.php:40
+#: single-auteur.php:41
 msgid "Nationalité : "
 msgstr "Nationality: "
 
-#: single-evenement.php:24
+#: single-auteur.php:76
+msgid "Œuvres présentées aux AiIlleurs"
+msgstr "Works presented by Ailleurs"
+
+#: single-auteur.php:115
+msgid "Évévenments avec"
+msgstr "Events with"
+
+#: single-auteur.php:171
+msgid "Rencontrer d'autres auteurs"
+msgstr "Meet others writers"
+
+#: single-evenement.php:37
 msgid "Lieu : "
 msgstr "Place: "
 
-#: single-evenement.php:34
+#: single-evenement.php:47
 msgid "Date : "
 msgstr "Date: "
 
-#: single-evenement.php:52
+#: single-evenement.php:65
 msgid "Type d'événement : "
 msgstr "Type of event: "
 
-#: single-evenement.php:64
+#: single-evenement.php:77
 msgid "Modalité : "
 msgstr "Term "
 
-#: single-evenement.php:76
+#: single-evenement.php:89
 msgid "Intervenant : "
 msgstr "Workshop leader: "
 
-#: single-evenement.php:117 single-oeuvre.php:84
+#: single-evenement.php:137 single-oeuvre.php:85
 msgid "Thématiques"
 msgstr "Themes"
 
-#: single-evenement.php:127 single-oeuvre.php:94
+#: single-evenement.php:147 single-oeuvre.php:95
 msgid "Voir toutes les thématiques"
 msgstr "See all the themes"
 
-#: single-evenement.php:128 single-oeuvre.php:95
+#: single-evenement.php:148 single-oeuvre.php:96
 msgid ""
 "Les Ailleurs explorent. Jamais ne tourne en rond. Alors perdez-vous avec "
 "nous."
 msgstr ""
 "The Ailleurs is exploring, never turns in circles. So, lose yourself with us."
 
-#: single-oeuvre.php:29
+#: single-oeuvre.php:30
 msgid "Pays : "
 msgstr "Country: "
 
-#: single-oeuvre.php:39
+#: single-oeuvre.php:40
 msgid "Durée : "
 msgstr "Duration: "
 
-#: single-oeuvre.php:48
+#: single-oeuvre.php:49
 msgid "Format : "
 msgstr "Format "
 
-#: single-oeuvre.php:60
+#: single-oeuvre.php:61
 msgid "Première : "
 msgstr "Première: "
 
-#: single-oeuvre.php:112
-msgid "Artites principaux"
-msgstr "Main Artites"
+#: single-oeuvre.php:113
+msgid "Principaux Auteurs"
+msgstr "Principal writers"
 
-#: single-oeuvre.php:140
+#: single-oeuvre.php:141
 msgid "Générique"
 msgstr "Credits"
 
-#: single-selection.php:32
+#: single-selection.php:31
 msgid "Découvrir les sélections précédentes"
 msgstr "Discover previous selected works"
 
-#: single-selection.php:33
+#: single-selection.php:32
 msgid "Toutes exactement conformes à nos valeurs : toutes singulières."
 msgstr "All exactly in line with our values: all singular."
+
+#: taxonomy.php:34
+msgid "Événement ou Œuvre en rapport"
+msgstr "Related Event or Work"
+
+#: taxonomy.php:64
+msgid "Autres"
+msgstr "Others"
 
 #. Theme Name of the plugin/theme
 msgid "Les Ailleurs"
@@ -620,8 +670,8 @@ msgid "https://crc-studio.fr/"
 msgstr "https://crc-studio.fr/"
 
 #. Template Name of the plugin/theme
-msgid "Taxonomie"
-msgstr "Taxonomy"
+msgid "Taxonomie Single"
+msgstr "Taxonomy Single"
 
 #. Template Name of the plugin/theme
 msgid "À propos"
@@ -630,6 +680,10 @@ msgstr "About"
 #. Template Name of the plugin/theme
 msgid "Éditions"
 msgstr "Editions"
+
+#. Template Name of the plugin/theme
+msgid "Taxonomie - Thématiques"
+msgstr "Taxonomy - Thematics"
 
 #. Template Name of the plugin/theme
 msgid "Partenaire"
@@ -680,6 +734,10 @@ msgid "Résidence d'écriture"
 msgstr "Writing residency"
 
 #. Template Name of the plugin/theme
+msgid "Programme"
+msgstr "Program"
+
+#. Template Name of the plugin/theme
 msgid "Sélection Single"
 msgstr "Single selection"
 
@@ -694,3 +752,6 @@ msgstr "Single Work"
 #. Template Name of the plugin/theme
 msgid "Auteur Single"
 msgstr "Single Author"
+
+#~ msgid "Artites principaux"
+#~ msgstr "Main Artites"
