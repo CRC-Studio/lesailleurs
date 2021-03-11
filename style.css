@@ -1776,36 +1776,6 @@ em {
   padding-top: 100%;
 }
 
-.image-full__ratio-1-2 {
-  position: relative;
-  width: 100%;
-  padding-top: 50%;
-}
-
-.image-full__ratio-2-3 {
-  position: relative;
-  width: 100%;
-  padding-top: 66.66%;
-}
-
-.image-full__ratio-2-1 {
-  position: relative;
-  width: 100%;
-  padding-top: 200%;
-}
-
-.image-full__ratio-3-2 {
-  position: relative;
-  width: 100%;
-  padding-top: 150%;
-}
-
-.image-full__ratio-5-4 {
-  position: relative;
-  width: 100%;
-  padding-top: 80%;
-}
-
 .image-full__content {
   position: absolute;
   top: 0;
@@ -2901,6 +2871,11 @@ em {
   }
   .accordion__icon {
     width: 28px;
+  }
+  .btn--big, a:link.btn--big, a:visited.btn--big {
+    padding: 14px 21px;
+    font-size: 28px;
+    line-height: 28px;
   }
   section.bigm {
     padding-bottom: 14px;

@@ -37,47 +37,12 @@ require_once( __DIR__ . '/functions/custom-taxo__format.php');
 require_once( __DIR__ . '/functions/custom-taxo__pays.php');
 
 
-/*        ADD Custom Block        */
-
-// require_once( __DIR__ . '/functions/add-custom-block-cat.php');
-// require_once( __DIR__ . '/functions/add-custom-block-type.php');
-
-
-/*     ADD Custom Option Page       */
-
-// require_once( __DIR__ . '/functions/add-custom-option-page.php');
-
-
 /*     Custom HTML wp_nav_menu()      */
 
 require_once( __DIR__ . '/functions/custom_menu.php');
 require_once( __DIR__ . '/functions/custom_html_wp_nav_menu.php');
 
 
-/*        ADD Custom Script        */
-
-// require_once( __DIR__ . '/functions/hexa-to-rgba.php');
-
-
-/*        ADD WooCommerce support     */
-
-// require_once( __DIR__ . '/functions/add-woocommerce-support.php');
-
-
-
-
-
-// filter
-
-function my_posts_where( $where ) {
-	$where = str_replace("meta_key = 'eve__qqn_$", "meta_key LIKE 'eve__qqn_%", $where);
-	return $where;
-}
-add_filter('posts_where', 'my_posts_where');
-
-
-
-
 /**
-* On fait des trucs affreux ici
+* Ici, on peut tester des trucs affreux ici
 */

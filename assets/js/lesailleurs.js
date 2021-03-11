@@ -1,12 +1,5 @@
 
-$(window).resize(function() {
-  responsive()
-});
-
 jQuery( document ).ready(function( $ ) {
-  responsive();
-  message__init();
-
 
   // Bouton Menu Nav
 
@@ -105,6 +98,7 @@ jQuery( document ).ready(function( $ ) {
     $('.modal__container').fadeOut();
   });
 
+
   // Bloc partenaire minimize
 
   var n = 0;
@@ -120,60 +114,4 @@ jQuery( document ).ready(function( $ ) {
     $('.par').toggleClass('par--is--minimize');
   });
 
-
-
-  // Extention Mailchimp
-
-  // $('.EMAIL-label input').focus(function() {
-  // 	$('.yikes-easy-mc-submit-button').addClass('is--active');
-  // });
-  // $('.EMAIL-label input').focusout(function() {
-  // 	$('.yikes-easy-mc-submit-button').removeClass('is--active');
-  // });
-
-
 });  //Fin du jQuery( document ).ready
-
-
-
-
-
-// Changement de skin du header si scroll
-
-// $(document).ready(function(){
-//     var offset = $('.l-header').offset().top;
-//     $(document).scroll(function(){
-//         var scrollTop = $(document).scrollTop();
-//         if(scrollTop > 110){
-//           $('.l-header').addClass('is--white');
-//         }
-//         else {
-//           $('.l-header').removeClass('is--white');
-//         }
-//     });
-// });
-
-
-
-
-function responsive(){
-
-}
-
-
-
-// Message RGPD
-
-function message__init() {
-  $('.rgpd__oui').click(function(){
-    $(this).closest('.rgpd').removeClass('is--open');
-    var idMessage = $(this).closest('.rgpd').attr('id')
-    Cookies.set(idMessage, 'is--hidden', { expires: 1 });
-  });
-  var cookies =  Cookies.get();
-  for (var cookie in cookies) {
-    if (cookie.startsWith("message_") && cookies[cookie] == "is--hidden"){
-      $("div#" + cookie).remove('.is--open');
-    };
-  };
-};
