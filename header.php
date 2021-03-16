@@ -8,9 +8,6 @@
 		<!-- <meta content="" name="description">
 		<meta content="" name="keywords">
 		<meta name="contact" content="hello@crc-sutdio.fr"> -->
-		<meta name="robots" content="index, follow, all">
-		<meta name="googlebot" content="index, follow, all">
-		<meta name="googlebot-image" content="index, follow, all">
 		<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/favicon/apple-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/favicon/apple-icon-60x60.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/favicon/apple-icon-72x72.png">
@@ -28,7 +25,9 @@
 		<meta name="msapplication-TileColor" content="#00233f">
 		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 		<meta name="theme-color" content="#00233f">
-		<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/js.cookie.js"></script>
+		<meta name="robots" content="index, follow, all">
+		<meta name="googlebot" content="index, follow, all">
+		<meta name="googlebot-image" content="index, follow, all">
 		<?php wp_head(); ?>
 	</head>
 

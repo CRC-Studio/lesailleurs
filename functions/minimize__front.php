@@ -16,6 +16,8 @@ function reset_wordpress(){
    wp_dequeue_style( 'wp-block-library' );
    wp_dequeue_style( 'wp-block-library-theme' );
    wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
+   wp_dequeue_style( 'exactmetrics-vue-frontend-style-css' );
+   wp_dequeue_style( 'exactmetrics-popular-posts-style-css' );
 }
 add_action( 'wp_enqueue_scripts',  'reset_wordpress' );
 

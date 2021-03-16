@@ -43,11 +43,19 @@
 
     <?php // Ajout du boutton Scroll Down ?>
 
+
+
+
     <?php if( $cover__size == "cover__big" || $cover__size == "cover__full" ): ?>
-    <div class="cover__scroll-down">
-      <?php get_template_part('assets/img/inline', 'icon_scroll-down.svg'); ?>
-    </div>
+      <div class="cover__scroll-down">
+        <?php get_template_part('assets/img/inline', 'icon_scroll-down.svg'); ?>
+      </div>
     <?php endif; ?>
+
+
+
+
+
   </section>
 <?php endwhile; ?>
 <?php endif; ?>
