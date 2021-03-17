@@ -71,7 +71,7 @@ get_template_part('parts/nav');
 ));
 ?>
 <?php if( $oeuvres ): ?>
-  <section class="row white--isnt--white">
+  <section class="row">
     <div class="col l6 m1">
       <h2 class="subheading"><?php _e("Œuvres présentées aux AiIlleurs","lesailleurs") ?></h2>
       <div class="divider"></div>
@@ -80,13 +80,76 @@ get_template_part('parts/nav');
       <?php foreach( $oeuvres as $oeuvre ): ?>
         <?php $post = $oeuvre; ?>
         <?php setup_postdata($post); // Setup this post for WP functions (variable must be named $post). ?>
-        <article class="slc__slc slc__lar6 slc__marh5 isf__vit2 is--zoooom is--float" onclick="location.href='<?php the_permalink(); ?>'">
-          <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
-        </article>
-        <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>
-      <?php endforeach; ?>
-    </div>
-  </section>
+
+
+
+        <?php
+        // Ici, on test des trucs affreux.
+        // Objectif : sortir les mentions
+
+
+        $args = array(
+          'numberposts'	=> -1,
+          'post_type'		=> 'selection',
+          'meta_query' => array(
+            'relation' => 'AND',
+            array(
+              'key' => 'slc_$_slc__oeuvre', // name of custom field
+              'value' => get_the_ID(), // matches exactly "123", not just 123. This prevents a match for "1234"
+              'compare' => '='
+            )
+          )
+        );
+        $backup_post = $post;
+        $the_query = new WP_Query( $args );
+        if( $the_query->have_posts() ):
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+          ?>
+          <?php the_title(); ?>
+        <?php endwhile; ?>
+      <?php else: ?>
+        <?php echo "nada"; ?>
+      <?php endif; ?>
+      <?php wp_reset_query(); $post = $backup_post; ?>
+
+
+
+      <?php
+      // Ça c'est un exemple du site d'ACF
+      // https://support.advancedcustomfields.com/forums/topic/querying-a-post-object-relation-field-inside-a-repeater/
+
+      // checks if there's a department head
+      // if so, displays that person
+      // args
+      $args_faculty_head = array(
+        'posts_per_page' => -1,
+        'post_type' => 'people',
+        'orderby' => 'title',
+        'order' => 'ASC',
+        'meta_query' => array(
+          'relation' => 'AND',
+          array(
+            'key' => 'person_department_%_person_department_select',  // this should be the first sub-field
+            'value' => get_the_ID(),
+            'compare' => '='
+          ),
+          array(
+            'key' => 'person_department_%_person_department_head', // this should be the second sub-field
+            'value' => '"Yes"',
+            'compare' => 'LIKE'
+          )
+        )
+      );
+      ?>
+
+
+      <article class="slc__slc slc__lar6 slc__marh5 isf__vit2 is--zoooom is--float" onclick="location.href='<?php the_permalink(); ?>'">
+        <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
+      </article>
+      <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>
+    <?php endforeach; ?>
+  </div>
+</section>
 <?php endif; ?>
 
 
@@ -166,22 +229,22 @@ if ($loop->have_posts()) :?>
 if ($loop->have_posts()) :?>
 
 
-  <section>
-    <div class="col l6 m2">
-      <h2 class="subheading"><?php _e("Rencontrer d'autres auteurs","lesailleurs") ?></h2>
-      <div class="divider"></div>
-    </div>
-  </section>
+<section>
+  <div class="col l6 m2">
+    <h2 class="subheading"><?php _e("Rencontrer d'autres auteurs","lesailleurs") ?></h2>
+    <div class="divider"></div>
+  </div>
+</section>
 
-  <ul class="l-auteurs__items l12">
-    <li class="l-auteurs__item display3 l12">
-      <a href="<?php echo get_polypage_link('auteurs'); ?>" title="<?php the_title()?>" class="is--denko">
-        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-          <span><?php the_title(); ?></span>
-        <?php endwhile; ?>
-      </a>
-    </li>
-  </ul>
+<ul class="l-auteurs__items l12">
+  <li class="l-auteurs__item display3 l12">
+    <a href="<?php echo get_polypage_link('auteurs'); ?>" title="<?php the_title()?>" class="is--denko">
+      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <span><?php the_title(); ?></span>
+      <?php endwhile; ?>
+    </a>
+  </li>
+</ul>
 <?php endif; wp_reset_query(); ?>
 
 

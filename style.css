@@ -2159,7 +2159,7 @@ em {
 }
 
 .slc__readmore {
-  max-height: 150vh;
+  max-height: 300vh;
   transition: all 3s;
 }
 
@@ -2169,7 +2169,7 @@ em {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(0deg, white 20%, rgba(255, 255, 255, 0) 66%);
+  background: linear-gradient(0deg, white 10%, rgba(255, 255, 255, 0) 75%);
   pointer-events: none;
   opacity: 1;
   z-index: 1;

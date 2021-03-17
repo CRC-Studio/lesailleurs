@@ -5,7 +5,7 @@
 
 require_once( __DIR__ . '/functions/options.php');
 require_once( __DIR__ . '/functions/include.php');
-// require_once( __DIR__ . '/functions/minimize__back.php');
+require_once( __DIR__ . '/functions/minimize__back.php');
 require_once( __DIR__ . '/functions/minimize__front.php');
 require_once( __DIR__ . '/functions/multilangue.php');
 // require_once( __DIR__ . '/functions/acf-fields.php');
@@ -46,3 +46,14 @@ require_once( __DIR__ . '/functions/custom_html_wp_nav_menu.php');
 /**
 * Ici, on peut tester des trucs affreux ici
 */
+
+
+
+// Fonction ACF pour Query des field dans subfiel de fiel à l'infini
+// ↪ Necessaire pour la page single-auteur.php
+
+function my_posts_where( $where ) {
+	$where = str_replace("meta_key = 'slc_$", "meta_key LIKE 'slc_%", $where);
+	return $where;
+}
+add_filter('posts_where', 'my_posts_where');
