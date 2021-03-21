@@ -88,6 +88,12 @@ get_template_part('parts/nav');
         // Objectif : sortir les mentions
 
 
+        // Paramètre pour la première oeuvre de la Selection
+        $slc__lar = 5;
+        $slc__marh = 5;
+        $slc__marv = 1;
+        $isf__vit = 1;
+
         $args = array(
           'numberposts'	=> -1,
           'post_type'		=> 'selection',
@@ -95,7 +101,7 @@ get_template_part('parts/nav');
             'relation' => 'AND',
             array(
               'key' => 'slc_$_slc__oeuvre', // name of custom field
-              'value' => get_the_ID(), // matches exactly "123", not just 123. This prevents a match for "1234"
+              'value' => get_the_ID(),
               'compare' => '='
             )
           )
@@ -104,51 +110,67 @@ get_template_part('parts/nav');
         $the_query = new WP_Query( $args );
         if( $the_query->have_posts() ):
           while ( $the_query->have_posts() ) : $the_query->the_post();
-          ?>
-          <?php the_title(); ?>
-        <?php endwhile; ?>
-      <?php else: ?>
-        <?php echo "nada"; ?>
-      <?php endif; ?>
-      <?php wp_reset_query(); $post = $backup_post; ?>
+
+          // On explore la sélection
+
+          if( have_rows('slc') ):
+            while( have_rows('slc') ) : the_row();
+
+            // On cherche si des oeuvres ont des mentions
+
+            $terms = get_sub_field('slc__mention');
+            if( $terms ):
+              foreach( $terms as $term ):
+
+                // On affiche les oeuvres avec des mentions
+
+                $slc__labeltext = esc_html( $term->name )." ".get_the_title();
+                set_query_var( 'slc__labeltext', $slc__labeltext );
+                $post = get_sub_field('slc__oeuvre');
+                setup_postdata($post); // Setup this post for WP functions (variable must be named $post).
+                ?>
+                <article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom" onclick="location.href='<?php the_permalink(); ?>'">
+                  <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
+                  <?php get_template_part('parts/part__slc__label', 'slc__labeltext'); ?>
+                </article>
+                <?php
+                wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly
+                $post = $backup_post; // Utile pour relancer la loop après un wp_reset_postdata();
+              endforeach;
 
 
+              // On affiche les oeuvres sans mentions
 
-      <?php
-      // Ça c'est un exemple du site d'ACF
-      // https://support.advancedcustomfields.com/forums/topic/querying-a-post-object-relation-field-inside-a-repeater/
+            else:
+              $post = get_sub_field('slc__oeuvre');
+              setup_postdata($post); // Setup this post for WP functions (variable must be named $post).
+              ?>
+              <article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom" onclick="location.href='<?php the_permalink(); ?>'">
+                <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
+              </article>
+              <?php
+              wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly
+              $post = $backup_post; // Utile pour relancer la loop après un wp_reset_postdata();
 
-      // checks if there's a department head
-      // if so, displays that person
-      // args
-      $args_faculty_head = array(
-        'posts_per_page' => -1,
-        'post_type' => 'people',
-        'orderby' => 'title',
-        'order' => 'ASC',
-        'meta_query' => array(
-          'relation' => 'AND',
-          array(
-            'key' => 'person_department_%_person_department_select',  // this should be the first sub-field
-            'value' => get_the_ID(),
-            'compare' => '='
-          ),
-          array(
-            'key' => 'person_department_%_person_department_head', // this should be the second sub-field
-            'value' => '"Yes"',
-            'compare' => 'LIKE'
-          )
-        )
-      );
+            endif;
+          endwhile;
+        endif;
+      endwhile;
+    else:
+
+      // On affiche des oeuvres sans sélection
       ?>
-
-
-      <article class="slc__slc slc__lar6 slc__marh5 isf__vit2 is--zoooom is--float" onclick="location.href='<?php the_permalink(); ?>'">
+      <article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom" onclick="location.href='<?php the_permalink(); ?>'">
         <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
       </article>
-      <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>
-    <?php endforeach; ?>
-  </div>
+      <?php
+      
+    endif;
+    wp_reset_query(); $post = $backup_post; ?>
+
+    <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>
+  <?php endforeach; ?>
+</div>
 </section>
 <?php endif; ?>
 
