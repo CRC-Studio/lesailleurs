@@ -27,7 +27,7 @@
 
 .l-header__nav-fixed
   display: flex
-  flex-direction: row
+  @include prefix(flex-direction, row)
   justify-content: space-between
   position: fixed
   width: 50%
@@ -38,14 +38,14 @@
 
 .l-header__nav-editons
   display: flex
-  flex-direction: row
+  @include prefix(flex-direction, row)
   justify-content: space-between
   align-items: center
   width: 50%
   height: $header_barre-height
 
   .divider-h
-    flex-grow: 2
+    @include prefix(flex-grow, 2)
     height: 1px
     background: $color__08
     margin: $modulor
@@ -55,7 +55,7 @@
 
 .l-header__nav-r
   display: flex
-  flex-direction: row
+  @include prefix(flex-direction, row)
 
 .nav__button
   display: block
@@ -99,7 +99,7 @@
 
   &.is--active
     display: flex
-    flex-direction: row
+    @include prefix(flex-direction, row)
     position: fixed
     z-index: 10
     width: 100%

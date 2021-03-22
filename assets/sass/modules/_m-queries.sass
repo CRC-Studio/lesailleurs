@@ -105,7 +105,7 @@
     right: $modulor*2
 
   .cover.cover__big
-    flex-direction: column
+    @include prefix(flex-direction, column)
     .cover__container
       height: 50vh
     .cover__is--empty
@@ -183,7 +183,7 @@
 
   .eve__eve
     display: flex
-    flex-direction: column
+    @include prefix(flex-direction, column)
     .col
       padding: 0
 
@@ -225,7 +225,7 @@
     height: auto
     padding: 0
     margin: 0 0 $modulor*3 0 !important
-    flex-direction: column-reverse
+    @include prefix(flex-direction, column-reverse)
 
     .slc__infos
       width: 100%
@@ -238,7 +238,7 @@
       display: none
 
     .slc__img
-      flex-grow: 0
+      @include prefix(flex-grow, 0)
       height: 50vw
 
 

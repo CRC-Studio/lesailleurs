@@ -93,7 +93,7 @@
 
 .slc__infos
   display: flex
-  flex-direction: column
+  @include prefix(flex-direction, column)
   justify-content: space-between
   width: 25vw
   padding-right: $modulor
@@ -103,7 +103,7 @@
     width: 100%
 
 .slc__img
-  flex-grow: 1
+  @include prefix(flex-grow, 1)
   position: relative
   background-color: $color__08
   border: 2px solid $color-back
@@ -115,8 +115,8 @@
 
 .slc__hashtag
   display: flex
-  flex-direction: row
-  flex-wrap: wrap
+  @include prefix(flex-direction, row)
+  @include prefix(flex-wrap, wrap)
   padding-bottom: $modulor/2
   background-image: url('./assets/img/background__hashtag.svg')
   background-size: 1px 32px
@@ -136,12 +136,12 @@
   right: 0
   background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 0.97) 20%)
   opacity: 1
-  @include prefix(transition, all 4s)
+  transition: all 4s
 
 .slc__lar1, .slc__lar2
   width: 25%
   height: auto
-  flex-direction: column-reverse
+  @include prefix(flex-direction, column-reverse)
 
   .slc__infos
     width: 100%
