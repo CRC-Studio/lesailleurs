@@ -5,8 +5,8 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title><?php if ( is_front_page() ) {  bloginfo( 'name' ); } else { wp_title(''); echo ' | ';  bloginfo( 'name' ); } ?></title>
 	<meta content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-	<!-- <meta content="" name="description">
-	<meta content="" name="keywords">
+	<!-- <meta name="description" content="" >
+	<meta name="keywords" content="" >
 	<meta name="contact" content="hello@crc-sutdio.fr"> -->
 	<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/favicon/apple-icon-60x60.png">

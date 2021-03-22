@@ -19,7 +19,7 @@
   max-width: 100%
   height: auto
   border-radius: $modulor*3
-  box-shadow: 0 19px 38px rgba($color__12,0.30), 0 15px 12px rgba($color__12,0.22)
+  @include box-shadow(100, $color__12)
   cursor: pointer
   opacity: 0.3
   filter: grayscale(1)
@@ -38,7 +38,7 @@
   opacity: 1
   filter: grayscale(0)
   border-radius: $modulor
-  box-shadow: 0 19px 100px rgba($color__12,0.80), 0 15px 80px rgba($color__12,0.5)
+  @include box-shadow(100, $color__12)
   transition: all 0.5s
 
 .vdo__legende

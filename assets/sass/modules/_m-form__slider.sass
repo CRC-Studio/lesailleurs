@@ -57,7 +57,7 @@ input
   &:checked + .slider
     background-color: lighten($color__06, 15%)
   &:focus + .slider
-    box-shadow: 0 0 1px $color__06
+    @include box-shadow(4, $color__06)
   &:checked + .slider:before
     -webkit-transform: translateX($modulor*1.5)
     -ms-transform: translateX($modulor*1.5)

@@ -136,8 +136,7 @@
   right: 0
   background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 0.97) 20%)
   opacity: 1
-  transition: all 4s
-
+  @include prefix(transition, all 4s)
 
 .slc__lar1, .slc__lar2
   width: 25%
@@ -155,8 +154,8 @@
     display: none
 
   .slc__img
-    flex-grow: 0
     height: 25vw
+    @include prefix(flex-grow, 0)
 
   .slc__overlay
     background: linear-gradient(90deg, rgba($color-back, 0) 0%, rgba($color-back, 0.97) 50%)
