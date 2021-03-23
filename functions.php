@@ -10,9 +10,14 @@ require_once( __DIR__ . '/functions/minimize__front.php');
 require_once( __DIR__ . '/functions/multilangue.php');
 // require_once( __DIR__ . '/functions/acf-fields.php');
 
-/*        ADD Custom Type        */
+
+/*        Custom Fonction LesAilleurs        */
 
 require_once( __DIR__ . '/functions/where--is--ailleurs.php');
+
+/*        ADD Options Page        */
+
+require_once( __DIR__ . '/functions/add-custom-option-page.php');
 
 /*        ADD Custom Type        */
 

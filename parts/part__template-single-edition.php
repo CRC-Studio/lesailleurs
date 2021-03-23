@@ -17,7 +17,7 @@
 
 <?php // Voir les autres sélections ?>
 
-<section class="thm white--isnt--white">
+<section class="thm">
   <button class="btn btn--outline slc__readmore-btn"><?php _e("Voir toute la sélection","lesailleurs") ?></button>
     <div class="row thm__more">
       <div class="divider"></div>
@@ -25,6 +25,10 @@
     </div>
   </div>
 </section>
+
+<?php // Afficher block__participate ?>
+
+<?php get_template_part('blocks/block__joindre') ?>
 
 <?php // Voir l'agenda ?>
 

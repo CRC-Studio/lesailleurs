@@ -41,4 +41,4 @@
 </head>
 
 
-<body id="<?php if ( is_front_page() ) { echo "front_page";  } else{ print strtolower(get_the_title()); }; ?>" <?php body_class(); ?>>
+<body id="<?php if ( is_front_page() ) { echo "front_page";  } else{ print strtolower(get_the_title()); }; ?>" <?php body_class('is--noisy'); ?>>

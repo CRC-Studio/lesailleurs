@@ -1,0 +1,50 @@
+// main: ../../../style.sass
+
+.jon
+  display: flex
+  @include prefix(justify-content, space-between)
+
+.jon__container
+  position: relative
+  width: calc(50% - #{$modulor}/2)
+  padding: $modulor*3
+  border-radius: $modulor
+
+.jon__content
+  width: 66%
+
+.jon__text
+  font-family: "roobert", Helvetica, sans-serif
+  margin: $modulor 0 $modulor*6 0
+
+.jon__soumission
+  background: $color__12
+
+  .jon__title
+    color: $color__08
+
+  .jon__text
+    color: $color__04
+
+.jon__newsletter
+  background: $color__08
+
+  .jon__title
+    color: $color__12
+
+  .jon__text
+    color: $color__10
+
+  .btn--plain
+    background: $color__12
+    color: $color__08
+
+.jon__overlay
+  z-index: -1
+  border-radius: $modulor
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  overflow: hidden
