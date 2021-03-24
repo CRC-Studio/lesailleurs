@@ -33,6 +33,24 @@ jQuery( document ).ready(function( jQuery ) {
   });
 
 
+  // Checkbox WhereIsAilleurs
+
+  var url = window.location.origin;
+  var whereIsAilleurs = Cookies.get('WhereIsAilleurs');
+
+  if (whereIsAilleurs == 'Arles') {
+    jQuery('#where--is--ailleurs').on('click', function(){
+      Cookies.set('WhereIsAilleurs', 'Paris');
+      window.location.href = url;
+    });
+  }else {
+    jQuery('#where--is--ailleurs').on('click', function(){
+      Cookies.set('WhereIsAilleurs', 'Arles');
+      window.location.href = url;
+    });
+  };
+
+
   // Block Accordion
 
   jQuery('.accordion__titre').click(function(){
@@ -74,6 +92,13 @@ jQuery( document ).ready(function( jQuery ) {
   });
 
 
+  // Effet is--FollowMouse
+
+  jQuery(document).mousemove(function(e){
+    jQuery('.is--followmouse').css({ top: e.clientY + 35, left:  e.clientX + 5});
+  });
+
+
   // Effet is--lightbox
 
   jQuery('.is--lightbox').click(function(){
@@ -92,7 +117,7 @@ jQuery( document ).ready(function( jQuery ) {
   });
 
 
-  // Fermeture de la modal
+  // Fermeture de la modale
 
   jQuery('.modal__btn').on('click', function(){
     jQuery('.modal__container').fadeOut();

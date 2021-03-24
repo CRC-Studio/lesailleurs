@@ -122,7 +122,7 @@
             </div>
           </div>
 
-        <div class="ebs__overlay"></div>
+        <div class="ebs__overlay is--fullsize"></div>
 
       </section>
 

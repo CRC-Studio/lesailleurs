@@ -31,7 +31,7 @@
         <?php $image = get_sub_field('cover__img'); ?>
         <?php if( !empty( $image ) ): ?>
           <div class="image-full">
-            <div class="image-full__content">
+            <div class="image-full__content is--fullsize">
               <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
             </div>
             <div class="cover__img-overlay"></div>
@@ -42,7 +42,6 @@
     </div>
 
     <?php // Ajout du boutton Scroll Down ?>
-
 
 
 

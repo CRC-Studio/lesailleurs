@@ -1,4 +1,5 @@
 // main: ../../../style.sass
+// main: ../../../style__sunrise.sass
 
 .jon
   display: flex
@@ -18,7 +19,11 @@
   margin: $modulor 0 $modulor*6 0
 
 .jon__soumission
-  background: $color__12
+  .jon__back
+    background: $color__12
+
+  .jon__overlay
+    background: linear-gradient(135deg, rgba($color__12, 1) 50%, rgba($color__12, 0) 100%)
 
   .jon__title
     color: $color__08
@@ -26,8 +31,16 @@
   .jon__text
     color: $color__04
 
+  .btn--plain
+    &:hover
+      color: $color__11
+
 .jon__newsletter
-  background: $color__08
+  .jon__back
+    background: $color__08
+
+  .jon__overlay
+    background: linear-gradient(135deg, rgba($color__08, 1) 50%, rgba($color__08, 0) 100%)
 
   .jon__title
     color: $color__12
@@ -39,12 +52,9 @@
     background: $color__12
     color: $color__08
 
-.jon__overlay
-  z-index: -1
+.jon__back, .jon__overlay
   border-radius: $modulor
-  position: absolute
-  top: 0
-  right: 0
-  left: 0
-  bottom: 0
   overflow: hidden
+
+.jon__back
+  z-index: -1

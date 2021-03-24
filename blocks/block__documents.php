@@ -49,7 +49,7 @@
                       <div class="doc__container">
                         <?php echo wp_get_attachment_image( $image['ID'], 'full' ); ?>
                       </div>
-                      <div class="doc__overlay">
+                      <div class="doc__overlay is--fullsize">
                         <div>
                           <p class="lead_paragraph"><?php the_sub_field('doc__title'); ?></p>
                           <span class="subheading"><?php the_sub_field('sous-titre'); ?></span>

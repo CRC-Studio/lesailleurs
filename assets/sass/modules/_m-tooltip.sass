@@ -1,10 +1,19 @@
 // main: ../../../style.sass
+// main: ../../../style__sunrise.sass
+
+  Exemple de HTML :
+
+  Le module Tooltip permet d'afficher des petites bulles
+  d'informations aux survols d'élèments.
+
+  Attention : pensez à activer modifier les couleurs
+  du fichiers assets\img\tooltip_arrow.svg
 
   Exemple de HTML :
 
 	<a href="" class="tooltip--hover">Mon lien
-		<div class="tooltip tooltip_top-left">
-      <div class="tooltip__content">Fullscreen</div>
+		<div class="tooltip tooltip__is--top-left">
+      <div class="tooltip__content"><?php _e("Fullscreen","monobloc") ?></div>
     </div>
 	</a>
 
@@ -16,6 +25,7 @@
 
 .tooltip--hover:hover .tooltip
   visibility: initial
+  display: block
   top: $modulor*3
   opacity: 1
   @include box-shadow(5, $color-btn-tooltips)
@@ -33,7 +43,7 @@
   left: 50%
   transform: translate(-50%, 0%)
   opacity: 0
-  transition: all 0.5s
+  transition: all 5s
   z-index: 500
 
 .tooltip__content
@@ -45,7 +55,7 @@
   font-weight: 600
   letter-spacing: 1px
 
-.tooltip:before
+.tooltip__is--top:before
   content: ""
   display: block
   position: absolute

@@ -14,11 +14,19 @@ get_template_part('parts/nav');
     <div class="cover__container cover__image">
       <?php $image = get_sub_field('cover__img'); ?>
       <?php if( has_post_thumbnail() ): ?>
-        <div class="image-full">
-          <div class="image-full__nocrop">
+        <div class="cover__eve-wrapper">
+          <div class="doc__container">
             <?php the_post_thumbnail(); ?>
           </div>
         </div>
+
+
+
+        <!-- <div class="image-full">
+          <div class="image-full__nocrop">
+            <?php the_post_thumbnail(); ?>
+          </div>
+        </div> -->
       <?php else: ?>
       <div class="cover__is--empty"></div>
     <?php endif; ?>

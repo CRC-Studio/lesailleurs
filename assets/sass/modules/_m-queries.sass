@@ -1,9 +1,11 @@
 // main: ../../../style.sass
+// main: ../../../style__sunrise.sass
 
 
 // Extra large devices (large desktops, up to 1200px)
-@media (max-width: 1200px)
-    display: block
+// @media (max-width: 1200px)
+
+
 
 @media (max-width: 1080px)
   .switch input
@@ -21,6 +23,12 @@
 // Large devices (desktops, up to 992px)
 @media (max-width: 992px)
 
+  .jon__content
+    width: 100%
+
+  .l-header__baseline span:last-child
+    padding-left: 0
+
   .slc__marv1, .slc__marv2, .slc__marv3, .slc__marv4, .slc__marv5, .slc__marv6
     margin-bottom: $modulor *4
     margin-top: $modulor *4
@@ -30,17 +38,32 @@
 // Medium devices (tablets, up to 768px)
 @media (max-width: 768px)
 
+  .l-header__nav-editons .divider-h,
+  .l-header__nav-editons-label,
+  .l-header__baseline
+    display: none
+
+  .slc__lar1, .slc__lar2, .slc__lar3, .slc__lar4, .slc__lar5, .slc__lar6,
+  .jon__container
+    width: 100%
+
   .slc__marh1, .slc__marh2, .slc__marh3, .slc__marh4, .slc__marh5, .slc__marh6
     margin: 0
 
-  .slc__marv1, .slc__marv2, .slc__marv4, .slc__marv3, .slc__marv5, .slc__marv6
+  .slc__marv1, .slc__marv2, .slc__marv4, .slc__marv3, .slc__marv5, .slc__marv6,
+  .jon__container:nth-child(2n+2)
     margin-top: $modulor
 
-  .slc__lar1, .slc__lar2, .slc__lar3, .slc__lar4, .slc__lar5, .slc__lar6
-    width: 100%
+  .l-header__nav-editons,
+  .l-header__nav-fixed
+    justify-content: flex-end
 
   .biglinks, .vdo
     padding: $modulor*2 $modulor
+
+  .jon
+    @include prefix(flex-direction, column)
+    @include prefix(justify-content, space-between)
 
   .slc__slc
     min-height: 25vh
@@ -50,9 +73,6 @@
     width: 50%
 
   .slc__overlay
-    display: none
-
-  .l-header__baseline.l3
     display: none
 
   .display1 *, .display1

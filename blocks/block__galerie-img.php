@@ -12,7 +12,7 @@
       <?php foreach( $images as $image_id ): ?>
         <li class="gal__image is--lightbox">
           <div class="image-full__ratio-1-1">
-            <div class="image-full__content">
+            <div class="image-full__content is--fullsize">
               <?php echo wp_get_attachment_image( $image_id, $size ); ?>
             </div>
           </div>

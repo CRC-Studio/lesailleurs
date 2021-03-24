@@ -69,7 +69,7 @@
                         <div class="par__container">
                           <?php echo wp_get_attachment_image( $par__logo['ID'], 'full' ); ?>
                         </div>
-                        <div class="par__overlay">
+                        <div class="par__overlay is--fullsize">
                           <div>
                             <p class="lead_paragraph"><?php echo $par__title ?></p>
                             <span class="subheading"><?php echo $par__sous_title ?></span>

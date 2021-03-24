@@ -81,13 +81,7 @@ get_template_part('parts/nav');
         <?php $post = $oeuvre; ?>
         <?php setup_postdata($post); // Setup this post for WP functions (variable must be named $post). ?>
 
-
-
         <?php
-        // Ici, on test des trucs affreux.
-        // Objectif : sortir les mentions
-
-
         // Paramètre pour la première oeuvre de la Selection
         $slc__lar = 5;
         $slc__marh = 5;
@@ -129,7 +123,7 @@ get_template_part('parts/nav');
                 $post = get_sub_field('slc__oeuvre');
                 setup_postdata($post); // Setup this post for WP functions (variable must be named $post).
                 ?>
-                <article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom" onclick="location.href='<?php the_permalink(); ?>'">
+                <article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom tooltip--hover" onclick="location.href='<?php the_permalink(); ?>'">
                   <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
                   <?php get_template_part('parts/part__slc__label', 'slc__labeltext'); ?>
                 </article>
@@ -145,7 +139,7 @@ get_template_part('parts/nav');
               $post = get_sub_field('slc__oeuvre');
               setup_postdata($post); // Setup this post for WP functions (variable must be named $post).
               ?>
-              <article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom" onclick="location.href='<?php the_permalink(); ?>'">
+              <article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom tooltip--hover" onclick="location.href='<?php the_permalink(); ?>'">
                 <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
               </article>
               <?php
@@ -164,7 +158,7 @@ get_template_part('parts/nav');
         <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
       </article>
       <?php
-      
+
     endif;
     wp_reset_query(); $post = $backup_post; ?>
 

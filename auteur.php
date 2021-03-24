@@ -26,6 +26,7 @@ get_template_part('parts/nav');
   <?php endwhile; ?>
 </ul>
 <?php endif; wp_reset_query(); ?>
+<?php get_template_part('blocks/block__joindre') ?>
 </main>
 
 <?php get_footer(); ?>

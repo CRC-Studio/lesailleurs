@@ -48,7 +48,7 @@
 					?>
 					<?php $post = $row['slc__oeuvre']; ?>
 					<?php setup_postdata($post); // Setup this post for WP functions (variable must be named $post). ?>
-					<article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom" onclick="location.href='<?php the_permalink(); ?>'">
+					<article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom tooltip--hover" onclick="location.href='<?php the_permalink(); ?>'">
 						<?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
 						<?php get_template_part('parts/part__slc__label', 'slc__labeltext'); ?>
 					</article>
@@ -85,7 +85,7 @@
 				$post = $row['slc__oeuvre'];
 				setup_postdata($post); // Setup this post for WP functions (variable must be named $post).
 				?>
-				<article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom" onclick="location.href='<?php the_permalink(); ?>'">
+				<article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom tooltip--hover" onclick="location.href='<?php the_permalink(); ?>'">
 					<?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
 				</article>
 			<?php	endif; ?>
@@ -93,6 +93,6 @@
 			<?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>
 			<?php $post = $backup_post; // Utile pour relancer la loop après un wp_reset_postdata(); ?>
 		<?php endforeach; ?>
-		<div class="slc__readmore-overlay"></div>
+		<div class="slc__readmore-overlay is--fullsize"></div>
 	</section>
 <?php endif; ?>

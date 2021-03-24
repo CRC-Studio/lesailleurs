@@ -32,7 +32,7 @@ $language_menu = wp_nav_menu(
 
 
 <header class="l-header row">
-	<div class="l3 l-header__logo">
+	<div class="l-header__logo">
 		<a href="<?php echo home_url(); ?>" class="headline">
 			<?php
 				// bloginfo( 'name' );
@@ -40,7 +40,7 @@ $language_menu = wp_nav_menu(
 			?>
 		</a>
 	</div>
-	<div class="l-header__baseline l3">
+	<div class="l-header__baseline">
 		<span><?php _e("LE FESTIVAL","lesailleurs") ?></span>
 		<span><?php _e("QUI EXPLORE L'IMMERSION","lesailleurs") ?></span>
 	</div>
@@ -49,18 +49,19 @@ $language_menu = wp_nav_menu(
 		<?php // menu Changement de ville ?>
 
 		<div class="l-header__nav-editons">
-			<!-- <span class="body">Explorer</span>
+			<!-- <span class="l-header__nav-editons-label body">Explorer</span>
 			<div class="divider-h"></div>
 			<span class="body">Paris</span>
 			<label class="switch tooltip--hover">
-				<input type="checkbox">
-				<span class="slider round"></span>
+				<input id="where--is--ailleurs" type="checkbox" <?php if (WHEREISAILLEURS == "Arles") { echo "checked"; } ?> >
+				<span class="slider is--fullsize round"></span>
 				<div class="tooltip tooltip_top">
-					<div class="tooltip__content">Coming Soon!</div>
+					<div class="tooltip__content tooltip__is--top"><?php _e("Voyager Ailleurs","lesailleurs") ?></div>
 				</div>
 			</label>
 			<span>Arles</span> -->
 		</div>
+
 
 		<div class="l-header__nav-r">
 
@@ -96,7 +97,7 @@ $language_menu = wp_nav_menu(
 			<?php if ($images): ?>
 				<?php $rand = array_rand($images, 1); // On choisi une image au hasard dans la galerie ?>
 				<div class="image-full">
-					<div class="image-full__content">
+					<div class="image-full__content is--fullsize">
 						<img src="<?php echo $images[$rand]['url']; ?>" alt="<?php echo $images[$rand]['alt']; ?>" />
 					</div>
 				</div>

@@ -7,6 +7,7 @@ get_header();
 get_template_part('parts/nav');
 ?>
 <main class="main l-selection">
+
   <?php get_template_part('blocks/block__cover') ?>
 
   <?php // Voir les sélections ?>
@@ -25,6 +26,7 @@ get_template_part('parts/nav');
   );
   if ($loop->have_posts()) :?>
 
+
   <section class="thm">
     <div class="thm__container l6 m3">
       <div class="row thm__title thm__more">
@@ -41,7 +43,7 @@ get_template_part('parts/nav');
   </section>
 <?php endif; wp_reset_query(); ?>
 
-
+<?php get_template_part('blocks/block__joindre') ?>
 </main>
 
 <?php get_footer(); ?>

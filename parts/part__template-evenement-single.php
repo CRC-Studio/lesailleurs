@@ -6,7 +6,7 @@
 		<div class="col l6 eve__info">
 			<div class="eve__img">
 				<div class="image-full__ratio-1-1">
-					<div class="image-full__content">
+					<div class="image-full__content is--fullsize">
 						<?php the_post_thumbnail(); ?>
 					</div>
 				</div>
@@ -18,7 +18,7 @@
 		<div class="col l4 eve__desc-courte">
 			<p class="caption color__legende"><?php the_field('eve__desc-courte'); ?></p>
 		</div>
-		<div class="eve__overlay">
+		<div class="eve__overlay is--fullsize">
 			<div class="col l4 eve__overlay--content">
 				<?php $terms = get_field('eve__modalite');
 				if( $terms ): ?>

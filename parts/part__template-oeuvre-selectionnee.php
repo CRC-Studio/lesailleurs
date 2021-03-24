@@ -63,8 +63,11 @@
 </div>
 </div>
 <div class="slc__img is--zoooom--box">
-	<div class="image-full__content">
+	<div class="image-full__content is--fullsize">
 		<?php the_post_thumbnail(); ?>
 	</div>
 </div>
-<div class="slc__overlay"></div> <?php // Ici, on ajoute l'effet Brouillard ?>
+<div class="tooltip tooltip__is--top is--followmouse">
+	<div class="tooltip__content"><?php _e("En savoir plus","lesailleurs") ?></div>
+</div>
+<div class="slc__overlay is--fullsize"></div> <?php // Ici, on ajoute l'effet Brouillard ?>

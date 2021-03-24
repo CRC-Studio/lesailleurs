@@ -5,7 +5,7 @@
 
 require_once( __DIR__ . '/functions/options.php');
 require_once( __DIR__ . '/functions/include.php');
-require_once( __DIR__ . '/functions/minimize__back.php');
+// require_once( __DIR__ . '/functions/minimize__back.php');
 require_once( __DIR__ . '/functions/minimize__front.php');
 require_once( __DIR__ . '/functions/multilangue.php');
 // require_once( __DIR__ . '/functions/acf-fields.php');

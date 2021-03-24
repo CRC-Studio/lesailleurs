@@ -1,0 +1,25 @@
+// main: ../../../style.sass
+// main: ../../../style__sunrise.sass
+
+  Le module Is--Followmouse permet à un contenu suivre
+  le cursor
+
+  Attention : pensez à activer le module is--followmouse
+  dans le fichier assets/js/monobloc.js
+
+  Exemple de HTML :
+
+	<article class="tooltip--hover">
+    <!-- content -->
+  	<div class="tooltip is--followmouse">
+      <div class="tooltip__content">
+        <?php _e("En savoir plus","monobloc") ?>
+      </div>
+    </div>
+	</article>
+
+.is--followmouse
+  position: fixed
+  z-index: 1000
+  pointer-events: none
+  transition: top 0s, left 0s !important
