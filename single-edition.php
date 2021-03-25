@@ -29,10 +29,9 @@ get_template_part('parts/nav');
 
   <section class="thm">
     <button class="btn btn--outline slc__readmore-btn"><?php _e("Voir toute la sélection","lesailleurs") ?></button>
-      <div class="row thm__more">
-        <div class="divider"></div>
-          <p class="body color__legende"><?php _e("Découvrez aussi","lesailleurs") ?><br><a href="<?php echo home_url(); ?>/selections"><?php _e("les sélections précédentes","lesailleurs") ?></a></p>
-      </div>
+    <div class="row thm__more">
+      <div class="divider"></div>
+      <p class="body color__legende"><?php _e("Découvrez aussi","lesailleurs") ?><br><a href="<?php echo home_url(); ?>/selections"><?php _e("les sélections précédentes","lesailleurs") ?></a></p>
     </div>
   </section>
 
@@ -61,7 +60,7 @@ get_template_part('parts/nav');
         <?php foreach( $evenements as $evenement ): ?>
           <?php $post = $evenement; ?>
           <?php setup_postdata($post); // Setup this post for WP functions (variable must be named $post). ?>
-            <?php get_template_part('parts/part__template-evenement-single') ?>
+          <?php get_template_part('parts/part__template-evenement-single') ?>
           <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>
         <?php endforeach; ?>
       </ul>

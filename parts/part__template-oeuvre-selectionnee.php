@@ -53,11 +53,9 @@
 		<?php endif; ?>
 		<?php $terms = get_field('oeu__thematique');
 		if( $terms ): ?>
-		<span>
 			<?php foreach( $terms as $term ): ?>
 				<li><a href="<?php echo esc_url( get_term_link( $term ) ); ?>">#<?php echo esc_html( $term->name ); ?></a></li>
 			<?php endforeach; ?>
-		</span>
 	<?php endif; ?>
 </ul>
 </div>

@@ -1,4 +1,4 @@
-<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 410.9 183.54" style="enable-background:new 0 0 410.9 183.54;" xml:space="preserve">
 <g>
 	<path d="M205.46,59.51c7.76,1.25,10.62-3.12,10.54-9.19l-0.34-0.05c-0.66,5.95-4.4,8.38-9.73,7.52
