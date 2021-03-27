@@ -3,6 +3,12 @@
 
 .l-agenda
 
+.eve
+  position: relative
+  padding: 0 0 $modulor*3 0
+  &>*
+    padding: 0 $modulor
+
 .eve__eve
   position: relative
   border-bottom: 1px solid $color-secondaire
@@ -22,9 +28,6 @@
     .subheading
       padding-right: $modulor*2
       transition: all 0.5s
-
-.eve__eve:first-of-type
-  border-top: 1px solid $color-secondaire
 
 .eve__img
   float: left
@@ -64,3 +67,82 @@
     color: $color__03
     padding-right: $modulor*4
     transition: all 4s
+
+.eve__filtres
+  display: none
+
+// Bar de recherche
+
+.eve__bar
+  float: left
+  width: 100%
+  background: linear-gradient(90deg, $color__07, $color__06)
+  *
+    color: $color__04
+    font-family: "roobert", Helvetica, sans-serif
+    font-size: 18px
+
+.eve__bar-search
+  input
+    width: 100%
+    height: $modulor*3
+    padding: $modulor
+    color: $color__08
+    border: none
+    border-radius: $modulor*3
+    background: $color__06
+    transition: all 4s
+
+    &:hover
+      border-radius: $modulor/2
+      transition: all .5s
+      @include box-shadow(5, $color__12)
+
+    &:focus
+      border-radius: $modulor/2
+      background: lighten($color__06, 10%)
+      outline: none
+      color: $color__09
+      @include box-shadow(100, $color__12)
+      transition: all .5s
+
+  ::placeholder
+    color: $color__05
+
+.eve__bar-filtres,
+.eve__bar-title
+  display: flex
+  height: $modulor*4
+  align-items: center
+
+.eve__bar-title
+  justify-content: flex-end
+
+.eve__bar-filtre
+  height: $modulor*3
+  border-radius: $modulor/2
+  padding:  0 $modulor
+  margin-right: $modulor/2
+  transition: all 4s
+  &:first-of-type
+    margin-left: $modulor
+  &:hover, &.is--active
+    border-radius: $modulor*3
+    background: $color__06
+    @include box-shadow(5, $color__12)
+    transition: all .5s
+  &.is--active
+    background: lighten($color__06, 10%)
+    @include box-shadow(100, $color__12)
+
+
+
+
+
+
+
+
+
+
+
+.fermela

@@ -194,6 +194,7 @@ if ($loop->have_posts()) :?>
     <h2 class="subheading"><?php _e("Évévenments avec","lesailleurs") ?> <?php the_title(); ?></h2>
     <div class="divider"></div>
   </div>
+  <?php get_template_part('parts/part__eve-bar') ?>
   <ul>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
@@ -213,7 +214,7 @@ if ($loop->have_posts()) :?>
             if ($intervenant == $auteur) { // On test si l'intervenant est l'auteur
               $post = $evenement;
               setup_postdata($post);
-              get_template_part('parts/part__template-evenement-single'); // Si oui, on affiche l'évenement
+              get_template_part('parts/part__eve-single'); // Si oui, on affiche l'évenement
               wp_reset_postdata();
             }
             wp_reset_postdata();   // Reset the global post object so that the rest of the page works correctly.

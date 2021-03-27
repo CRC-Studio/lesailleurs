@@ -29,7 +29,7 @@ jQuery( document ).ready(function( jQuery ) {
     var y = jQuery(window).scrollTop();
     var y_next = Math.ceil( y / jQuery(window).height() );
     if ( y >= y_next ){ y_next++ };
-    jQuery("html, body").animate({ scrollTop: y_next * jQuery(window).height() }, 3000, 'easeInOutQuart');
+    jQuery("html, body").animate({ scrollTop: y_next * jQuery(window).height() }, 3000);
   });
 
 
@@ -122,6 +122,51 @@ jQuery( document ).ready(function( jQuery ) {
   jQuery('.modal__btn').on('click', function(){
     jQuery('.modal__container').fadeOut();
   });
+
+
+  // Barre de Rechercher Événement
+
+  jQuery.extend(jQuery.expr[":"], {
+    'containsIN': function(elem, i, match, array) {
+      return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+    }
+  });
+  jQuery('.eve__bar-search').find('input').on('input', function(){
+    var val = jQuery(this).val();
+    console.log(val);
+    jQuery('.eve__eve').hide();
+    jQuery('.eve__eve:containsIN(' + val +')').show();
+  });
+
+
+  // Barre de filtre Événement
+  //    Sortir tout filtre utiliser dans la page
+  var filtres = [];
+  jQuery( ".eve__filtre" ).each(function( index ) {
+    var filtre = jQuery(this).text();
+    if(filtres.indexOf(filtre) == -1){
+      filtres.push(filtre);
+    };
+  });
+  //    Afficher tout filtre dans la barre
+  jQuery.each(filtres, function(index, value){
+    jQuery(".eve__bar-filtres").append('<button class="eve__bar-filtre">'+ value + '</button>');
+  });
+  //    Faire des Trucs si on clique sur un filtre
+  jQuery('.eve__bar-filtre').on('click', function(){
+    jQuery('.eve__bar-filtre').removeClass('is--active');
+    jQuery(this).toggleClass('is--active');
+    if (jQuery('.eve__bar-filtre').is('.is--active')) {
+      jQuery('.eve__eve').hide();
+      jQuery( ".eve__bar-filtre.is--active" ).each(function( index ) {
+        var filterThis = jQuery(this).text();
+        jQuery('.eve__eve:containsIN(' + filterThis +')').show();
+      });
+    }else {
+      jQuery('.eve__eve').show();
+    }
+  });
+
 
 
   // Bloc partenaire minimize

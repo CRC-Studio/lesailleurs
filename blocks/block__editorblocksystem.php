@@ -84,7 +84,9 @@
                         <?php the_sub_field('bloc_citation'); ?>
                       </div>
                       <?php if( get_sub_field('bloc_citation_legende') ): ?>
-                        <div class="divider-h"></div>
+                        <div class="ebs__divider">
+                          <div class="divider-h"></div>
+                        </div>
                         <span class="color__legende body"><?php the_sub_field('bloc_citation_legende') ?></span>
                       <?php endif; ?>
                     </div>

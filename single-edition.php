@@ -56,11 +56,12 @@ get_template_part('parts/nav');
   <?php if( $evenements ): ?>
     <?php $backup_post = $post // Utile pour relancer la loop après un wp_reset_postdata(); ?>
     <section class="eve">
+      <?php get_template_part('parts/part__eve-bar') ?>
       <ul>
         <?php foreach( $evenements as $evenement ): ?>
           <?php $post = $evenement; ?>
           <?php setup_postdata($post); // Setup this post for WP functions (variable must be named $post). ?>
-          <?php get_template_part('parts/part__template-evenement-single') ?>
+          <?php get_template_part('parts/part__eve-single') ?>
           <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>
         <?php endforeach; ?>
       </ul>

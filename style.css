@@ -945,7 +945,7 @@ em {
   font-size: 42px;
   color: black;
   background: white;
-  transition: background 0.5s;
+  transition: background .5s;
 }
 
 .form__input-container textarea {
@@ -956,7 +956,7 @@ em {
 .form__input-container input:focus, .form__input-container textarea:focus {
   background: #e8ecfb;
   outline: none;
-  transition: background 0.5s;
+  transition: background .5s;
 }
 
 .form__input-container .form__input-full {
@@ -1446,6 +1446,15 @@ em {
   padding: 7px;
 }
 
+.eve {
+  position: relative;
+  padding: 0 0 42px 0;
+}
+
+.eve > * {
+  padding: 0 14px;
+}
+
 .eve__eve {
   position: relative;
   border-bottom: 1px solid #667EE4;
@@ -1471,10 +1480,6 @@ em {
 .eve__eve:hover .subheading {
   padding-right: 28px;
   transition: all 0.5s;
-}
-
-.eve__eve:first-of-type {
-  border-top: 1px solid #667EE4;
 }
 
 .eve__img {
@@ -1522,6 +1527,87 @@ em {
   color: #764B9C;
   padding-right: 56px;
   transition: all 4s;
+}
+
+.eve__filtres {
+  display: none;
+}
+
+.eve__bar {
+  float: left;
+  width: 100%;
+  background: linear-gradient(90deg, #808FE2, #99A6E0);
+}
+
+.eve__bar * {
+  color: #806BB3;
+  font-family: "roobert", Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.eve__bar-search input {
+  width: 100%;
+  height: 42px;
+  padding: 14px;
+  color: #667EE4;
+  border: none;
+  border-radius: 42px;
+  background: #99A6E0;
+  transition: all 4s;
+}
+
+.eve__bar-search input:hover {
+  border-radius: 7px;
+  transition: all .5s;
+  box-shadow: 0 0.938em 2.188em rgba(9, 32, 63, 0.15), 0 0.313em 0.938em rgba(9, 32, 63, 0.1);
+}
+
+.eve__bar-search input:focus {
+  border-radius: 7px;
+  background: #c0c8ec;
+  outline: none;
+  color: #486BAA;
+  box-shadow: 0 2.8px 2.2px rgba(9, 32, 63, 0.034), 0 6.7px 5.3px rgba(9, 32, 63, 0.048), 0 12.5px 10px rgba(9, 32, 63, 0.06), 0 22.3px 17.9px rgba(9, 32, 63, 0.072), 0 41.8px 33.4px rgba(9, 32, 63, 0.086), 0 100px 80px rgba(9, 32, 63, 0.12);
+  transition: all .5s;
+}
+
+.eve__bar-search ::placeholder {
+  color: #8B86C9;
+}
+
+.eve__bar-filtres,
+.eve__bar-title {
+  display: flex;
+  height: 56px;
+  align-items: center;
+}
+
+.eve__bar-title {
+  justify-content: flex-end;
+}
+
+.eve__bar-filtre {
+  height: 42px;
+  border-radius: 7px;
+  padding: 0 14px;
+  margin-right: 7px;
+  transition: all 4s;
+}
+
+.eve__bar-filtre:first-of-type {
+  margin-left: 14px;
+}
+
+.eve__bar-filtre:hover, .eve__bar-filtre.is--active {
+  border-radius: 42px;
+  background: #99A6E0;
+  box-shadow: 0 0.938em 2.188em rgba(9, 32, 63, 0.15), 0 0.313em 0.938em rgba(9, 32, 63, 0.1);
+  transition: all .5s;
+}
+
+.eve__bar-filtre.is--active {
+  background: #c0c8ec;
+  box-shadow: 0 2.8px 2.2px rgba(9, 32, 63, 0.034), 0 6.7px 5.3px rgba(9, 32, 63, 0.048), 0 12.5px 10px rgba(9, 32, 63, 0.06), 0 22.3px 17.9px rgba(9, 32, 63, 0.072), 0 41.8px 33.4px rgba(9, 32, 63, 0.086), 0 100px 80px rgba(9, 32, 63, 0.12);
 }
 
 .l-auteurs__items {
@@ -1639,6 +1725,7 @@ em {
 }
 
 .ebs .divider-h {
+  float: right;
   background: #667EE4;
 }
 

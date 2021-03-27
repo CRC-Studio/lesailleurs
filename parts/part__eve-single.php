@@ -1,4 +1,20 @@
 <li class="eve__eve row" onclick="location.href='<?php the_permalink(); ?>'">
+
+
+	<?php //Sortir la Taxo Filtres pour qu'ils puissent être utilisé en JS ?>
+	<?php $terms = get_field('eve__filtre');
+	if( $terms ): ?>
+	<div class="eve__filtres">
+		<ul>
+		<?php foreach( $terms as $term ): ?>
+			<li class="eve__filtre"><?php echo esc_html( $term->name ); ?></li>
+		<?php endforeach; ?>
+		</ul>
+	</div>
+<?php endif; ?>
+
+
+
 	<div class="col l2">
 		<p class="body"><?php the_field('eve__start');?>
 			<br><a href="<?php the_field('eve__lieu-url') ?>" target="_blank"><?php the_field('eve__lieu');?></a><?php if( get_field('eve__lieu') ): ?>, <?php the_field('eve__lieu-ville') ?><?php endif; ?></p>

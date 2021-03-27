@@ -26,14 +26,15 @@ get_template_part('parts/nav');
   if ($loop->have_posts()) :?>
 
   <section class="eve row">
+    <?php get_template_part('parts/part__eve-bar') ?>
     <ul>
       <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <?php get_template_part('parts/part__template-evenement-single') ?>
+        <?php get_template_part('parts/part__eve-single') ?>
       <?php endwhile; ?>
     </ul>
   </section>
 <?php endif; wp_reset_query(); ?>
-<?php get_template_part('blocks/block__joindre') ?> 
+<?php get_template_part('blocks/block__joindre') ?>
 </main>
 
 <?php get_footer(); ?>
