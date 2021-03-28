@@ -1580,6 +1580,7 @@ em {
   display: flex;
   height: 56px;
   align-items: center;
+  overflow: hidden;
 }
 
 .eve__bar-title {
@@ -1591,6 +1592,7 @@ em {
   border-radius: 7px;
   padding: 0 14px;
   margin-right: 7px;
+  white-space: nowrap;
   transition: all 4s;
 }
 
@@ -2930,13 +2932,15 @@ em {
 }
 
 @media (max-width: 768px) {
+  .eve__bar-filtres, .eve__bar-title,
   .l-header__nav-editons .divider-h,
   .l-header__nav-editons-label,
   .l-header__baseline {
     display: none;
   }
   .slc__lar1, .slc__lar2, .slc__lar3, .slc__lar4, .slc__lar5, .slc__lar6,
-  .jon__container {
+  .jon__container,
+  .eve__bar-search {
     width: 100%;
   }
   .slc__marh1, .slc__marh2, .slc__marh3, .slc__marh4, .slc__marh5, .slc__marh6 {

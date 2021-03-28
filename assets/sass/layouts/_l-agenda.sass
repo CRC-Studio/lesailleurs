@@ -114,6 +114,7 @@
   display: flex
   height: $modulor*4
   align-items: center
+  overflow: hidden
 
 .eve__bar-title
   justify-content: flex-end
@@ -123,6 +124,7 @@
   border-radius: $modulor/2
   padding:  0 $modulor
   margin-right: $modulor/2
+  white-space: nowrap
   transition: all 4s
   &:first-of-type
     margin-left: $modulor
@@ -134,15 +136,3 @@
   &.is--active
     background: lighten($color__06, 10%)
     @include box-shadow(100, $color__12)
-
-
-
-
-
-
-
-
-
-
-
-.fermela
