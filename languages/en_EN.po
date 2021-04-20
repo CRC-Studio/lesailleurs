@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Les Ailleurs\n"
 "POT-Creation-Date: 2021-03-24 18:56-0400\n"
-"PO-Revision-Date: 2021-03-24 18:56-0400\n"
+"PO-Revision-Date: 2021-04-20 12:40-0400\n"
 "Last-Translator: CRC Studio <hello@crc-studio.fr>\n"
 "Language-Team: CRC Studio <hello@crc-studio.fr>\n"
 "Language: en_EN\n"
@@ -529,7 +529,7 @@ msgstr "Events with"
 
 #: single-auteur.php:250
 msgid "Rencontrer d'autres auteurs"
-msgstr "Meet others writers"
+msgstr "Meet others artists"
 
 #: single-edition.php:31
 msgid "Voir toute la sélection"
@@ -600,7 +600,7 @@ msgstr "Première: "
 
 #: single-oeuvre.php:113
 msgid "Principaux Auteurs"
-msgstr "Principal writers"
+msgstr "Principal artists"
 
 #: single-oeuvre.php:141
 msgid "Générique"

@@ -191,7 +191,7 @@ if ($loop->have_posts()) :?>
 
 <section class="eve row">
   <div class="col l6">
-    <h2 class="subheading"><?php _e("Évévenments avec","lesailleurs") ?> <?php the_title(); ?></h2>
+    <h2 class="subheading"><?php _e("Événements avec","lesailleurs") ?> <?php the_title(); ?></h2>
     <div class="divider"></div>
   </div>
   <?php get_template_part('parts/part__eve-bar') ?>
