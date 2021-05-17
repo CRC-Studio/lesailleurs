@@ -23,103 +23,107 @@ get_template_part('parts/nav');
 
 
         <!-- <div class="image-full">
-          <div class="image-full__nocrop">
-            <?php the_post_thumbnail(); ?>
-          </div>
-        </div> -->
-      <?php else: ?>
-      <div class="cover__is--empty"></div>
-    <?php endif; ?>
-  </div>
-    <div class="cover__container cover__text isv--parent">
-      <div class="cover__content">
-        <h1 class="cover__title display3"><?php the_title(); ?></h1>
-        <div class="cover__info lead_paragraph l10 m2">
+        <div class="image-full__nocrop">
+        <?php the_post_thumbnail(); ?>
+      </div>
+    </div> -->
+  <?php else: ?>
+    <div class="cover__is--empty"></div>
+  <?php endif; ?>
+</div>
+<div class="cover__container cover__text isv--parent">
+  <div class="cover__content">
+    <h1 class="cover__title display3"><?php the_title(); ?></h1>
+    <div class="cover__info lead_paragraph l10 m2">
 
 
-          <?php // Info sur la couverture : Lieu ?>
+      <?php // Info sur la couverture : Lieu ?>
 
 
-          <?php if( get_field('eve__lieu') ): ?>
-            <span>
-              <?php _e("Lieu : ","lesailleurs") ?>
-              <a href="<?php the_field('eve__lieu-url') ?>" target="_blank"><?php the_field('eve__lieu'); if( get_field('eve__lieu') ): ?>, <?php the_field('eve__lieu-ville') ?><?php endif; ?></a>
-            </span>
+      <?php if( get_field('eve__lieu') ): ?>
+        <span>
+          <?php _e("Lieu : ","lesailleurs") ?>
+          <?php if( get_field('eve__lieu-url') ): ?>
+            <a href="<?php the_field('eve__lieu-url') ?>" target="_blank"><?php the_field('eve__lieu'); if( get_field('eve__lieu') ): ?>, <?php the_field('eve__lieu-ville') ?><?php endif; ?></a>
+          <?php else: ?>
+            <?php the_field('eve__lieu'); if( get_field('eve__lieu-ville') ): ?>, <?php the_field('eve__lieu-ville') ?><?php endif; ?></a>
           <?php endif; ?>
-
-
-          <?php // Info sur la couverture : Date ?>
-
-          <?php if( get_field('eve__start') ): ?>
-            <span>
-              <?php _e("Date : ","lesailleurs") ?>
-              <?php if( get_field('eve__end') ): ?>
-                du
-              <?php endif; ?>
-              <?php the_field('eve__start') ?>
-              <?php if( get_field('eve__end') ): ?>
-                <br>au
-                <?php the_field('eve__end') ?>
-              <?php endif; ?>
-            </span>
-          <?php endif; ?>
-
-
-          <?php // Info sur la couverture : Type d'événement ?>
-
-          <?php $terms = get_field('eve__filtre');
-          if( $terms ): ?>
-          <span class="liste__de__lien">
-            <?php _e("Type d'événement : ","lesailleurs") ?>
-            <?php foreach( $terms as $term ): ?>
-              <a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
-            <?php endforeach; ?>
-          </span>
-        <?php endif; ?>
-
-        <?php // Info sur la couverture : Modalité ?>
-
-        <?php $terms = get_field('eve__modalite');
-        if( $terms ): ?>
-        <span class="liste__de__lien">
-          <?php _e("Modalité : ","lesailleurs") ?>
-          <?php foreach( $terms as $term ): ?>
-            <a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
-          <?php endforeach; ?>
         </span>
       <?php endif; ?>
 
 
-      <?php // Info sur la couverture : Intervenant ?>
+      <?php // Info sur la couverture : Date ?>
 
-      <?php if( have_rows('eve__qqn') ): ?>
-        <span class="eve_qqns liste__de__lien">
-          <?php _e("Intervenant : ","lesailleurs") ?>
-          <?php while( have_rows('eve__qqn') ): the_row(); ?>
-            <?php // Alors, c'est vrai que l'on ajouté un groupe pour simplifier l'interface du backoffice. Conséquence : ce fichier.php est un peu complexe. Courage ! ?>
-            <?php if( have_rows('eve_grp') ): ?>
-              <?php while( have_rows('eve_grp') ): the_row(); ?>
-                <?php if( get_sub_field('eve__team-url') ): ?>
-                  <a href="<?php the_sub_field('eve__team-url'); ?>" target="_blank"><?php the_sub_field('eve__team'); ?></a>
-                <?php else: ?>
-                  <?php if( get_sub_field('eve__team') ): ?>
-                    <a><?php the_sub_field('eve__team'); ?></a>
-                  <?php endif; ?>
-                <?php endif; ?>
-                <?php $eve__auteurs = get_sub_field('eve__auteurs'); ?>
-                <?php if( $eve__auteurs ): ?>
-                  <?php $permalink = get_permalink( $eve__auteurs->ID ); ?>
-                  <?php $title = get_the_title( $eve__auteurs->ID ); ?>
-                  <a href="<?php echo esc_html($permalink ); ?>"><?php echo esc_html($title ); ?></a>
-                <?php endif; ?>
-              <?php endwhile; ?>
+      <?php if( get_field('eve__start') ): ?>
+        <span>
+          <?php _e("Date : ","lesailleurs") ?>
+          <?php if( get_field('eve__end') ): ?>
+            du
+          <?php endif; ?>
+          <?php the_field('eve__start') ?>
+          <?php if( get_field('eve__end') ): ?>
+            <br>au
+            <?php the_field('eve__end') ?>
+          <?php endif; ?>
+        </span>
+      <?php endif; ?>
+
+
+      <?php // Info sur la couverture : Type d'événement ?>
+
+      <?php $terms = get_field('eve__filtre');
+      if( $terms ): ?>
+      <span class="liste__de__lien">
+        <?php _e("Type d'événement : ","lesailleurs") ?>
+        <?php foreach( $terms as $term ): ?>
+          <a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
+        <?php endforeach; ?>
+      </span>
+    <?php endif; ?>
+
+    <?php // Info sur la couverture : Modalité ?>
+
+    <?php $terms = get_field('eve__modalite');
+    if( $terms ): ?>
+    <span class="liste__de__lien">
+      <?php _e("Modalité : ","lesailleurs") ?>
+      <?php foreach( $terms as $term ): ?>
+        <a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
+      <?php endforeach; ?>
+    </span>
+  <?php endif; ?>
+
+
+  <?php // Info sur la couverture : Intervenant ?>
+
+  <?php if( have_rows('eve__qqn') ): ?>
+    <span class="eve_qqns liste__de__lien">
+      <?php _e("Intervenant : ","lesailleurs") ?>
+      <?php while( have_rows('eve__qqn') ): the_row(); ?>
+        <?php // Alors, c'est vrai que l'on ajouté un groupe pour simplifier l'interface du backoffice. Conséquence : ce fichier.php est un peu complexe. Courage ! ?>
+        <?php if( have_rows('eve_grp') ): ?>
+          <?php while( have_rows('eve_grp') ): the_row(); ?>
+            <?php if( get_sub_field('eve__team-url') ): ?>
+              <a href="<?php the_sub_field('eve__team-url'); ?>" target="_blank"><?php the_sub_field('eve__team'); ?></a>
+            <?php else: ?>
+              <?php if( get_sub_field('eve__team') ): ?>
+                <a><?php the_sub_field('eve__team'); ?></a>
+              <?php endif; ?>
+            <?php endif; ?>
+            <?php $eve__auteurs = get_sub_field('eve__auteurs'); ?>
+            <?php if( $eve__auteurs ): ?>
+              <?php $permalink = get_permalink( $eve__auteurs->ID ); ?>
+              <?php $title = get_the_title( $eve__auteurs->ID ); ?>
+              <a href="<?php echo esc_html($permalink ); ?>"><?php echo esc_html($title ); ?></a>
             <?php endif; ?>
           <?php endwhile; ?>
-        </span>
-      <?php endif; ?>
+        <?php endif; ?>
+      <?php endwhile; ?>
+    </span>
+  <?php endif; ?>
 
-    </div>
-  </div>
+</div>
+</div>
 </div>
 
 <?php // Ajout du boutton Scroll Down ?>
@@ -129,6 +133,24 @@ get_template_part('parts/nav');
 </div>
 
 </section>
+
+<?php // Ajout Bouton réservation ? ?>
+
+<?php if( get_field('eve__btn-resa') ): ?>
+  <?php
+  $link = get_field('eve__btn-resa');
+  $link_url = $link['url'];
+  $link_title = $link['title'];
+  $link_target = $link['target'] ? $link['target'] : '_self';
+  ?>
+  <div class="resa l-auteurs__items">
+    <div class="l-auteurs__item display3 l12">
+      <a class="is--denko" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+        <span><?php _e("Réservez maintenant","lesailleurs") ?></span>
+      </a>
+    </div>
+  </div>
+<?php endif; ?>
 
 <?php // Description ? ?>
 
@@ -158,6 +180,7 @@ if( $terms ): ?>
   </div>
 </section>
 <?php endif; ?>
+
 
 <?php // Trailer video & co. ? ?>
 

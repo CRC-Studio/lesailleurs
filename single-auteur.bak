@@ -88,6 +88,70 @@ get_template_part('parts/nav');
         $slc__marv = 1;
         $isf__vit = 1;
 
+        $args = array(
+          'numberposts'	=> -1,
+          'post_type'		=> 'selection',
+          'meta_query' => array(
+            'relation' => 'AND',
+            array(
+              'key' => 'slc_$_slc__oeuvre', // name of custom field
+              'value' => get_the_ID(),
+              'compare' => '='
+            )
+          )
+        );
+        $backup_post = $post;
+        $the_query = new WP_Query( $args );
+        if( $the_query->have_posts() ):
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+
+          // On explore la sélection
+
+          if( have_rows('slc') ):
+            while( have_rows('slc') ) : the_row();
+
+            // On cherche si des oeuvres ont des mentions
+
+            $terms = get_sub_field('slc__mention');
+            if( $terms ):
+              foreach( $terms as $term ):
+
+                // On affiche les oeuvres avec des mentions
+
+                $slc__labeltext = esc_html( $term->name )." ".get_the_title();
+                set_query_var( 'slc__labeltext', $slc__labeltext );
+                $post = get_sub_field('slc__oeuvre');
+                setup_postdata($post); // Setup this post for WP functions (variable must be named $post).
+                ?>
+                <article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom tooltip--hover" onclick="location.href='<?php the_permalink(); ?>'">
+                  <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
+                  <?php get_template_part('parts/part__slc__label', 'slc__labeltext'); ?>
+                </article>
+                <?php
+                wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly
+                $post = $backup_post; // Utile pour relancer la loop après un wp_reset_postdata();
+              endforeach;
+
+
+              // On affiche les oeuvres sans mentions
+
+            else:
+              $post = get_sub_field('slc__oeuvre');
+              setup_postdata($post); // Setup this post for WP functions (variable must be named $post).
+              ?>
+              <article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom tooltip--hover" onclick="location.href='<?php the_permalink(); ?>'">
+                <?php get_template_part('parts/part__template-oeuvre-selectionnee') ?>
+              </article>
+              <?php
+              wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly
+              $post = $backup_post; // Utile pour relancer la loop après un wp_reset_postdata();
+
+            endif;
+          endwhile;
+        endif;
+      endwhile;
+    else:
+
       // On affiche des oeuvres sans sélection
       ?>
       <article class="slc__slc is--float <?php if (isset($slc__lar)) {echo "slc__lar".$slc__lar;}; if (isset($slc__marh)) {echo " slc__marh".$slc__marh;}; if (isset($slc__marv)) {echo " slc__marv".$slc__marv;}; if (isset($isf__vit)) {echo " isf__vit".$isf__vit;}; ?>  is--zoooom" onclick="location.href='<?php the_permalink(); ?>'">
@@ -95,6 +159,7 @@ get_template_part('parts/nav');
       </article>
       <?php
 
+    endif;
     wp_reset_query(); $post = $backup_post; ?>
 
     <?php wp_reset_postdata(); // Reset the global post object so that the rest of the page works correctly.?>
