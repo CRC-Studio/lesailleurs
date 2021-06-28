@@ -49,7 +49,7 @@ $language_menu = wp_nav_menu(
 		<?php // menu Changement de ville ?>
 
 		<div class="l-header__nav-editons">
-			<!-- <span class="l-header__nav-editons-label body">Explorer</span>
+			<span class="l-header__nav-editons-label body">Explorer</span>
 			<div class="divider-h"></div>
 			<span class="body">Paris</span>
 			<label class="switch tooltip--hover">
@@ -59,7 +59,7 @@ $language_menu = wp_nav_menu(
 					<div class="tooltip__content tooltip__is--top"><?php _e("Voyager Ailleurs","lesailleurs") ?></div>
 				</div>
 			</label>
-			<span>Arles</span> -->
+			<span>Arles</span>
 		</div>
 
 
