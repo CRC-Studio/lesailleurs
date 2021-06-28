@@ -38,17 +38,14 @@ jQuery( document ).ready(function( jQuery ) {
   var url = window.location.origin;
   var whereIsAilleurs = Cookies.get('WhereIsAilleurs');
 
-  if (whereIsAilleurs == 'Arles') {
-    jQuery('#where--is--ailleurs').on('click', function(){
+  jQuery('#where--is--ailleurs').on('click', function(){
+    if (whereIsAilleurs == 'Arles') {
       Cookies.set('WhereIsAilleurs', 'Paris');
-      window.location.href = url;
-    });
-  }else {
-    jQuery('#where--is--ailleurs').on('click', function(){
+    }else {
       Cookies.set('WhereIsAilleurs', 'Arles');
-      window.location.href = url;
-    });
-  };
+    };
+    window.location.href = url;
+  });
 
 
   // Block Accordion

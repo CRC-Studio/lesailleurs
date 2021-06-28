@@ -251,6 +251,8 @@ section.bigm {
 }
 
 main {
+  float: left;
+  width: 100%;
   margin-top: 56px;
 }
 
@@ -945,7 +947,7 @@ em {
   font-size: 42px;
   color: black;
   background: white;
-  transition: background 0.5s;
+  transition: background .5s;
 }
 
 .form__input-container textarea {
@@ -956,7 +958,7 @@ em {
 .form__input-container input:focus, .form__input-container textarea:focus {
   background: #fff9f8;
   outline: none;
-  transition: background 0.5s;
+  transition: background .5s;
 }
 
 .form__input-container .form__input-full {
@@ -1230,6 +1232,10 @@ em {
   z-index: 2;
 }
 
+.l-header__baseline {
+  width: 33.33%;
+}
+
 .l-header__baseline span {
   width: 100%;
   float: left;
@@ -1239,6 +1245,10 @@ em {
 
 .l-header__baseline span:last-child {
   padding-left: 42px;
+}
+
+.l-header__logo {
+  width: 16.66%;
 }
 
 .l-header__logo svg {
@@ -1438,6 +1448,15 @@ em {
   padding: 7px;
 }
 
+.eve {
+  position: relative;
+  padding: 0 0 42px 0;
+}
+
+.eve > * {
+  padding: 0 14px;
+}
+
 .eve__eve {
   position: relative;
   border-bottom: 1px solid #FF765F;
@@ -1463,10 +1482,6 @@ em {
 .eve__eve:hover .subheading {
   padding-right: 28px;
   transition: all 0.5s;
-}
-
-.eve__eve:first-of-type {
-  border-top: 1px solid #FF765F;
 }
 
 .eve__img {
@@ -1516,8 +1531,99 @@ em {
   transition: all 4s;
 }
 
+.eve__filtres {
+  display: none;
+}
+
+.eve__bar {
+  float: left;
+  width: 100%;
+  background: linear-gradient(90deg, #FF9A6C, #FFBE79);
+}
+
+.eve__bar * {
+  color: #FFECDB;
+  font-family: "roobert", Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.eve__bar-search input {
+  width: 100%;
+  height: 42px;
+  padding: 14px;
+  color: #FF765F;
+  border: none;
+  border-radius: 42px;
+  background: #FFBE79;
+  transition: all 4s;
+}
+
+.eve__bar-search input:hover {
+  border-radius: 7px;
+  transition: all .5s;
+  box-shadow: 0 0.938em 2.188em rgba(45, 46, 96, 0.15), 0 0.313em 0.938em rgba(45, 46, 96, 0.1);
+}
+
+.eve__bar-search input:focus {
+  border-radius: 7px;
+  background: #ffd7ac;
+  outline: none;
+  color: #FF5252;
+  box-shadow: 0 2.8px 2.2px rgba(45, 46, 96, 0.034), 0 6.7px 5.3px rgba(45, 46, 96, 0.048), 0 12.5px 10px rgba(45, 46, 96, 0.06), 0 22.3px 17.9px rgba(45, 46, 96, 0.072), 0 41.8px 33.4px rgba(45, 46, 96, 0.086), 0 100px 80px rgba(45, 46, 96, 0.12);
+  transition: all .5s;
+}
+
+.eve__bar-search ::placeholder {
+  color: #FFD5AA;
+}
+
+.eve__bar-filtres,
+.eve__bar-title {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.eve__bar-title {
+  justify-content: flex-end;
+}
+
+.eve__bar-filtre {
+  height: 42px;
+  border-radius: 7px;
+  padding: 0 14px;
+  margin-right: 7px;
+  white-space: nowrap;
+  transition: all 4s;
+}
+
+.eve__bar-filtre:first-of-type {
+  margin-left: 14px;
+}
+
+.eve__bar-filtre:hover, .eve__bar-filtre.is--active {
+  border-radius: 42px;
+  background: #FFBE79;
+  box-shadow: 0 0.938em 2.188em rgba(45, 46, 96, 0.15), 0 0.313em 0.938em rgba(45, 46, 96, 0.1);
+  transition: all .5s;
+}
+
+.eve__bar-filtre.is--active {
+  background: #ffd7ac;
+  box-shadow: 0 2.8px 2.2px rgba(45, 46, 96, 0.034), 0 6.7px 5.3px rgba(45, 46, 96, 0.048), 0 12.5px 10px rgba(45, 46, 96, 0.06), 0 22.3px 17.9px rgba(45, 46, 96, 0.072), 0 41.8px 33.4px rgba(45, 46, 96, 0.086), 0 100px 80px rgba(45, 46, 96, 0.12);
+}
+
+.resa {
+  position: sticky;
+  float: left;
+  top: 56px;
+}
+
 .l-auteurs__items {
   float: left;
+  width: 100%;
+  overflow: hidden;
   border-top: 1px solid #FFDEEE;
 }
 
@@ -1539,7 +1645,7 @@ em {
 }
 
 .l-auteurs__item:hover a:link {
-  padding: 84px 0;
+  padding: 49px 0;
 }
 
 .l-auteurs__item span {
@@ -1631,6 +1737,7 @@ em {
 }
 
 .ebs .divider-h {
+  float: right;
   background: #FF765F;
 }
 
@@ -2289,6 +2396,18 @@ em {
   border-radius: 50%;
 }
 
+.cover__eve-wrapper {
+  width: 100%;
+  position: relative;
+  height: 100vh;
+}
+
+.cover__eve-wrapper img {
+  border-radius: 14px;
+  border: 2px solid black;
+  box-shadow: 0 2.8px 2.2px rgba(45, 46, 96, 0.034), 0 6.7px 5.3px rgba(45, 46, 96, 0.048), 0 12.5px 10px rgba(45, 46, 96, 0.06), 0 22.3px 17.9px rgba(45, 46, 96, 0.072), 0 41.8px 33.4px rgba(45, 46, 96, 0.086), 0 100px 80px rgba(45, 46, 96, 0.12);
+}
+
 .cover__color01 {
   background: #FFA8B7;
 }
@@ -2796,10 +2915,6 @@ em {
   z-index: -1;
 }
 
-@media (max-width: 1200px) {
-  display: block;
-}
-
 @media (max-width: 1080px) {
   .switch input {
     width: 35px;
@@ -2817,6 +2932,9 @@ em {
   .jon__content {
     width: 100%;
   }
+  .l-header__baseline span:last-child {
+    padding-left: 0;
+  }
   .slc__marv1, .slc__marv2, .slc__marv3, .slc__marv4, .slc__marv5, .slc__marv6 {
     margin-bottom: 56px;
     margin-top: 56px;
@@ -2824,8 +2942,15 @@ em {
 }
 
 @media (max-width: 768px) {
+  .eve__bar-filtres, .eve__bar-title,
+  .l-header__nav-editons .divider-h,
+  .l-header__nav-editons-label,
+  .l-header__baseline {
+    display: none;
+  }
   .slc__lar1, .slc__lar2, .slc__lar3, .slc__lar4, .slc__lar5, .slc__lar6,
-  .jon__container {
+  .jon__container,
+  .eve__bar-search {
     width: 100%;
   }
   .slc__marh1, .slc__marh2, .slc__marh3, .slc__marh4, .slc__marh5, .slc__marh6 {
@@ -2834,6 +2959,10 @@ em {
   .slc__marv1, .slc__marv2, .slc__marv4, .slc__marv3, .slc__marv5, .slc__marv6,
   .jon__container:nth-child(2n+2) {
     margin-top: 14px;
+  }
+  .l-header__nav-editons,
+  .l-header__nav-fixed {
+    justify-content: flex-end;
   }
   .biglinks, .vdo {
     padding: 28px 14px;
@@ -2858,9 +2987,6 @@ em {
     width: 50%;
   }
   .slc__overlay {
-    display: none;
-  }
-  .l-header__baseline.l3 {
     display: none;
   }
   .display1 *, .display1 {
