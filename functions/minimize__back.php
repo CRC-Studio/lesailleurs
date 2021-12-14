@@ -66,15 +66,6 @@ show_admin_bar(false);
 // }
 //
 //
-//
-// add_action( 'init', function () {
-//     $wpseo_front = WPSEO_Frontend::get_instance();
-//     remove_filter( 'pre_get_document_title', array( $wpseo_front, 'title' ), 15 );
-//     remove_filter( 'wp_title', array( $wpseo_front, 'title' ), 15 );
-// } );
-//
-//
-//
 // function plt_hide_wordpress_seo_menus() {
 // 	//Hide "SEO".
 // 	remove_menu_page('wpseo_dashboard');
